@@ -99,10 +99,10 @@
 		2AA09B052947B85400017E46 /* HappyEducation */ = {
 			isa = PBXGroup;
 			children = (
+				2AB7B6DA2947BE4300C82AD2 /* VC */,
+				2AB7B6D92947BE1E00C82AD2 /* Screens */,
 				2AA09B062947B85400017E46 /* AppDelegate.swift */,
 				2AA09B082947B85500017E46 /* SceneDelegate.swift */,
-				2AA09B0A2947B85500017E46 /* ViewController.swift */,
-				2AA09B0C2947B85500017E46 /* Main.storyboard */,
 				2AA09B0F2947B85500017E46 /* Assets.xcassets */,
 				2AA09B112947B85500017E46 /* LaunchScreen.storyboard */,
 				2AA09B142947B85500017E46 /* Info.plist */,
@@ -125,6 +125,22 @@
 				2AA09B292947B85600017E46 /* HappyEducationUITestsLaunchTests.swift */,
 			);
 			path = HappyEducationUITests;
+			sourceTree = "<group>";
+		};
+		2AB7B6D92947BE1E00C82AD2 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				2AA09B0C2947B85500017E46 /* Main.storyboard */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		2AB7B6DA2947BE4300C82AD2 /* VC */ = {
+			isa = PBXGroup;
+			children = (
+				2AA09B0A2947B85500017E46 /* ViewController.swift */,
+			);
+			path = VC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
