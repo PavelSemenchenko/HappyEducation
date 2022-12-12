@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A9475672947DF48000C3043 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A9475662947DF48000C3043 /* GoogleService-Info.plist */; };
 		2AA09B072947B85400017E46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA09B062947B85400017E46 /* AppDelegate.swift */; };
 		2AA09B092947B85500017E46 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA09B082947B85500017E46 /* SceneDelegate.swift */; };
 		2AA09B0B2947B85500017E46 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA09B0A2947B85500017E46 /* ViewController.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A9475662947DF48000C3043 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AA09B032947B85400017E46 /* HappyEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA09B062947B85400017E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AA09B082947B85500017E46 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				2AA09B0F2947B85500017E46 /* Assets.xcassets */,
 				2AA09B112947B85500017E46 /* LaunchScreen.storyboard */,
 				2AA09B142947B85500017E46 /* Info.plist */,
+				2A9475662947DF48000C3043 /* GoogleService-Info.plist */,
 			);
 			path = HappyEducation;
 			sourceTree = "<group>";
@@ -248,6 +251,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2AA09B132947B85500017E46 /* LaunchScreen.storyboard in Resources */,
+				2A9475672947DF48000C3043 /* GoogleService-Info.plist in Resources */,
 				2AA09B102947B85500017E46 /* Assets.xcassets in Resources */,
 				2AA09B0E2947B85500017E46 /* Main.storyboard in Resources */,
 			);
