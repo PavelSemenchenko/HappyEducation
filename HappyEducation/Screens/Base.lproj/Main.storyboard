@@ -161,7 +161,7 @@ recommendations</string>
                                 <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9tw-dY-JY7">
-                                <rect key="frame" x="72" y="681" width="249" height="56"/>
+                                <rect key="frame" x="72" y="676" width="249" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="u2b-XF-eEQ"/>
                                 </constraints>
@@ -180,7 +180,7 @@ recommendations</string>
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCA-Dx-Ah5">
-                                <rect key="frame" x="233.99999999999997" y="740.66666666666663" width="81.666666666666657" height="33.666666666666629"/>
+                                <rect key="frame" x="233.99999999999997" y="735.66666666666663" width="81.666666666666657" height="33.666666666666629"/>
                                 <color key="tintColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain">
@@ -205,7 +205,7 @@ recommendations</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7DH-uy-rxq" firstAttribute="leading" secondItem="QAM-SQ-3cd" secondAttribute="leading" constant="34" id="0rK-mO-c5p"/>
-                            <constraint firstItem="9tw-dY-JY7" firstAttribute="top" secondItem="NnR-GE-hYt" secondAttribute="bottom" constant="65" id="3yb-Rg-VeH"/>
+                            <constraint firstItem="9tw-dY-JY7" firstAttribute="top" secondItem="NnR-GE-hYt" secondAttribute="bottom" constant="60" id="3yb-Rg-VeH"/>
                             <constraint firstItem="7ii-9c-8wV" firstAttribute="leading" secondItem="QAM-SQ-3cd" secondAttribute="leading" constant="34" id="A4w-iX-KP4"/>
                             <constraint firstItem="NnR-GE-hYt" firstAttribute="top" secondItem="7ii-9c-8wV" secondAttribute="bottom" constant="23" id="DdX-fP-4m7"/>
                             <constraint firstItem="7ii-9c-8wV" firstAttribute="top" secondItem="P9G-53-DcY" secondAttribute="bottom" constant="26" id="Du4-H8-U56"/>
