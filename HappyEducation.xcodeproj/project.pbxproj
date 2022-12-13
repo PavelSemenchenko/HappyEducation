@@ -46,6 +46,8 @@
 		2AA09B2A2947B85600017E46 /* HappyEducationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA09B292947B85600017E46 /* HappyEducationUITestsLaunchTests.swift */; };
 		DA5C05AD2948578200799A16 /* Authetitication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C05AC2948578200799A16 /* Authetitication.swift */; };
 		DA5C05B0294859DA00799A16 /* BaseAuthentiticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C05AF294859DA00799A16 /* BaseAuthentiticationVC.swift */; };
+		DA5C05B329488E0200799A16 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C05B229488E0200799A16 /* EmailTextField.swift */; };
+		DA5C05B529488E1B00799A16 /* PasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C05B429488E1B00799A16 /* PasswordTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +84,8 @@
 		2AA09B292947B85600017E46 /* HappyEducationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyEducationUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		DA5C05AC2948578200799A16 /* Authetitication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authetitication.swift; sourceTree = "<group>"; };
 		DA5C05AF294859DA00799A16 /* BaseAuthentiticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthentiticationVC.swift; sourceTree = "<group>"; };
+		DA5C05B229488E0200799A16 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		DA5C05B429488E1B00799A16 /* PasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 		2AA09B052947B85400017E46 /* HappyEducation */ = {
 			isa = PBXGroup;
 			children = (
+				DA5C05B129488DD500799A16 /* Views */,
 				DA5C05AE294859B900799A16 /* Common */,
 				DA5C05AB2948575600799A16 /* Services */,
 				2AB7B6DA2947BE4300C82AD2 /* VC */,
@@ -220,6 +225,15 @@
 				DA5C05AF294859DA00799A16 /* BaseAuthentiticationVC.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		DA5C05B129488DD500799A16 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DA5C05B229488E0200799A16 /* EmailTextField.swift */,
+				DA5C05B429488E1B00799A16 /* PasswordTextField.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -388,6 +402,8 @@
 			files = (
 				DA5C05B0294859DA00799A16 /* BaseAuthentiticationVC.swift in Sources */,
 				2AA09B0B2947B85500017E46 /* ViewController.swift in Sources */,
+				DA5C05B529488E1B00799A16 /* PasswordTextField.swift in Sources */,
+				DA5C05B329488E0200799A16 /* EmailTextField.swift in Sources */,
 				2AA09B072947B85400017E46 /* AppDelegate.swift in Sources */,
 				2AA09B092947B85500017E46 /* SceneDelegate.swift in Sources */,
 				DA5C05AD2948578200799A16 /* Authetitication.swift in Sources */,
