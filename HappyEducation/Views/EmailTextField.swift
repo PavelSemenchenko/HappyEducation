@@ -15,7 +15,7 @@ class EmailTextField: UITextField {
         layer.borderWidth = 1
         layer.borderColor = UIColor.blue.cgColor
     }
-    func validateEmailTextfield(errorLabel: UILabel) -> String? {
+    func validateEmailTextField(errorLabel: UILabel) -> String? {
         let optionalEmail = text
         guard let email = optionalEmail, email.contains("@") else {
             layer.borderColor = UIColor.red.cgColor

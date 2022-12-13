@@ -24,7 +24,7 @@ class SignInVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
     }
     
     func signIn() {
-        guard let email = emailTextField.validateEmailTextfield(errorLabel: errorEmailLabel) else {
+        guard let email = emailTextField.validateEmailTextField(errorLabel: errorEmailLabel) else {
             return
         }
         guard let password = passwordTextField.validatePasswordTextField(errorLabel: errorPasswordLabel) else {
@@ -32,7 +32,9 @@ class SignInVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
         }
         authenticationService.signIn(email: email, password: password) { errorMessage in
             if let message = errorMessage {
-                let alert = UIAlertController(title: "Happy Education", message: message, preferredStyle: UIAlertController.Style.alert)
+                let alert = UIAlertController(title: "Happy Education",
+                                              message: message,
+                                              preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default))
                 self.present(alert, animated: true)
             } else {
