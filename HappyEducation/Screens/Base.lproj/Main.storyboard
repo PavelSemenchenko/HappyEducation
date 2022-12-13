@@ -30,6 +30,9 @@
                                         </fragment>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="skipSignUpButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5nc-e1-GAF"/>
+                                </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="LoginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ZPU-X6-xYw">
                                 <rect key="frame" x="43" y="176" width="324" height="324"/>
@@ -85,9 +88,19 @@ recommendations</string>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
+                                        <fragment content=" / reg">
+                                            <attributes>
+                                                <color key="NSColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <font key="NSFont" size="20" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
                                     </attributedString>
                                     <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signUpButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1G-lk-IfS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -110,10 +123,6 @@ recommendations</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="hhG-JW-XU0"/>
-                    <connections>
-                        <outlet property="SignUpButtonClicked" destination="vkz-iM-gvG" id="Z5x-eN-lgy"/>
-                        <outlet property="skipSignUpButtonClicked" destination="lMQ-oL-6N4" id="mk5-un-xiM"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -122,7 +131,7 @@ recommendations</string>
         <!--Sign InVC-->
         <scene sceneID="IlY-wG-pGr">
             <objects>
-                <viewController id="wZs-BE-1ef" customClass="SignInVC" customModule="HappyEducation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignIn" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wZs-BE-1ef" customClass="SignInVC" customModule="HappyEducation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rW9-MG-crp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,6 +183,12 @@ recommendations</string>
                                             <attributes>
                                                 <font key="NSFont" size="20" name="Helvetica-Bold"/>
                                                 <font key="NSOriginalFont" size="20" name="Helvetica-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                        <fragment content=" / login">
+                                            <attributes>
+                                                <font key="NSFont" size="20" name="Helvetica-Bold"/>
                                                 <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                             </attributes>
                                         </fragment>
@@ -264,8 +279,24 @@ recommendations</string>
                     <view key="view" contentMode="scaleToFill" id="GyX-WY-HuX">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do - do" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXt-ug-GnB">
+                                <rect key="frame" x="146.66666666666666" y="388.66666666666669" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="sRf-LD-ARn"/>
+                                    <constraint firstAttribute="height" constant="100" id="v4L-Et-8uf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="TMP-1b-rcI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="JXt-ug-GnB" firstAttribute="centerY" secondItem="TMP-1b-rcI" secondAttribute="centerY" id="VLc-XQ-wI3"/>
+                            <constraint firstItem="JXt-ug-GnB" firstAttribute="centerX" secondItem="TMP-1b-rcI" secondAttribute="centerX" id="YYU-cT-XSv"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6j-eL-SgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

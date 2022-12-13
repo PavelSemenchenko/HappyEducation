@@ -9,16 +9,27 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    
-    @IBOutlet weak var SignUpButtonClicked: UIButton!
-    
-    @IBOutlet weak var skipSignUpButtonClicked: UIButton!
+    // 2 SignInVc
+    // 2 HomeVC
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SignUpButtonClicked.layer.cornerRadius = 12
+        // SignUpButtonClicked.layer.cornerRadius = 12
         
         // Do any additional setup after loading the view.
     }
-
+    
+    @IBAction func signUpButtonClicked(_ sender: Any) {
+        guard let signUp = self.storyboard?.instantiateViewController(withIdentifier: "SignIn") as? SignInVC else { return
+        }
+        self.navigationController?.pushViewController(signUp, animated: true)
+    }
+    
+    @IBAction func skipSignUpButton(_ sender: Any) {
+        guard let skip = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else { return
+            
+        }
+        self.navigationController?.pushViewController(skip, animated: true)
+    }
+    
 }
