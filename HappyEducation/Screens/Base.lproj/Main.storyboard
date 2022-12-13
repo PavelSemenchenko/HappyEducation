@@ -112,16 +112,17 @@ recommendations</string>
                     <navigationItem key="navigationItem" id="hhG-JW-XU0"/>
                     <connections>
                         <outlet property="SignUpButtonClicked" destination="vkz-iM-gvG" id="Z5x-eN-lgy"/>
+                        <outlet property="skipSignUpButtonClicked" destination="lMQ-oL-6N4" id="mk5-un-xiM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="113.74045801526717" y="-34.507042253521128"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign InVC-->
         <scene sceneID="IlY-wG-pGr">
             <objects>
-                <viewController id="wZs-BE-1ef" sceneMemberID="viewController">
+                <viewController id="wZs-BE-1ef" customClass="SignInVC" customModule="HappyEducation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rW9-MG-crp">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -179,6 +180,9 @@ recommendations</string>
                                     </attributedString>
                                     <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signInButtonClicked:" destination="wZs-BE-1ef" eventType="touchUpInside" id="xxK-0E-Ziq"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nCA-Dx-Ah5">
                                 <rect key="frame" x="233.99999999999997" y="735.66666666666663" width="81.666666666666657" height="33.666666666666629"/>
@@ -201,11 +205,24 @@ recommendations</string>
                                 <color key="textColor" red="0.38911098240000003" green="0.42735370989999999" blue="0.46494412419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U3G-y5-a06">
+                                <rect key="frame" x="148.66666666666666" y="416" width="46.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errorP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbI-v5-WuD">
+                                <rect key="frame" x="153" y="538" width="47.333333333333343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QAM-SQ-3cd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7DH-uy-rxq" firstAttribute="leading" secondItem="QAM-SQ-3cd" secondAttribute="leading" constant="34" id="0rK-mO-c5p"/>
+                            <constraint firstItem="dbI-v5-WuD" firstAttribute="leading" secondItem="7ii-9c-8wV" secondAttribute="trailing" constant="45" id="1nk-q2-Uz9"/>
                             <constraint firstItem="9tw-dY-JY7" firstAttribute="top" secondItem="NnR-GE-hYt" secondAttribute="bottom" constant="60" id="3yb-Rg-VeH"/>
                             <constraint firstItem="7ii-9c-8wV" firstAttribute="leading" secondItem="QAM-SQ-3cd" secondAttribute="leading" constant="34" id="A4w-iX-KP4"/>
                             <constraint firstItem="NnR-GE-hYt" firstAttribute="top" secondItem="7ii-9c-8wV" secondAttribute="bottom" constant="23" id="DdX-fP-4m7"/>
@@ -217,6 +234,7 @@ recommendations</string>
                             <constraint firstItem="nCA-Dx-Ah5" firstAttribute="centerY" secondItem="smw-9w-Hcs" secondAttribute="centerY" id="V1c-wx-KWh"/>
                             <constraint firstItem="smw-9w-Hcs" firstAttribute="top" secondItem="9tw-dY-JY7" secondAttribute="bottom" constant="10" id="Vsj-ey-njX"/>
                             <constraint firstItem="PUd-OC-ilc" firstAttribute="leading" secondItem="QAM-SQ-3cd" secondAttribute="leading" constant="73" id="YGx-mQ-hS8"/>
+                            <constraint firstItem="U3G-y5-a06" firstAttribute="centerY" secondItem="7DH-uy-rxq" secondAttribute="centerY" id="Ych-FX-gh5"/>
                             <constraint firstItem="nCA-Dx-Ah5" firstAttribute="leading" secondItem="smw-9w-Hcs" secondAttribute="trailing" constant="2" id="cJ9-94-wCy"/>
                             <constraint firstItem="P9G-53-DcY" firstAttribute="leading" secondItem="QAM-SQ-3cd" secondAttribute="leading" constant="34" id="h3z-KZ-NEw"/>
                             <constraint firstItem="QAM-SQ-3cd" firstAttribute="trailing" secondItem="NnR-GE-hYt" secondAttribute="trailing" constant="34" id="hKH-2w-tdc"/>
@@ -224,12 +242,35 @@ recommendations</string>
                             <constraint firstItem="PUd-OC-ilc" firstAttribute="top" secondItem="QAM-SQ-3cd" secondAttribute="top" constant="68" id="hnN-Jc-xVn"/>
                             <constraint firstItem="9tw-dY-JY7" firstAttribute="leading" secondItem="QAM-SQ-3cd" secondAttribute="leading" constant="72" id="hsI-L4-mEU"/>
                             <constraint firstItem="7DH-uy-rxq" firstAttribute="top" secondItem="PUd-OC-ilc" secondAttribute="bottom" constant="23" id="rrg-CS-Eq4"/>
+                            <constraint firstItem="7DH-uy-rxq" firstAttribute="leading" secondItem="U3G-y5-a06" secondAttribute="trailing" constant="-161" id="vZd-Ea-T7e"/>
+                            <constraint firstItem="dbI-v5-WuD" firstAttribute="centerY" secondItem="7ii-9c-8wV" secondAttribute="centerY" id="woj-2h-Zix"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="P9G-53-DcY" id="cay-jc-gw1"/>
+                        <outlet property="errorEmailLabel" destination="U3G-y5-a06" id="7hv-Hs-SuV"/>
+                        <outlet property="errorPasswordLabel" destination="dbI-v5-WuD" id="dOm-KN-zq5"/>
+                        <outlet property="passwordTextField" destination="NnR-GE-hYt" id="nH4-KN-3Be"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jl-Pd-btZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="768.70229007633588" y="-35.211267605633807"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="s6I-1t-uOb">
+            <objects>
+                <viewController storyboardIdentifier="HomeVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mRu-x2-Se0" customClass="HomeVC" customModule="HappyEducation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GyX-WY-HuX">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="TMP-1b-rcI"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="u6j-eL-SgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1482" y="-35"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="bhj-gE-QNm">

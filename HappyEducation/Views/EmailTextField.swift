@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class EmailTextfield: UITextField {
+class EmailTextField: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
         layer.cornerRadius = 12

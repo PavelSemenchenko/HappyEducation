@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var SignUpButtonClicked: UIButton!
     
+    @IBOutlet weak var skipSignUpButtonClicked: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         SignUpButtonClicked.layer.cornerRadius = 12
