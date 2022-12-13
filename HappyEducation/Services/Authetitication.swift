@@ -34,4 +34,8 @@ class FirebaseAuthentiticationService: AuthentiticationService {
             }
         }
     }
+    func isAuthenticated() -> Bool {
+        let hasUser = Auth.auth().currentUser != nil
+        return hasUser 
+    }
 }
