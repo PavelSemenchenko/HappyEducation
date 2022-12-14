@@ -20,6 +20,10 @@ class ViewController: UIViewController {
     }
     
     @IBAction func signUpButtonClicked(_ sender: Any) {
+        guard let signUp = self.storyboard?.instantiateViewController(withIdentifier: "SignUp") as? SignUpVC else { return
+            
+        }
+        self.navigationController?.pushViewController(signUp, animated: true)
     }
     
     @IBAction func skipSignUpButton(_ sender: Any) {
