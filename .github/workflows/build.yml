@@ -11,6 +11,17 @@ jobs:
       - uses: actions/checkout@v3
         name: Downloading sources
       - run: |
+          mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
+          cp PavelSemenchenkoHappyEducation.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
+          
+          security create-keychain -p "" PavelSemenchenkoHappyEducation-build.keychain
+          security import imagevideo.p12 -t agg -k ~/Library/Keychains/PavelSemenchenkoHappyEducation-build.keychain -P "098qwe!@#" -A
+          
+          security list-keychains -s ~/Library/Keychains/PavelSemenchenkoHappyEducation-build.keychain
+          security default-keychain -s ~/Library/Keychains/PavelSemenchenkoHappyEducation-build.keychain
+          security unlock-keychain -p "" ~/Library/Keychains/PavelSemenchenkoHappyEducation-build.keychain
+          security set-key-partition-list -S apple-tool:,apple: -s -k "" ~/Library/Keychains/PavelSemenchenkoHappyEducation-build.keychain
+          
           xcodebuild -quiet -project HappyEducation.xcodeproj -scheme HappyEducation -configuration Release -derivedDataPath build_output -sdk iphoneos -archivePath app_output/HappyEducation.xcarchive archive
         name: Building application
       - run: |
