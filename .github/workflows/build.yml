@@ -12,8 +12,10 @@ jobs:
         name: Downloading sources
       - run: |
           xcodebuild -quiet -project HappyEducation.xcodeproj -scheme HappyEducation -configuration Release -derivedDataPath build_output -sdk iphoneos -archivePath app_output/HappyEducation.xcarchive archive
-          xcodebuild -exportArchive -archivePath app_output/HappyEducation.xcarchive -exportPath app_output/ -exportOptionsPlist HappyEducation.plist
         name: Building application
+      - run: |
+          xcodebuild -exportArchive -archivePath app_output/HappyEducation.xcarchive -exportPath app_output/ -exportOptionsPlist HappyEducation.plist
+        name: Exporting application
       - uses: wzieba/Firebase-Distribution-Github-Action@v1
         name: Uploading to Firebase App Distribution
         with:
