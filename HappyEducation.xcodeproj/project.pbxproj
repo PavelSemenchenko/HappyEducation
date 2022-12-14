@@ -44,6 +44,9 @@
 		2AA09B1E2947B85600017E46 /* HappyEducationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA09B1D2947B85600017E46 /* HappyEducationTests.swift */; };
 		2AA09B282947B85600017E46 /* HappyEducationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA09B272947B85600017E46 /* HappyEducationUITests.swift */; };
 		2AA09B2A2947B85600017E46 /* HappyEducationUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AA09B292947B85600017E46 /* HappyEducationUITestsLaunchTests.swift */; };
+		2AD5D6A6294A305C000F6256 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5D6A5294A305C000F6256 /* HomeVC.swift */; };
+		2AD5D6A8294A3064000F6256 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5D6A7294A3064000F6256 /* SignInVC.swift */; };
+		2AD5D6AA294A3069000F6256 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD5D6A9294A3069000F6256 /* SignUpVC.swift */; };
 		DA5C05AD2948578200799A16 /* Authetitication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C05AC2948578200799A16 /* Authetitication.swift */; };
 		DA5C05B0294859DA00799A16 /* BaseAuthentiticationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C05AF294859DA00799A16 /* BaseAuthentiticationVC.swift */; };
 		DA5C05B329488E0200799A16 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DA5C05B229488E0200799A16 /* EmailTextField.swift */; };
@@ -82,6 +85,9 @@
 		2AA09B232947B85600017E46 /* HappyEducationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HappyEducationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA09B272947B85600017E46 /* HappyEducationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyEducationUITests.swift; sourceTree = "<group>"; };
 		2AA09B292947B85600017E46 /* HappyEducationUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HappyEducationUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		2AD5D6A5294A305C000F6256 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		2AD5D6A7294A3064000F6256 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		2AD5D6A9294A3069000F6256 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		DA5C05AC2948578200799A16 /* Authetitication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authetitication.swift; sourceTree = "<group>"; };
 		DA5C05AF294859DA00799A16 /* BaseAuthentiticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthentiticationVC.swift; sourceTree = "<group>"; };
 		DA5C05B229488E0200799A16 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
@@ -206,6 +212,9 @@
 		2AB7B6DA2947BE4300C82AD2 /* VC */ = {
 			isa = PBXGroup;
 			children = (
+				2AD5D6A9294A3069000F6256 /* SignUpVC.swift */,
+				2AD5D6A7294A3064000F6256 /* SignInVC.swift */,
+				2AD5D6A5294A305C000F6256 /* HomeVC.swift */,
 				2AA09B0A2947B85500017E46 /* ViewController.swift */,
 			);
 			path = VC;
@@ -401,11 +410,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				DA5C05B0294859DA00799A16 /* BaseAuthentiticationVC.swift in Sources */,
+				2AD5D6A6294A305C000F6256 /* HomeVC.swift in Sources */,
+				2AD5D6A8294A3064000F6256 /* SignInVC.swift in Sources */,
 				2AA09B0B2947B85500017E46 /* ViewController.swift in Sources */,
 				DA5C05B529488E1B00799A16 /* PasswordTextField.swift in Sources */,
 				DA5C05B329488E0200799A16 /* EmailTextField.swift in Sources */,
 				2AA09B072947B85400017E46 /* AppDelegate.swift in Sources */,
 				2AA09B092947B85500017E46 /* SceneDelegate.swift in Sources */,
+				2AD5D6AA294A3069000F6256 /* SignUpVC.swift in Sources */,
 				DA5C05AD2948578200799A16 /* Authetitication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
