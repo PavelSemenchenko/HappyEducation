@@ -310,6 +310,15 @@ recommendations</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPI-ib-kTU">
+                                <rect key="frame" x="234" y="696" width="76" height="35"/>
+                                <color key="tintColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Sign in"/>
+                                <connections>
+                                    <action selector="signInButtonClicked:" destination="nvO-cf-WUn" eventType="touchUpInside" id="RYy-rr-ReK"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPQ-Em-H6U">
                                 <rect key="frame" x="76" y="620" width="240" height="54"/>
                                 <constraints>
@@ -319,6 +328,9 @@ recommendations</string>
                                 <buttonConfiguration key="configuration" style="filled" title="Sign up">
                                     <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="signUpButtonclicked:" destination="nvO-cf-WUn" eventType="touchUpInside" id="q7D-7M-26B"/>
+                                </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig8-d9-TN9">
                                 <rect key="frame" x="34" y="356" width="325" height="34"/>
@@ -335,12 +347,20 @@ recommendations</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CPI-ib-kTU">
-                                <rect key="frame" x="234" y="696" width="76" height="35"/>
-                                <color key="tintColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Sign in"/>
-                            </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="errPassword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-e6-d1H">
+                                <rect key="frame" x="126" y="507" width="95" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="errEmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-Yd-h1m">
+                                <rect key="frame" x="167" y="415" width="63" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="hRd-Zt-ITk"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -376,6 +396,13 @@ recommendations</string>
                             <constraint firstItem="L2u-uX-dDe" firstAttribute="leading" secondItem="Ig8-d9-TN9" secondAttribute="leading" id="zqm-1o-XYh"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="L2u-uX-dDe" id="Ts0-9N-Wcb"/>
+                        <outlet property="errorEmailLabel" destination="hNK-Yd-h1m" id="Tv0-C1-viq"/>
+                        <outlet property="errorPasswordLabel" destination="xbG-e6-d1H" id="UqO-o9-qb1"/>
+                        <outlet property="nameTextField" destination="Ig8-d9-TN9" id="gWB-c7-8Db"/>
+                        <outlet property="passwordTextField" destination="xZg-q0-ynY" id="ikY-Fa-s7e"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vf5-Vp-baE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
