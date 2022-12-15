@@ -51,5 +51,10 @@ class SignInVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
     }
     
     @IBAction func signUpButtonClicked(_ sender: Any) {
+        guard let signUp = self.storyboard?
+            .instantiateViewController(withIdentifier: "SignUp") as? SignUpVC else {
+            return
+        }
+        self.navigationController?.pushViewController(signUp, animated: true)
     }
 }
