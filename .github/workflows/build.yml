@@ -10,6 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Downloading sources
+      - uses: GetSidetrack/action-xcodeproj-spm-update@main
+        name: Resolving Dependencies
+        with:
+          failWhenOutdated: false
       - run: |
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp PavelSemenchenkoHappyEducation.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
