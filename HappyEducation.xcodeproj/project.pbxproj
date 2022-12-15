@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A78283C294BC07C0032AD4F /* GradeSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */; };
 		2A9475672947DF48000C3043 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A9475662947DF48000C3043 /* GoogleService-Info.plist */; };
 		2A94756A2947E073000C3043 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2A9475692947E073000C3043 /* FirebaseAnalytics */; };
 		2A94756C2947E073000C3043 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 2A94756B2947E073000C3043 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -71,6 +72,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeSelectVC.swift; sourceTree = "<group>"; };
 		2A9475662947DF48000C3043 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AA09B032947B85400017E46 /* HappyEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA09B062947B85400017E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +221,7 @@
 				2AD5D6A7294A3064000F6256 /* SignInVC.swift */,
 				2AD5D6A5294A305C000F6256 /* HomeVC.swift */,
 				2AA09B0A2947B85500017E46 /* ViewController.swift */,
+				2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -431,6 +434,7 @@
 				2AA09B092947B85500017E46 /* SceneDelegate.swift in Sources */,
 				2AD5D6AA294A3069000F6256 /* SignUpVC.swift in Sources */,
 				DA5C05AD2948578200799A16 /* Authetitication.swift in Sources */,
+				2A78283C294BC07C0032AD4F /* GradeSelectVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
