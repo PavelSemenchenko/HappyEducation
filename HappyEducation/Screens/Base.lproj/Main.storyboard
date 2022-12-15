@@ -137,6 +137,12 @@ recommendations</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aSz-3a-EPA">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <viewLayoutGuide key="contentLayoutGuide" id="KQN-Aq-WY4"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="762-vQ-RXm"/>
+                            </scrollView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login" translatesAutoresizingMaskIntoConstraints="NO" id="PUd-OC-ilc">
                                 <rect key="frame" x="73" y="127" width="266" height="266"/>
                                 <constraints>
@@ -270,11 +276,12 @@ recommendations</string>
                         <outlet property="errorEmailLabel" destination="U3G-y5-a06" id="7hv-Hs-SuV"/>
                         <outlet property="errorPasswordLabel" destination="dbI-v5-WuD" id="dOm-KN-zq5"/>
                         <outlet property="passwordTextField" destination="NnR-GE-hYt" id="nH4-KN-3Be"/>
+                        <outlet property="scrollView" destination="aSz-3a-EPA" id="CZ8-Af-rCz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1jl-Pd-btZ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="766" y="-298"/>
+            <point key="canvasLocation" x="765.64885496183206" y="-298.59154929577466"/>
         </scene>
         <!--Sign UpVC-->
         <scene sceneID="6HG-cW-82y">
