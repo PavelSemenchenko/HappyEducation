@@ -14,6 +14,13 @@ class GradeSelectVC: UIViewController {
        
     }
     
+    
+    @IBAction func nextButtonClicked(_ sender: Any) {
+    }
+    
+    
+    @IBAction func skipButtonClicked(_ sender: Any) {
+    }
 }
 
 
