@@ -10,10 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         name: Downloading sources
-      - uses: GetSidetrack/action-xcodeproj-spm-update@main
-        name: Resolving Dependencies
+      - uses: actions/cache@v3
+        name: Caching packages
         with:
-          failWhenOutdated: false
+          path: build_output/SourcePackages
+          key: ${{ runner.os }}-spm-${{ hashFiles('**/Package.resolved') }}
+          restore-keys: |
+            ${{ runner.os }}-spm-
+      - run: |
+          xcodebuild -resolvePackageDependencies -project HappyEducation.xcodeproj -clonedSourcePackagesDirPath build_output/SourcePackages
+        name: Resolving Dependencies
       - run: |
           mkdir -p ~/Library/MobileDevice/Provisioning\ Profiles
           cp PavelSemenchenkoHappyEducation.mobileprovision ~/Library/MobileDevice/Provisioning\ Profiles/
