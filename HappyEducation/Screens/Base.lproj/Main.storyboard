@@ -438,32 +438,53 @@ recommendations</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Grade  1 - 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxo-M9-MP8">
-                                <rect key="frame" x="37" y="159" width="319" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxo-M9-MP8">
+                                <rect key="frame" x="37" y="150.33333333333334" width="319" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Grade  1 - 5">
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="Helvetica"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Grade  6 - 9" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="La8-c5-bTr">
-                                <rect key="frame" x="37" y="221" width="319" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="La8-c5-bTr">
+                                <rect key="frame" x="37" y="189.33333333333334" width="319" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Grade  6 - 9">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Grade  10 - 11" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kix-if-eFT">
-                                <rect key="frame" x="37" y="286" width="319" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kix-if-eFT">
+                                <rect key="frame" x="37" y="228.33333333333334" width="319" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Grade  10 - 11">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Grade  12 - 13" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaS-KH-OWJ">
-                                <rect key="frame" x="37" y="353" width="319" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AaS-KH-OWJ">
+                                <rect key="frame" x="37" y="267.33333333333331" width="319" height="21"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Grade  12 - 13">
+                                        <attributes>
+                                            <font key="NSFont" metaFont="system" size="18"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJg-py-ejT">
-                                <rect key="frame" x="52" y="643" width="289" height="54"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vJg-py-ejT">
+                                <rect key="frame" x="52" y="628.33333333333337" width="289" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="Abx-Vo-qrm"/>
                                 </constraints>
@@ -482,8 +503,9 @@ recommendations</string>
                                     <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEI-ZU-z0a">
-                                <rect key="frame" x="168" y="724" width="57" height="35"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEI-ZU-z0a">
+                                <rect key="frame" x="168" y="703.33333333333337" width="57" height="35"/>
+                                <color key="tintColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Skip"/>
                             </button>
@@ -493,7 +515,7 @@ recommendations</string>
                                     <fragment content="What's your grade?">
                                         <attributes>
                                             <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            <font key="NSFont" size="23" name=".SFNS-Bold"/>
+                                            <font key="NSFont" size="29" name=".SFNS-Bold"/>
                                             <font key="NSOriginalFont" metaFont="systemBold" size="20"/>
                                         </attributes>
                                     </fragment>
@@ -512,12 +534,17 @@ recommendations</string>
                             <constraint firstItem="JEI-ZU-z0a" firstAttribute="centerX" secondItem="0nx-Cz-pt7" secondAttribute="centerX" id="7PX-PH-GCl"/>
                             <constraint firstItem="Kix-if-eFT" firstAttribute="leading" secondItem="PRt-hn-BI8" secondAttribute="leading" id="9kc-8k-PCl"/>
                             <constraint firstItem="La8-c5-bTr" firstAttribute="leading" secondItem="PRt-hn-BI8" secondAttribute="leading" id="BeX-yQ-enO"/>
+                            <constraint firstItem="vJg-py-ejT" firstAttribute="top" secondItem="AaS-KH-OWJ" secondAttribute="bottom" constant="340" id="MBY-7t-4vw"/>
                             <constraint firstItem="vJg-py-ejT" firstAttribute="leading" secondItem="0nx-Cz-pt7" secondAttribute="leading" constant="52" id="Nf5-Fa-vqq"/>
                             <constraint firstItem="PRt-hn-BI8" firstAttribute="top" secondItem="0nx-Cz-pt7" secondAttribute="top" constant="28" id="VYf-zz-0hB"/>
                             <constraint firstItem="JEI-ZU-z0a" firstAttribute="top" secondItem="vJg-py-ejT" secondAttribute="bottom" constant="25" id="YaW-gI-jrC"/>
+                            <constraint firstItem="Kxo-M9-MP8" firstAttribute="top" secondItem="PRt-hn-BI8" secondAttribute="bottom" constant="31" id="coq-HG-mYx"/>
                             <constraint firstItem="Kxo-M9-MP8" firstAttribute="leading" secondItem="PRt-hn-BI8" secondAttribute="leading" id="igG-8n-c65"/>
+                            <constraint firstItem="La8-c5-bTr" firstAttribute="top" secondItem="Kxo-M9-MP8" secondAttribute="bottom" constant="18" id="jyn-2K-dAs"/>
                             <constraint firstItem="0nx-Cz-pt7" firstAttribute="trailing" secondItem="vJg-py-ejT" secondAttribute="trailing" constant="52" id="n7D-wU-Lo1"/>
+                            <constraint firstItem="Kix-if-eFT" firstAttribute="top" secondItem="La8-c5-bTr" secondAttribute="bottom" constant="18" id="qje-Ao-ISb"/>
                             <constraint firstItem="AaS-KH-OWJ" firstAttribute="leading" secondItem="PRt-hn-BI8" secondAttribute="leading" id="tOF-DK-MZP"/>
+                            <constraint firstItem="AaS-KH-OWJ" firstAttribute="top" secondItem="Kix-if-eFT" secondAttribute="bottom" constant="18" id="wLe-UB-to6"/>
                             <constraint firstItem="Kix-if-eFT" firstAttribute="trailing" secondItem="PRt-hn-BI8" secondAttribute="trailing" id="xnl-ct-3Ye"/>
                         </constraints>
                     </view>
