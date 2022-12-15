@@ -18,7 +18,7 @@
 	<string>Apple Distribution: Mykola Dymura (8MJN994E42)</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>PavelSemenchenko.HappyEducation12</key>
+		<key>PavelSemenchenko.HappyEducation.Demo</key>
 		<string>PavelSemenchenkoHappyEducation</string>
 	</dict>
 </dict>

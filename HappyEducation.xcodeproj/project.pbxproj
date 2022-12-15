@@ -88,6 +88,8 @@
 		2AD5D6A5294A305C000F6256 /* HomeVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		2AD5D6A7294A3064000F6256 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		2AD5D6A9294A3069000F6256 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		6D9697CE294B80C9002F4E91 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
+		6D9697CF294B80D6002F4E91 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		DA5C05AC2948578200799A16 /* Authetitication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Authetitication.swift; sourceTree = "<group>"; };
 		DA5C05AF294859DA00799A16 /* BaseAuthentiticationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseAuthentiticationVC.swift; sourceTree = "<group>"; };
 		DA5C05B229488E0200799A16 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		2AA09AFA2947B85400017E46 = {
 			isa = PBXGroup;
 			children = (
+				6D9697CD294B8098002F4E91 /* Configs */,
 				2AA09B052947B85400017E46 /* HappyEducation */,
 				2AA09B1C2947B85600017E46 /* HappyEducationTests */,
 				2AA09B262947B85600017E46 /* HappyEducationUITests */,
@@ -218,6 +221,15 @@
 				2AA09B0A2947B85500017E46 /* ViewController.swift */,
 			);
 			path = VC;
+			sourceTree = "<group>";
+		};
+		6D9697CD294B8098002F4E91 /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				6D9697CE294B80C9002F4E91 /* Debug.xcconfig */,
+				6D9697CF294B80D6002F4E91 /* Release.xcconfig */,
+			);
+			path = Configs;
 			sourceTree = "<group>";
 		};
 		DA5C05AB2948575600799A16 /* Services */ = {
@@ -590,12 +602,10 @@
 		};
 		2AA09B2E2947B85600017E46 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D9697CE294B80C9002F4E91 /* Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 7328NRHXBW;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HappyEducation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -603,13 +613,10 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PavelSemenchenko.HappyEducation;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -619,13 +626,10 @@
 		};
 		2AA09B2F2947B85600017E46 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D9697CF294B80D6002F4E91 /* Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_IDENTITY = "Apple Distribution: Mykola Dymura (8MJN994E42)";
-				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8MJN994E42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HappyEducation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -633,15 +637,11 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.6;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = PavelSemenchenko.HappyEducation12;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = PavelSemenchenkoHappyEducation;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
