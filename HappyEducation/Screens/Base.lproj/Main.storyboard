@@ -568,37 +568,43 @@ recommendations</string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fky-mT-cos">
-                                <rect key="frame" x="52" y="676" width="289" height="56"/>
+                                <rect key="frame" x="52" y="685" width="289" height="56"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="56" id="cTl-fX-ikX"/>
                                 </constraints>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                <buttonConfiguration key="configuration" style="filled" title="Next">
                                     <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnw-ww-9sr">
-                                <rect key="frame" x="159" y="765" width="75" height="35"/>
+                                <rect key="frame" x="168" y="774" width="57" height="35"/>
+                                <color key="tintColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Skip"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your province?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vj-fr-th7">
-                                <rect key="frame" x="31" y="130" width="170" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="31.000000000000014" y="130" width="239.33333333333337" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9e-om-b6L">
                                 <rect key="frame" x="34" y="184" width="330" height="398"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provinces of Sri Lanka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6q-4N-jaQ">
-                                        <rect key="frame" x="22" y="18" width="169" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6q-4N-jaQ">
+                                        <rect key="frame" x="22" y="18" width="177.33333333333334" height="21.333333333333329"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="Provinces of Sri Lanka">
+                                                <attributes>
+                                                    <font key="NSFont" metaFont="system" size="18"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wet-id-5sM">
-                                        <rect key="frame" x="15" y="56" width="137" height="53"/>
+                                        <rect key="frame" x="15" y="56.333333333333343" width="137" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="137" id="6iM-OK-RjU"/>
                                             <constraint firstAttribute="height" constant="53" id="Sza-p2-3lX"/>
@@ -607,7 +613,7 @@ recommendations</string>
                                         <buttonConfiguration key="configuration" style="gray" title="Central"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpn-Ur-q4s">
-                                        <rect key="frame" x="168" y="55" width="142" height="53"/>
+                                        <rect key="frame" x="168" y="55.333333333333343" width="142" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="6gc-5z-cMv"/>
                                             <constraint firstAttribute="width" constant="142" id="k7u-cM-aEO"/>
@@ -616,7 +622,7 @@ recommendations</string>
                                         <buttonConfiguration key="configuration" style="gray" title="Eastern"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-TK-6Zk">
-                                        <rect key="frame" x="15" y="125" width="137" height="53"/>
+                                        <rect key="frame" x="15" y="125.33333333333331" width="137" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="137" id="H1u-sU-sWc"/>
                                             <constraint firstAttribute="height" constant="53" id="M57-7T-OP9"/>
@@ -625,7 +631,7 @@ recommendations</string>
                                         <buttonConfiguration key="configuration" style="gray" title="Noth Central"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHK-FQ-5XW">
-                                        <rect key="frame" x="168" y="124" width="142" height="53"/>
+                                        <rect key="frame" x="168" y="124.33333333333331" width="142" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="JiV-TG-uko"/>
                                             <constraint firstAttribute="width" constant="142" id="pBR-j5-2iy"/>
@@ -634,7 +640,7 @@ recommendations</string>
                                         <buttonConfiguration key="configuration" style="gray" title="Nothern"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lA-lw-3GJ">
-                                        <rect key="frame" x="15" y="194" width="137" height="53"/>
+                                        <rect key="frame" x="15" y="194.33333333333331" width="137" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="jvn-Lz-WUq"/>
                                             <constraint firstAttribute="width" constant="137" id="sRH-Hc-IWf"/>
@@ -643,7 +649,7 @@ recommendations</string>
                                         <buttonConfiguration key="configuration" style="gray" title="Noth Western"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fm-dL-TDF">
-                                        <rect key="frame" x="168" y="193" width="142" height="53"/>
+                                        <rect key="frame" x="168" y="193.33333333333331" width="142" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="0h3-1c-87z"/>
                                             <constraint firstAttribute="width" constant="142" id="kil-JX-IlH"/>
@@ -652,10 +658,28 @@ recommendations</string>
                                         <buttonConfiguration key="configuration" style="gray" title="Sabaragamuwa"/>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPJ-uo-c2H">
-                                        <rect key="frame" x="15" y="263" width="137" height="53"/>
+                                        <rect key="frame" x="15" y="263.33333333333331" width="137" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="137" id="hp6-Vy-qIN"/>
                                             <constraint firstAttribute="height" constant="53" id="uC1-3w-vPn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Southern"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-2f-Ydb">
+                                        <rect key="frame" x="173" y="263.33333333333331" width="137" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="SrX-KY-ZtH"/>
+                                            <constraint firstAttribute="width" constant="137" id="k4z-l4-uOh"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title=" Uva"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-zz-aCZ">
+                                        <rect key="frame" x="15" y="330.33333333333337" width="137" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="dkW-Xf-h6f"/>
+                                            <constraint firstAttribute="width" constant="137" id="sQ3-VL-gva"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Western"/>
@@ -670,16 +694,20 @@ recommendations</string>
                                     <constraint firstItem="1lA-lw-3GJ" firstAttribute="leading" secondItem="Wet-id-5sM" secondAttribute="leading" id="Dex-tz-eSP"/>
                                     <constraint firstItem="Wet-id-5sM" firstAttribute="leading" secondItem="u9e-om-b6L" secondAttribute="leading" constant="15" id="I80-bU-95y"/>
                                     <constraint firstItem="Wet-id-5sM" firstAttribute="top" secondItem="M6q-4N-jaQ" secondAttribute="bottom" constant="17" id="Pvt-eR-XHm"/>
+                                    <constraint firstItem="SdN-2f-Ydb" firstAttribute="top" secondItem="0fm-dL-TDF" secondAttribute="bottom" constant="17" id="VgT-zv-QNS"/>
                                     <constraint firstItem="dPO-TK-6Zk" firstAttribute="leading" secondItem="Wet-id-5sM" secondAttribute="leading" id="WHn-vZ-RqP"/>
                                     <constraint firstItem="KPJ-uo-c2H" firstAttribute="top" secondItem="1lA-lw-3GJ" secondAttribute="bottom" constant="16" id="YrE-Y7-Jup"/>
                                     <constraint firstItem="M6q-4N-jaQ" firstAttribute="leading" secondItem="u9e-om-b6L" secondAttribute="leading" constant="22" id="ZWo-EQ-LeX"/>
                                     <constraint firstAttribute="height" constant="398" id="cNF-VC-KgL"/>
                                     <constraint firstItem="vpn-Ur-q4s" firstAttribute="top" secondItem="M6q-4N-jaQ" secondAttribute="bottom" constant="16" id="g7j-NQ-0UI"/>
+                                    <constraint firstItem="Qyh-zz-aCZ" firstAttribute="top" secondItem="KPJ-uo-c2H" secondAttribute="bottom" constant="14" id="p3o-9X-W0m"/>
                                     <constraint firstItem="M6q-4N-jaQ" firstAttribute="top" secondItem="u9e-om-b6L" secondAttribute="top" constant="18" id="pfZ-5L-BNj"/>
                                     <constraint firstItem="0fm-dL-TDF" firstAttribute="top" secondItem="lHK-FQ-5XW" secondAttribute="bottom" constant="16" id="qVO-qv-g2o"/>
                                     <constraint firstAttribute="trailing" secondItem="vpn-Ur-q4s" secondAttribute="trailing" constant="15" id="tVa-60-QyL"/>
                                     <constraint firstItem="0fm-dL-TDF" firstAttribute="trailing" secondItem="vpn-Ur-q4s" secondAttribute="trailing" id="vSS-bH-BuV"/>
                                     <constraint firstItem="lHK-FQ-5XW" firstAttribute="top" secondItem="vpn-Ur-q4s" secondAttribute="bottom" constant="16" id="wjz-w5-mP8"/>
+                                    <constraint firstItem="Qyh-zz-aCZ" firstAttribute="leading" secondItem="KPJ-uo-c2H" secondAttribute="leading" id="zJ9-qY-ipq"/>
+                                    <constraint firstItem="SdN-2f-Ydb" firstAttribute="trailing" secondItem="0fm-dL-TDF" secondAttribute="trailing" id="zvt-H4-3hP"/>
                                 </constraints>
                             </view>
                         </subviews>
