@@ -611,8 +611,8 @@ recommendations</string>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaO-hw-ys7">
-                                        <rect key="frame" x="18" y="61" width="137" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EaO-hw-ys7">
+                                        <rect key="frame" x="16" y="53" width="140" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="OCR-rn-8gW"/>
                                             <constraint firstAttribute="width" constant="140" id="Q5W-iZ-HnH"/>
@@ -621,8 +621,8 @@ recommendations</string>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="🎨 Arts"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIH-cX-CGP">
-                                        <rect key="frame" x="174" y="61" width="140" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aIH-cX-CGP">
+                                        <rect key="frame" x="174" y="53" width="140" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="KZe-0v-rUU"/>
                                             <constraint firstAttribute="height" constant="50" id="lDp-Ha-zVo"/>
@@ -631,8 +631,8 @@ recommendations</string>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="🔬 Science"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTm-G7-u5s">
-                                        <rect key="frame" x="18" y="123" width="137" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gTm-G7-u5s">
+                                        <rect key="frame" x="16" y="114" width="140" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="Slh-DJ-UJi"/>
                                             <constraint firstAttribute="width" constant="140" id="joz-Qc-qMG"/>
@@ -641,8 +641,8 @@ recommendations</string>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="📐 Maths"/>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnT-wY-X6H">
-                                        <rect key="frame" x="174" y="123" width="140" height="50"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnT-wY-X6H">
+                                        <rect key="frame" x="174" y="114" width="140" height="50"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="140" id="Mlu-tB-MHY"/>
                                             <constraint firstAttribute="height" constant="50" id="Qs1-Jp-sOj"/>
@@ -666,8 +666,16 @@ recommendations</string>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
                                 <constraints>
                                     <constraint firstItem="vqF-e8-rAs" firstAttribute="leading" secondItem="BR1-co-jqi" secondAttribute="leading" constant="17" id="3wU-E6-qjZ"/>
+                                    <constraint firstItem="gTm-G7-u5s" firstAttribute="leading" secondItem="EaO-hw-ys7" secondAttribute="leading" id="5ks-B2-BN1"/>
+                                    <constraint firstItem="aIH-cX-CGP" firstAttribute="top" secondItem="EaO-hw-ys7" secondAttribute="top" id="UKk-Rm-rMz"/>
+                                    <constraint firstItem="EaO-hw-ys7" firstAttribute="top" secondItem="vqF-e8-rAs" secondAttribute="bottom" constant="11" id="WOR-qm-M0p"/>
                                     <constraint firstAttribute="trailing" secondItem="fmU-pP-cd2" secondAttribute="trailing" constant="22" id="bQL-ss-eJM"/>
+                                    <constraint firstItem="nnT-wY-X6H" firstAttribute="top" secondItem="gTm-G7-u5s" secondAttribute="top" id="cNg-sC-EHH"/>
+                                    <constraint firstItem="nnT-wY-X6H" firstAttribute="trailing" secondItem="aIH-cX-CGP" secondAttribute="trailing" id="eQ7-hQ-1Qu"/>
+                                    <constraint firstAttribute="trailing" secondItem="aIH-cX-CGP" secondAttribute="trailing" constant="16" id="hKC-CF-2UT"/>
+                                    <constraint firstItem="gTm-G7-u5s" firstAttribute="top" secondItem="EaO-hw-ys7" secondAttribute="bottom" constant="11" id="hVT-PV-wLr"/>
                                     <constraint firstAttribute="width" constant="330" id="jpD-Tt-BaQ"/>
+                                    <constraint firstItem="EaO-hw-ys7" firstAttribute="leading" secondItem="BR1-co-jqi" secondAttribute="leading" constant="16" id="lH7-ib-Atk"/>
                                     <constraint firstItem="fmU-pP-cd2" firstAttribute="top" secondItem="BR1-co-jqi" secondAttribute="top" constant="25" id="u9V-6o-l1h"/>
                                     <constraint firstItem="vqF-e8-rAs" firstAttribute="top" secondItem="BR1-co-jqi" secondAttribute="top" constant="18" id="uGQ-2Z-Gb0"/>
                                     <constraint firstAttribute="height" constant="191" id="uXW-W7-ui3"/>
