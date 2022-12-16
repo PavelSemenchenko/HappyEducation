@@ -559,6 +559,150 @@ recommendations</string>
             </objects>
             <point key="canvasLocation" x="1474.0458015267175" y="350"/>
         </scene>
+        <!--ProvinceVC-->
+        <scene sceneID="T0R-sR-BT5">
+            <objects>
+                <viewController id="XZf-Nr-9Df" customClass="ProvinceVC" customModule="HappyEducation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZJJ-0I-7uj">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fky-mT-cos">
+                                <rect key="frame" x="52" y="676" width="289" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="cTl-fX-ikX"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Button">
+                                    <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnw-ww-9sr">
+                                <rect key="frame" x="159" y="765" width="75" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your province?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vj-fr-th7">
+                                <rect key="frame" x="31" y="130" width="170" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u9e-om-b6L">
+                                <rect key="frame" x="34" y="184" width="330" height="398"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Provinces of Sri Lanka" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M6q-4N-jaQ">
+                                        <rect key="frame" x="22" y="18" width="169" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wet-id-5sM">
+                                        <rect key="frame" x="15" y="56" width="137" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="137" id="6iM-OK-RjU"/>
+                                            <constraint firstAttribute="height" constant="53" id="Sza-p2-3lX"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Central"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpn-Ur-q4s">
+                                        <rect key="frame" x="168" y="55" width="142" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="6gc-5z-cMv"/>
+                                            <constraint firstAttribute="width" constant="142" id="k7u-cM-aEO"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Eastern"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-TK-6Zk">
+                                        <rect key="frame" x="15" y="125" width="137" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="137" id="H1u-sU-sWc"/>
+                                            <constraint firstAttribute="height" constant="53" id="M57-7T-OP9"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Noth Central"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHK-FQ-5XW">
+                                        <rect key="frame" x="168" y="124" width="142" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="JiV-TG-uko"/>
+                                            <constraint firstAttribute="width" constant="142" id="pBR-j5-2iy"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Nothern"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lA-lw-3GJ">
+                                        <rect key="frame" x="15" y="194" width="137" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="jvn-Lz-WUq"/>
+                                            <constraint firstAttribute="width" constant="137" id="sRH-Hc-IWf"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Noth Western"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fm-dL-TDF">
+                                        <rect key="frame" x="168" y="193" width="142" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="53" id="0h3-1c-87z"/>
+                                            <constraint firstAttribute="width" constant="142" id="kil-JX-IlH"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Sabaragamuwa"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPJ-uo-c2H">
+                                        <rect key="frame" x="15" y="263" width="137" height="53"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="137" id="hp6-Vy-qIN"/>
+                                            <constraint firstAttribute="height" constant="53" id="uC1-3w-vPn"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="gray" title="Western"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                <constraints>
+                                    <constraint firstItem="KPJ-uo-c2H" firstAttribute="leading" secondItem="Wet-id-5sM" secondAttribute="leading" id="8L3-bf-m1a"/>
+                                    <constraint firstItem="1lA-lw-3GJ" firstAttribute="top" secondItem="dPO-TK-6Zk" secondAttribute="bottom" constant="16" id="9af-a6-8zt"/>
+                                    <constraint firstItem="dPO-TK-6Zk" firstAttribute="top" secondItem="Wet-id-5sM" secondAttribute="bottom" constant="16" id="9g8-Cj-etH"/>
+                                    <constraint firstItem="lHK-FQ-5XW" firstAttribute="trailing" secondItem="vpn-Ur-q4s" secondAttribute="trailing" id="BQ7-H9-RZd"/>
+                                    <constraint firstItem="1lA-lw-3GJ" firstAttribute="leading" secondItem="Wet-id-5sM" secondAttribute="leading" id="Dex-tz-eSP"/>
+                                    <constraint firstItem="Wet-id-5sM" firstAttribute="leading" secondItem="u9e-om-b6L" secondAttribute="leading" constant="15" id="I80-bU-95y"/>
+                                    <constraint firstItem="Wet-id-5sM" firstAttribute="top" secondItem="M6q-4N-jaQ" secondAttribute="bottom" constant="17" id="Pvt-eR-XHm"/>
+                                    <constraint firstItem="dPO-TK-6Zk" firstAttribute="leading" secondItem="Wet-id-5sM" secondAttribute="leading" id="WHn-vZ-RqP"/>
+                                    <constraint firstItem="KPJ-uo-c2H" firstAttribute="top" secondItem="1lA-lw-3GJ" secondAttribute="bottom" constant="16" id="YrE-Y7-Jup"/>
+                                    <constraint firstItem="M6q-4N-jaQ" firstAttribute="leading" secondItem="u9e-om-b6L" secondAttribute="leading" constant="22" id="ZWo-EQ-LeX"/>
+                                    <constraint firstAttribute="height" constant="398" id="cNF-VC-KgL"/>
+                                    <constraint firstItem="vpn-Ur-q4s" firstAttribute="top" secondItem="M6q-4N-jaQ" secondAttribute="bottom" constant="16" id="g7j-NQ-0UI"/>
+                                    <constraint firstItem="M6q-4N-jaQ" firstAttribute="top" secondItem="u9e-om-b6L" secondAttribute="top" constant="18" id="pfZ-5L-BNj"/>
+                                    <constraint firstItem="0fm-dL-TDF" firstAttribute="top" secondItem="lHK-FQ-5XW" secondAttribute="bottom" constant="16" id="qVO-qv-g2o"/>
+                                    <constraint firstAttribute="trailing" secondItem="vpn-Ur-q4s" secondAttribute="trailing" constant="15" id="tVa-60-QyL"/>
+                                    <constraint firstItem="0fm-dL-TDF" firstAttribute="trailing" secondItem="vpn-Ur-q4s" secondAttribute="trailing" id="vSS-bH-BuV"/>
+                                    <constraint firstItem="lHK-FQ-5XW" firstAttribute="top" secondItem="vpn-Ur-q4s" secondAttribute="bottom" constant="16" id="wjz-w5-mP8"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="sbt-of-mGD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="u9e-om-b6L" firstAttribute="leading" secondItem="sbt-of-mGD" secondAttribute="leading" constant="34" id="4yp-tp-TPp"/>
+                            <constraint firstItem="sbt-of-mGD" firstAttribute="trailing" secondItem="u9e-om-b6L" secondAttribute="trailing" constant="34" id="BK5-iO-5W8"/>
+                            <constraint firstItem="Fky-mT-cos" firstAttribute="top" secondItem="u9e-om-b6L" secondAttribute="bottom" constant="94" id="DWo-vy-rU2"/>
+                            <constraint firstItem="sbt-of-mGD" firstAttribute="trailing" secondItem="Fky-mT-cos" secondAttribute="trailing" constant="52" id="Dyg-7m-X2h"/>
+                            <constraint firstItem="u9e-om-b6L" firstAttribute="top" secondItem="9Vj-fr-th7" secondAttribute="bottom" constant="33" id="ERo-Ga-yax"/>
+                            <constraint firstItem="cnw-ww-9sr" firstAttribute="centerX" secondItem="sbt-of-mGD" secondAttribute="centerX" id="GmY-qJ-6vE"/>
+                            <constraint firstItem="9Vj-fr-th7" firstAttribute="top" secondItem="sbt-of-mGD" secondAttribute="top" constant="71" id="ILh-3K-h5I"/>
+                            <constraint firstItem="cnw-ww-9sr" firstAttribute="top" secondItem="Fky-mT-cos" secondAttribute="bottom" constant="33" id="KY9-BB-ruQ"/>
+                            <constraint firstItem="Fky-mT-cos" firstAttribute="leading" secondItem="sbt-of-mGD" secondAttribute="leading" constant="52" id="SKO-2J-YK8"/>
+                            <constraint firstItem="9Vj-fr-th7" firstAttribute="leading" secondItem="sbt-of-mGD" secondAttribute="leading" constant="31" id="dS9-nh-nC7"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="RHk-Yf-dlH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2179.3893129770991" y="350"/>
+        </scene>
         <!--HomeVC-->
         <scene sceneID="s6I-1t-uOb">
             <objects>
@@ -613,6 +757,9 @@ recommendations</string>
         <image name="signUplogo" width="235.33332824707031" height="157"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

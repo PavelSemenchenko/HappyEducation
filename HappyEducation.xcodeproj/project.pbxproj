@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2A78283C294BC07C0032AD4F /* GradeSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */; };
 		2A8695BC294CE18700B73D98 /* GradeCustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */; };
+		2A8695BE294CED9200B73D98 /* ProvinceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8695BD294CED9200B73D98 /* ProvinceVC.swift */; };
 		2A9475672947DF48000C3043 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A9475662947DF48000C3043 /* GoogleService-Info.plist */; };
 		2A94756A2947E073000C3043 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2A9475692947E073000C3043 /* FirebaseAnalytics */; };
 		2A94756C2947E073000C3043 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 2A94756B2947E073000C3043 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -75,6 +76,7 @@
 /* Begin PBXFileReference section */
 		2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeSelectVC.swift; sourceTree = "<group>"; };
 		2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCustomVC.swift; sourceTree = "<group>"; };
+		2A8695BD294CED9200B73D98 /* ProvinceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceVC.swift; sourceTree = "<group>"; };
 		2A9475662947DF48000C3043 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AA09B032947B85400017E46 /* HappyEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA09B062947B85400017E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -225,6 +227,7 @@
 				2AA09B0A2947B85500017E46 /* ViewController.swift */,
 				2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */,
 				2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */,
+				2A8695BD294CED9200B73D98 /* ProvinceVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -430,6 +433,7 @@
 				DA5C05B0294859DA00799A16 /* BaseAuthentiticationVC.swift in Sources */,
 				2AD5D6A6294A305C000F6256 /* HomeVC.swift in Sources */,
 				2AD5D6A8294A3064000F6256 /* SignInVC.swift in Sources */,
+				2A8695BE294CED9200B73D98 /* ProvinceVC.swift in Sources */,
 				2AA09B0B2947B85500017E46 /* ViewController.swift in Sources */,
 				DA5C05B529488E1B00799A16 /* PasswordTextField.swift in Sources */,
 				DA5C05B329488E0200799A16 /* EmailTextField.swift in Sources */,
