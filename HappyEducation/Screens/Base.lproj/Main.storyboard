@@ -566,6 +566,7 @@ recommendations</string>
                         <outlet property="grade12to13Button" destination="Pzg-hS-Bt7" id="IJi-zF-PFc"/>
                         <outlet property="grade1to5Button" destination="GUw-PB-gSK" id="YkA-fO-F7i"/>
                         <outlet property="grade6to9Button" destination="zhR-9V-EB1" id="Gmq-Og-cJq"/>
+                        <outlet property="nextButton" destination="vJg-py-ejT" id="8Vj-uO-2mh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXf-IU-quq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

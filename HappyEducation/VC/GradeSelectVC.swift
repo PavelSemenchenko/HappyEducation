@@ -22,35 +22,50 @@ class GradeSelectVC: UIViewController {
     @IBOutlet weak var grade6to9Button: UIButton!
     @IBOutlet weak var grade10to11Button: UIButton!
     @IBOutlet weak var grade12to13Button: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     var grade: Grade = .none
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        if grade != .none {
+            nextButton.isEnabled = true
+        } else {
+            nextButton.isEnabled = false
+        }
+    }
+    
     func validateGrades() {
         if grade == .from1to5 {
+            nextButton.isEnabled = true
             grade1to5Button.backgroundColor = .systemIndigo
             grade1to5Button.tintColor = .white
             grade6to9Button.backgroundColor = .systemGray6
             grade10to11Button.backgroundColor = .systemGray6
             grade12to13Button.backgroundColor = .systemGray6
         } else if grade == .from6to9 {
+            nextButton.isEnabled = true
             grade1to5Button.backgroundColor = .systemGray6
             grade6to9Button.backgroundColor = .systemIndigo
             grade6to9Button.tintColor = .white
             grade10to11Button.backgroundColor = .systemGray6
             grade12to13Button.backgroundColor = .systemGray6
         } else if grade == .from10to11 {
+            nextButton.isEnabled = true
             grade1to5Button.backgroundColor = .systemGray6
             grade6to9Button.backgroundColor = .systemGray6
             grade10to11Button.backgroundColor = .systemIndigo
             grade10to11Button.tintColor = .white
             grade12to13Button.backgroundColor = .systemGray6
         } else if grade == .from12to13 {
+            nextButton.isEnabled = true
             grade1to5Button.backgroundColor = .systemGray6
             grade6to9Button.backgroundColor = .systemGray6
             grade10to11Button.backgroundColor = .systemGray6
             grade12to13Button.backgroundColor = .systemIndigo
             grade12to13Button.tintColor = .white
         } else if grade == .none {
+            nextButton.isEnabled = false
             grade1to5Button.backgroundColor = .systemGray6
             grade1to5Button.tintColor = .darkGray
             grade6to9Button.backgroundColor = .systemGray6
