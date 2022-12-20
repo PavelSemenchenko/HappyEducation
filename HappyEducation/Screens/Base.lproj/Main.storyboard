@@ -496,6 +496,9 @@ recommendations</string>
                                         <fragment content="Grade  1 - 5"/>
                                     </attributedString>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="grade1to5Clicked:" destination="cCN-SP-L4G" eventType="touchUpInside" id="GU7-dV-NAC"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zhR-9V-EB1">
                                 <rect key="frame" x="34" y="231" width="330" height="60"/>
@@ -506,6 +509,9 @@ recommendations</string>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Grade  6 - 9"/>
+                                <connections>
+                                    <action selector="grade6to9Clicked:" destination="cCN-SP-L4G" eventType="touchUpInside" id="K8B-mG-wFP"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fH7-gB-xc2">
                                 <rect key="frame" x="34" y="309" width="330" height="60"/>
@@ -516,6 +522,9 @@ recommendations</string>
                                 <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Grade  10 - 11"/>
+                                <connections>
+                                    <action selector="grade10to11Clicked:" destination="cCN-SP-L4G" eventType="touchUpInside" id="4J4-BL-9iQ"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pzg-hS-Bt7">
                                 <rect key="frame" x="34" y="387" width="330" height="60"/>
@@ -523,9 +532,12 @@ recommendations</string>
                                     <constraint firstAttribute="width" constant="330" id="NJu-Rs-DoO"/>
                                     <constraint firstAttribute="height" constant="60" id="dBJ-yy-1Qk"/>
                                 </constraints>
-                                <color key="tintColor" red="0.38911098240000003" green="0.42735370989999999" blue="0.46494412419999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Grade  12 - 13"/>
+                                <connections>
+                                    <action selector="grade12to13Clicked:" destination="cCN-SP-L4G" eventType="touchUpInside" id="pTj-1L-2a8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0nx-Cz-pt7"/>
@@ -549,6 +561,12 @@ recommendations</string>
                             <constraint firstItem="fH7-gB-xc2" firstAttribute="top" secondItem="zhR-9V-EB1" secondAttribute="bottom" constant="18" id="tiA-xa-pJS"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="grade10to11Button" destination="fH7-gB-xc2" id="fQG-IB-Zh7"/>
+                        <outlet property="grade12to13Button" destination="Pzg-hS-Bt7" id="IJi-zF-PFc"/>
+                        <outlet property="grade1to5Button" destination="GUw-PB-gSK" id="YkA-fO-F7i"/>
+                        <outlet property="grade6to9Button" destination="zhR-9V-EB1" id="Gmq-Og-cJq"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXf-IU-quq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
