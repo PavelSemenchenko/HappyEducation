@@ -371,17 +371,21 @@ recommendations</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="errPassword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-e6-d1H">
-                                <rect key="frame" x="126" y="507" width="95" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errEmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-Yd-h1m">
+                                <rect key="frame" x="160" y="415" width="180" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="48k-6y-Hn5"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="errEmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-Yd-h1m">
-                                <rect key="frame" x="167" y="415" width="63" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errPassword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-e6-d1H">
+                                <rect key="frame" x="160" y="505" width="180" height="18"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="su8-nZ-o7m"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -392,10 +396,12 @@ recommendations</string>
                         <constraints>
                             <constraint firstItem="gqm-Us-yOV" firstAttribute="leading" secondItem="hRd-Zt-ITk" secondAttribute="leading" constant="10" id="1aS-wO-J9m"/>
                             <constraint firstItem="xZg-q0-ynY" firstAttribute="width" secondItem="Ig8-d9-TN9" secondAttribute="width" id="46n-6w-535"/>
+                            <constraint firstItem="hNK-Yd-h1m" firstAttribute="leading" secondItem="dFe-UE-IDW" secondAttribute="trailing" constant="20" id="60f-1H-mdw"/>
                             <constraint firstItem="L2u-uX-dDe" firstAttribute="width" secondItem="Ig8-d9-TN9" secondAttribute="width" id="E6L-eq-XbV"/>
                             <constraint firstItem="L2u-uX-dDe" firstAttribute="height" secondItem="Ig8-d9-TN9" secondAttribute="height" id="FRu-le-9eE"/>
                             <constraint firstItem="HZn-Pe-d69" firstAttribute="leading" secondItem="yU4-98-PNq" secondAttribute="leading" id="GE7-zW-Dk4"/>
                             <constraint firstItem="HZn-Pe-d69" firstAttribute="top" secondItem="L2u-uX-dDe" secondAttribute="bottom" constant="25" id="GsD-M9-dW9"/>
+                            <constraint firstItem="xbG-e6-d1H" firstAttribute="leading" secondItem="hNK-Yd-h1m" secondAttribute="leading" id="HFr-Ef-GzT"/>
                             <constraint firstItem="L2u-uX-dDe" firstAttribute="top" secondItem="dFe-UE-IDW" secondAttribute="bottom" constant="10" id="HVh-9Y-JTr"/>
                             <constraint firstItem="yU4-98-PNq" firstAttribute="leading" secondItem="hRd-Zt-ITk" secondAttribute="leading" constant="34" id="J3a-gz-VQ9"/>
                             <constraint firstItem="hRd-Zt-ITk" firstAttribute="trailing" secondItem="Ig8-d9-TN9" secondAttribute="trailing" constant="34" id="Klv-ZD-srx"/>
@@ -403,6 +409,7 @@ recommendations</string>
                             <constraint firstItem="dFe-UE-IDW" firstAttribute="top" secondItem="Ig8-d9-TN9" secondAttribute="bottom" constant="25" id="N04-G8-JNT"/>
                             <constraint firstItem="xZg-q0-ynY" firstAttribute="height" secondItem="Ig8-d9-TN9" secondAttribute="height" id="NH9-LX-8aP"/>
                             <constraint firstItem="xZg-q0-ynY" firstAttribute="leading" secondItem="Ig8-d9-TN9" secondAttribute="leading" id="NSz-US-wzU"/>
+                            <constraint firstItem="hNK-Yd-h1m" firstAttribute="top" secondItem="dFe-UE-IDW" secondAttribute="top" id="Nvf-HI-fsj"/>
                             <constraint firstItem="CPI-ib-kTU" firstAttribute="centerY" secondItem="W5k-34-CNp" secondAttribute="centerY" id="OQK-s1-SMl"/>
                             <constraint firstItem="W5k-34-CNp" firstAttribute="top" secondItem="PPQ-Em-H6U" secondAttribute="bottom" constant="25" id="TQl-3p-0w8"/>
                             <constraint firstItem="PPQ-Em-H6U" firstAttribute="centerX" secondItem="hRd-Zt-ITk" secondAttribute="centerX" id="W7e-DU-Sdl"/>
@@ -418,6 +425,7 @@ recommendations</string>
                             <constraint firstItem="PPQ-Em-H6U" firstAttribute="leading" secondItem="hRd-Zt-ITk" secondAttribute="leading" constant="72" id="kXg-Ai-h5D"/>
                             <constraint firstItem="Ig8-d9-TN9" firstAttribute="top" secondItem="yU4-98-PNq" secondAttribute="bottom" constant="10" id="mVU-fb-Qh5"/>
                             <constraint firstItem="gqm-Us-yOV" firstAttribute="top" secondItem="hRd-Zt-ITk" secondAttribute="top" constant="5" id="piK-P5-lCa"/>
+                            <constraint firstItem="xbG-e6-d1H" firstAttribute="top" secondItem="HZn-Pe-d69" secondAttribute="top" id="qVi-an-Cr5"/>
                             <constraint firstItem="L2u-uX-dDe" firstAttribute="leading" secondItem="Ig8-d9-TN9" secondAttribute="leading" id="zqm-1o-XYh"/>
                         </constraints>
                     </view>
@@ -747,7 +755,7 @@ recommendations</string>
         <!--ProvinceVC-->
         <scene sceneID="T0R-sR-BT5">
             <objects>
-                <viewController id="XZf-Nr-9Df" customClass="ProvinceVC" customModule="HappyEducation" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProvinceVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="XZf-Nr-9Df" customClass="ProvinceVC" customModule="HappyEducation" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ZJJ-0I-7uj">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -768,12 +776,18 @@ recommendations</string>
                                     </attributedString>
                                     <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </buttonConfiguration>
+                                <connections>
+                                    <action selector="nextButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="2dG-rj-Rvd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cnw-ww-9sr">
                                 <rect key="frame" x="168" y="723" width="57" height="35"/>
                                 <color key="tintColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Skip"/>
+                                <connections>
+                                    <action selector="skipButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="q8B-pF-3Ix"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What's your province?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Vj-fr-th7">
                                 <rect key="frame" x="31.000000000000014" y="87" width="239.33333333333337" height="30"/>
@@ -805,6 +819,9 @@ recommendations</string>
                                         <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Central"/>
+                                        <connections>
+                                            <action selector="firstButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="1d1-mj-EUb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpn-Ur-q4s">
                                         <rect key="frame" x="168" y="55.333333333333343" width="142" height="53"/>
@@ -815,6 +832,9 @@ recommendations</string>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Eastern"/>
+                                        <connections>
+                                            <action selector="secondButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="kAi-pj-Q9F"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-TK-6Zk">
                                         <rect key="frame" x="15" y="125.33333333333331" width="137" height="53"/>
@@ -825,6 +845,9 @@ recommendations</string>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Noth Central"/>
+                                        <connections>
+                                            <action selector="thirdButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="Vy3-Ac-Ebr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHK-FQ-5XW">
                                         <rect key="frame" x="168" y="124.33333333333331" width="142" height="53"/>
@@ -835,6 +858,9 @@ recommendations</string>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Nothern"/>
+                                        <connections>
+                                            <action selector="forthButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="lqZ-kS-JiZ"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lA-lw-3GJ">
                                         <rect key="frame" x="15" y="194.33333333333331" width="137" height="53"/>
@@ -845,6 +871,9 @@ recommendations</string>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Noth Western"/>
+                                        <connections>
+                                            <action selector="fifthButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="k2v-Ft-ec6"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fm-dL-TDF">
                                         <rect key="frame" x="168" y="193.33333333333331" width="142" height="53"/>
@@ -855,6 +884,9 @@ recommendations</string>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Sabaragamuwa"/>
+                                        <connections>
+                                            <action selector="sixButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="ZWz-jX-PVS"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPJ-uo-c2H">
                                         <rect key="frame" x="15" y="263.33333333333331" width="137" height="53"/>
@@ -865,6 +897,9 @@ recommendations</string>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Southern"/>
+                                        <connections>
+                                            <action selector="sevenButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="2rd-lt-xw8"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-2f-Ydb">
                                         <rect key="frame" x="173" y="263.33333333333331" width="137" height="53"/>
@@ -875,6 +910,9 @@ recommendations</string>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title=" Uva"/>
+                                        <connections>
+                                            <action selector="eightButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="OqF-RC-eMn"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-zz-aCZ">
                                         <rect key="frame" x="15" y="330.33333333333331" width="137" height="53"/>
@@ -885,6 +923,9 @@ recommendations</string>
                                         <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="gray" title="Western"/>
+                                        <connections>
+                                            <action selector="nineButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="he3-Ig-Rby"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -928,6 +969,18 @@ recommendations</string>
                             <constraint firstItem="9Vj-fr-th7" firstAttribute="leading" secondItem="sbt-of-mGD" secondAttribute="leading" constant="31" id="dS9-nh-nC7"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="eightButton" destination="SdN-2f-Ydb" id="IDI-qb-Cwy"/>
+                        <outlet property="fifthButton" destination="1lA-lw-3GJ" id="i9j-C8-7na"/>
+                        <outlet property="firstButton" destination="Wet-id-5sM" id="pXj-Ou-5cS"/>
+                        <outlet property="forthButton" destination="lHK-FQ-5XW" id="9nZ-w4-tZf"/>
+                        <outlet property="nextButton" destination="Fky-mT-cos" id="T8e-GA-B5U"/>
+                        <outlet property="nineButton" destination="Qyh-zz-aCZ" id="eKz-BO-9Rp"/>
+                        <outlet property="secondButton" destination="vpn-Ur-q4s" id="lfG-Lc-3Ol"/>
+                        <outlet property="sevenButton" destination="KPJ-uo-c2H" id="KQi-Df-Siq"/>
+                        <outlet property="sixButton" destination="0fm-dL-TDF" id="f4F-b4-bHr"/>
+                        <outlet property="thirdButton" destination="dPO-TK-6Zk" id="hob-wK-qwn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHk-Yf-dlH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -31,7 +31,7 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
         let optionalEmail = emailTextField.text
         guard let email = optionalEmail, email.contains("@") else {
             emailTextField.layer.borderColor = UIColor.red.cgColor
-            errorEmailLabel.text = "Enter correcnt email"
+            errorEmailLabel.text = "Enter correct email"
             errorEmailLabel.isHidden = false
             return
         }
@@ -41,7 +41,7 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
         let optionalPassword = passwordTextField.text
         guard let password = optionalPassword, password.count >= 6 else {
             passwordTextField.layer.borderColor = UIColor.red.cgColor
-            errorPasswordLabel.text = "Enter password lager then 6"
+            errorPasswordLabel.text = "Enter password > 5"
             errorPasswordLabel.isHidden = false
             return
         }
@@ -57,10 +57,10 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
                 alert.addAction(UIAlertAction(title: "Fine", style: UIAlertAction.Style.default))
                 self.present(alert, animated: true)
             } else {
-                guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
+                guard let GradeSelect = self.storyboard?.instantiateViewController(withIdentifier: "GradeSelectVC") as? GradeSelectVC else {
                     return
                 }
-                self.navigationController?.pushViewController(homeVC, animated: true)
+                self.navigationController?.pushViewController(GradeSelect, animated: true)
             }
         }
     }

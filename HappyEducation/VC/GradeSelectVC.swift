@@ -127,7 +127,10 @@ class GradeSelectVC: UIViewController {
     
     
     @IBAction func nextButtonClicked(_ sender: Any) {
-        
+        guard let province = self.storyboard?.instantiateViewController(withIdentifier: "ProvinceVC") as? ProvinceVC else { return
+            
+        }
+        self.navigationController?.pushViewController(province, animated: true)
     }
     
     @IBAction func skipButtonClicked(_ sender: Any) {
