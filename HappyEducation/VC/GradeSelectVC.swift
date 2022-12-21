@@ -41,27 +41,39 @@ class GradeSelectVC: UIViewController {
             grade1to5Button.backgroundColor = .systemIndigo
             grade1to5Button.tintColor = .white
             grade6to9Button.backgroundColor = .systemGray6
+            grade6to9Button.tintColor = .darkGray
             grade10to11Button.backgroundColor = .systemGray6
+            grade10to11Button.tintColor = .darkGray
             grade12to13Button.backgroundColor = .systemGray6
+            grade12to13Button.tintColor = .darkGray
         } else if grade == .from6to9 {
             nextButton.isEnabled = true
             grade1to5Button.backgroundColor = .systemGray6
+            grade1to5Button.tintColor = .darkGray
             grade6to9Button.backgroundColor = .systemIndigo
             grade6to9Button.tintColor = .white
             grade10to11Button.backgroundColor = .systemGray6
+            grade10to11Button.tintColor = .darkGray
             grade12to13Button.backgroundColor = .systemGray6
+            grade12to13Button.tintColor = .darkGray
         } else if grade == .from10to11 {
             nextButton.isEnabled = true
             grade1to5Button.backgroundColor = .systemGray6
+            grade1to5Button.tintColor = .darkGray
             grade6to9Button.backgroundColor = .systemGray6
+            grade6to9Button.tintColor = .darkGray
             grade10to11Button.backgroundColor = .systemIndigo
             grade10to11Button.tintColor = .white
             grade12to13Button.backgroundColor = .systemGray6
+            grade12to13Button.tintColor = .darkGray
         } else if grade == .from12to13 {
             nextButton.isEnabled = true
             grade1to5Button.backgroundColor = .systemGray6
+            grade1to5Button.tintColor = .darkGray
             grade6to9Button.backgroundColor = .systemGray6
+            grade6to9Button.tintColor = .darkGray
             grade10to11Button.backgroundColor = .systemGray6
+            grade10to11Button.tintColor = .darkGray
             grade12to13Button.backgroundColor = .systemIndigo
             grade12to13Button.tintColor = .white
         } else if grade == .none {

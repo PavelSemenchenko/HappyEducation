@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class SignUpVC: UIViewController, BaseAuthentiticationVC {
+class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var emailTextField: EmailTextField!
@@ -20,6 +20,7 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
     }
     
