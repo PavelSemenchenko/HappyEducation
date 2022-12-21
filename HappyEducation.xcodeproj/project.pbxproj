@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0CD3A529533481007942A8 /* GradeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0CD3A429533481007942A8 /* GradeView.xib */; };
+		2A0CD3A729533494007942A8 /* GradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CD3A629533494007942A8 /* GradeView.swift */; };
 		2A78283C294BC07C0032AD4F /* GradeSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */; };
 		2A8695BC294CE18700B73D98 /* GradeCustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */; };
 		2A8695BE294CED9200B73D98 /* ProvinceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8695BD294CED9200B73D98 /* ProvinceVC.swift */; };
@@ -74,6 +76,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0CD3A429533481007942A8 /* GradeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeView.xib; sourceTree = "<group>"; };
+		2A0CD3A629533494007942A8 /* GradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeView.swift; sourceTree = "<group>"; };
 		2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeSelectVC.swift; sourceTree = "<group>"; };
 		2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCustomVC.swift; sourceTree = "<group>"; };
 		2A8695BD294CED9200B73D98 /* ProvinceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceVC.swift; sourceTree = "<group>"; };
@@ -262,6 +266,8 @@
 			children = (
 				DA5C05B229488E0200799A16 /* EmailTextField.swift */,
 				DA5C05B429488E1B00799A16 /* PasswordTextField.swift */,
+				2A0CD3A429533481007942A8 /* GradeView.xib */,
+				2A0CD3A629533494007942A8 /* GradeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -402,6 +408,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0CD3A529533481007942A8 /* GradeView.xib in Resources */,
 				2AA09B132947B85500017E46 /* LaunchScreen.storyboard in Resources */,
 				2A9475672947DF48000C3043 /* GoogleService-Info.plist in Resources */,
 				2AA09B102947B85500017E46 /* Assets.xcassets in Resources */,
@@ -436,6 +443,7 @@
 				2A8695BE294CED9200B73D98 /* ProvinceVC.swift in Sources */,
 				2AA09B0B2947B85500017E46 /* ViewController.swift in Sources */,
 				DA5C05B529488E1B00799A16 /* PasswordTextField.swift in Sources */,
+				2A0CD3A729533494007942A8 /* GradeView.swift in Sources */,
 				DA5C05B329488E0200799A16 /* EmailTextField.swift in Sources */,
 				2AA09B072947B85400017E46 /* AppDelegate.swift in Sources */,
 				2AA09B092947B85500017E46 /* SceneDelegate.swift in Sources */,
