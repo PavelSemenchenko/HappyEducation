@@ -10,7 +10,7 @@ import UIKit
 
 class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameTextField: NameTextField!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var passwordTextField: PasswordTextField!
     @IBOutlet weak var errorEmailLabel: UILabel!

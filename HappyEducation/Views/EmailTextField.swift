@@ -11,9 +11,11 @@ import UIKit
 class EmailTextField: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
+        /*
         layer.cornerRadius = 12
         layer.borderWidth = 1
         layer.borderColor = UIColor.blue.cgColor
+        */
         
         layer.shadowOpacity = 1
         layer.shadowRadius = 12.0

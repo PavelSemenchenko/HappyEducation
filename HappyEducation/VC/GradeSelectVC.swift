@@ -127,21 +127,9 @@ class GradeSelectVC: UIViewController {
     
     
     @IBAction func nextButtonClicked(_ sender: Any) {
+        
     }
     
     @IBAction func skipButtonClicked(_ sender: Any) {
     }
 }
-
-
-/*
- если нажат уровень - borderColor.blue.cgColor
- и все уровни в дефолт
- 
- ?? выбор только одного уровня ( смена со сбросом)
- 
- если выбран уровень is hiden = false
- 
- 
- 
- */

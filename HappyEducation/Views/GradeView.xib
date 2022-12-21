@@ -16,7 +16,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sK9-6w-gzq">
-                    <rect key="frame" x="50" y="69" width="293" height="50"/>
+                    <rect key="frame" x="50" y="10" width="293" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="1bp-zr-6pc"/>
                     </constraints>
@@ -25,7 +25,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QAk-gV-bqZ">
-                    <rect key="frame" x="50" y="139" width="120" height="50"/>
+                    <rect key="frame" x="50" y="80" width="120" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="R8x-jn-DAF"/>
                         <constraint firstAttribute="height" constant="50" id="dJ9-6M-Ch7"/>
@@ -34,7 +34,7 @@
                     <buttonConfiguration key="configuration" style="gray" title="Arts"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nnY-XQ-jUG">
-                    <rect key="frame" x="223" y="139" width="120" height="50"/>
+                    <rect key="frame" x="223" y="80" width="120" height="50"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="120" id="3Ce-aM-I1f"/>
                         <constraint firstAttribute="height" constant="50" id="Gnx-8V-wmo"/>
@@ -43,7 +43,7 @@
                     <buttonConfiguration key="configuration" style="gray" title="Math"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQK-6A-rzs">
-                    <rect key="frame" x="50" y="209" width="120" height="50"/>
+                    <rect key="frame" x="50" y="150" width="120" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="TGD-NG-lwE"/>
                         <constraint firstAttribute="width" constant="120" id="ksS-rN-TuC"/>
@@ -52,7 +52,7 @@
                     <buttonConfiguration key="configuration" style="gray" title="Button"/>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9vO-ks-2Ud">
-                    <rect key="frame" x="223" y="209" width="120" height="50"/>
+                    <rect key="frame" x="223" y="150" width="120" height="50"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="50" id="6ha-1f-ewP"/>
                         <constraint firstAttribute="width" constant="120" id="AZD-90-D6f"/>
@@ -83,7 +83,7 @@
                 <outlet property="titleLabel" destination="sK9-6w-gzq" id="dAd-jw-5qf"/>
                 <outletCollection property="gestureRecognizers" destination="kne-AK-5ND" appends="YES" id="9Xe-pg-Rmv"/>
             </connections>
-            <point key="canvasLocation" x="130.53435114503816" y="-11.267605633802818"/>
+            <point key="canvasLocation" x="263" y="-55"/>
         </view>
         <tapGestureRecognizer id="kne-AK-5ND">
             <connections>
