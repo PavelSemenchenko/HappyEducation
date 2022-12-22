@@ -71,7 +71,7 @@ class ProvinceVC: UIViewController {
      } else {
      nextButton.isEnabled = false
     
-     */
+     
     
     переменная подсчета баллов <= 3
     при нажатии кнопки счетчик + 1
@@ -108,7 +108,7 @@ class ProvinceVC: UIViewController {
             firstButton.isEnabled = false
         }
         
-    }
+    }*/
     
     @IBAction func firstButtonClicked(_ sender: Any) {
     }

@@ -42,7 +42,7 @@ class SignInVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
     @objc func kbWillShow(_ notification: Notification) {
         let userInfo = notification.userInfo
         let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
-        scrollView.contentOffset = CGPoint(x: 0.0, y: kbFrameSize.height)
+        scrollView.contentOffset = CGPoint(x: 0.0, y: kbFrameSize.height/1.5)
     }
     @objc func kbWillHide() {
         scrollView.contentOffset = CGPoint.zero
