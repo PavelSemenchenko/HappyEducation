@@ -72,8 +72,34 @@ class ProvinceVC: UIViewController {
      nextButton.isEnabled = false
     
      */
-    var checkSum: Int = 0
     
+    переменная подсчета баллов <= 3
+    при нажатии кнопки счетчик + 1
+    
+    если счетчик = 0 то блокировка далее
+    если нажата 1 привинция = счетчик +1 и разблокировка далее
+    если счетчик < 3 то счетчик +1 разблокировка далее
+    если счетчик = 3 то закрыть выбор привинций
+    ?? как определить выбранные от не выбранныъ привинций
+    
+    
+    var checkSum: Int = 0
+    var province: Province = .none
+    
+    if checkSum == 0
+        nextButton.isEnabled = false
+        
+   if checkSum < 3
+       checkSum + 1
+       nextButton.isEnabled = true
+   
+   if checkSum == 3
+       alert выбрано максимальное колличество привинций
+       nextButton.isEnabled = true
+    
+   if province == provinceID
+       province = .none
+       
     func validateProvince() {
         if checkSum < 3 {
             checkSum + 1
