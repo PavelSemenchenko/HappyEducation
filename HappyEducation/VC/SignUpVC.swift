@@ -21,8 +21,8 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //emailTextField.delegate = self
-        //passwordTextField.delegate = self
+        // emailTextField.delegate = self
+        // passwordTextField.delegate = self
         
         // keyboard Hiding
         registerForKeyboardNotifications()
