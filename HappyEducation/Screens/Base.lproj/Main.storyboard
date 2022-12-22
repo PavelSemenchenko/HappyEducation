@@ -317,13 +317,13 @@ recommendations</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFe-UE-IDW">
-                                <rect key="frame" x="34" y="415" width="106" height="21"/>
+                                <rect key="frame" x="34" y="431" width="106" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HZn-Pe-d69">
-                                <rect key="frame" x="34" y="505" width="74" height="21"/>
+                                <rect key="frame" x="34" y="537" width="74" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -357,22 +357,25 @@ recommendations</string>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ig8-d9-TN9" customClass="NameTextField" customModule="HappyEducation" customModuleProvider="target">
-                                <rect key="frame" x="34" y="356" width="325" height="34"/>
+                                <rect key="frame" x="34" y="356" width="325" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="s3T-SY-Jjw"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="L2u-uX-dDe" customClass="EmailTextField" customModule="HappyEducation" customModuleProvider="target">
-                                <rect key="frame" x="34" y="446" width="325" height="34"/>
+                                <rect key="frame" x="34" y="462" width="325" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="*******" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xZg-q0-ynY" customClass="PasswordTextField" customModule="HappyEducation" customModuleProvider="target">
-                                <rect key="frame" x="34" y="536" width="325" height="34"/>
+                                <rect key="frame" x="34" y="568" width="325" height="50"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errEmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-Yd-h1m">
-                                <rect key="frame" x="160" y="415" width="180" height="18"/>
+                                <rect key="frame" x="160" y="431" width="180" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="48k-6y-Hn5"/>
                                 </constraints>
@@ -381,7 +384,7 @@ recommendations</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errPassword" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbG-e6-d1H">
-                                <rect key="frame" x="160" y="505" width="180" height="18"/>
+                                <rect key="frame" x="160" y="537" width="180" height="18"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="180" id="su8-nZ-o7m"/>
                                 </constraints>
@@ -421,7 +424,7 @@ recommendations</string>
                             <constraint firstItem="CPI-ib-kTU" firstAttribute="trailing" secondItem="PPQ-Em-H6U" secondAttribute="trailing" constant="-10" id="f3X-kX-YBx"/>
                             <constraint firstItem="xZg-q0-ynY" firstAttribute="top" secondItem="HZn-Pe-d69" secondAttribute="bottom" constant="10" id="fLY-1T-TLn"/>
                             <constraint firstItem="dFe-UE-IDW" firstAttribute="leading" secondItem="yU4-98-PNq" secondAttribute="leading" id="hww-Ux-qRs"/>
-                            <constraint firstItem="PPQ-Em-H6U" firstAttribute="top" secondItem="xZg-q0-ynY" secondAttribute="bottom" constant="50" id="k26-1I-cIl"/>
+                            <constraint firstItem="PPQ-Em-H6U" firstAttribute="top" secondItem="xZg-q0-ynY" secondAttribute="bottom" constant="30" id="k26-1I-cIl"/>
                             <constraint firstItem="PPQ-Em-H6U" firstAttribute="leading" secondItem="hRd-Zt-ITk" secondAttribute="leading" constant="72" id="kXg-Ai-h5D"/>
                             <constraint firstItem="Ig8-d9-TN9" firstAttribute="top" secondItem="yU4-98-PNq" secondAttribute="bottom" constant="10" id="mVU-fb-Qh5"/>
                             <constraint firstItem="gqm-Us-yOV" firstAttribute="top" secondItem="hRd-Zt-ITk" secondAttribute="top" constant="5" id="piK-P5-lCa"/>

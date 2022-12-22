@@ -49,6 +49,15 @@ class ProvinceVC: UIViewController {
      выбор 3х максимум
      ценность каждого = 1
      
+     let checkSum = 0
+     
+     кнопка :
+     checkSum + 1
+     else
+     if checkSum <= 3 }
+     } else {
+     provinces.isEnabled = false
+     
      -- опеределить ценность одного и назначить кто считает
      -- проверка суммы после нажатия провинции
      и если нажата - оставить выбор ранее нажатой
@@ -63,6 +72,17 @@ class ProvinceVC: UIViewController {
      nextButton.isEnabled = false
     
      */
+    var checkSum: Int = 0
+    
+    func validateProvince() {
+        if checkSum < 3 {
+            checkSum + 1
+            nextButton.isEnabled = true
+        } else if checkSum == 3 {
+            firstButton.isEnabled = false
+        }
+        
+    }
     
     @IBAction func firstButtonClicked(_ sender: Any) {
     }
