@@ -48,7 +48,7 @@ import UIKit
     }
     private func commonInit() {
         
-    }*/
+    }
     
     // ND
     required init?(coder: NSCoder) {
@@ -60,5 +60,5 @@ import UIKit
         } else {
             fatalError("Cannot load view from bundle")
         }
-    }
+    }*/
 }

@@ -1007,25 +1007,12 @@ recommendations</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GDD-r2-Y3t" customClass="GradeView" customModule="HappyEducation" customModuleProvider="target">
-                                <rect key="frame" x="16" y="585" width="353" height="52"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="OkD-EQ-kFj"/>
-                                </constraints>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="gradeTitle" value="Grade 12 - 13"/>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TMP-1b-rcI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="GDD-r2-Y3t" firstAttribute="top" secondItem="JXt-ug-GnB" secondAttribute="bottom" constant="100" id="3zi-0w-uYf"/>
                             <constraint firstItem="JXt-ug-GnB" firstAttribute="centerY" secondItem="TMP-1b-rcI" secondAttribute="centerY" id="VLc-XQ-wI3"/>
                             <constraint firstItem="JXt-ug-GnB" firstAttribute="centerX" secondItem="TMP-1b-rcI" secondAttribute="centerX" id="YYU-cT-XSv"/>
-                            <constraint firstItem="TMP-1b-rcI" firstAttribute="trailing" secondItem="GDD-r2-Y3t" secondAttribute="trailing" constant="20" id="gv5-ke-uW7"/>
-                            <constraint firstItem="GDD-r2-Y3t" firstAttribute="leading" secondItem="TMP-1b-rcI" secondAttribute="leading" constant="20" id="sXE-h7-aod"/>
                         </constraints>
                     </view>
                 </viewController>
