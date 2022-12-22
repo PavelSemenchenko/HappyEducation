@@ -11,15 +11,22 @@ import UIKit
 class PasswordTextField: UITextField {
     override func awakeFromNib() {
         super.awakeFromNib()
+        /*
         layer.cornerRadius = 12
         layer.borderWidth = 1
         layer.borderColor = UIColor.blue.cgColor
+         */
+        
+        layer.shadowOpacity = 1
+        layer.shadowRadius = 10.0
+        layer.shadowOffset = CGSize.zero
+        layer.shadowColor = UIColor.gray.cgColor
     }
     func validatePasswordTextField(errorLabel: UILabel) -> String? {
         let optionalPassword = text
         guard let password = optionalPassword, password.count >= 6 else {
             layer.borderColor = UIColor.red.cgColor
-            errorLabel.text = "Password wrong, should be longer 6"
+            errorLabel.text = "Password wrong"
             errorLabel.isHidden = false
             return nil
         }

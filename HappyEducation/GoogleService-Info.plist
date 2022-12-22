@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>115163220166-99pbtlleiomtr5cmvj0c3vq4i4f0a8m7.apps.googleusercontent.com</string>
+	<string>115163220166-vup0kdlksuc5906qe4k38r3sljmlpcv0.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.115163220166-99pbtlleiomtr5cmvj0c3vq4i4f0a8m7</string>
+	<string>com.googleusercontent.apps.115163220166-vup0kdlksuc5906qe4k38r3sljmlpcv0</string>
 	<key>API_KEY</key>
 	<string>AIzaSyCRKCibSfTT0b5Ra4TYK7z4noE7RxlYYfg</string>
 	<key>GCM_SENDER_ID</key>
@@ -13,7 +13,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>PavelSemenchenko.HappyEducation</string>
+	<string>PavelSemenchenko.HappyEducation.Demo</string>
 	<key>PROJECT_ID</key>
 	<string>happyeducation-bcb82</string>
 	<key>STORAGE_BUCKET</key>
@@ -29,6 +29,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:115163220166:ios:68d5d5a57c432c7e5d2fc7</string>
+	<string>1:115163220166:ios:9382673289e109d35d2fc7</string>
 </dict>
 </plist>

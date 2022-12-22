@@ -8,9 +8,10 @@
 import Foundation
 import UIKit
 
-class SignUpVC: UIViewController, BaseAuthentiticationVC {
+class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var nameTextField: NameTextField!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var passwordTextField: PasswordTextField!
     @IBOutlet weak var errorEmailLabel: UILabel!
@@ -20,7 +21,32 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // emailTextField.delegate = self
+        // passwordTextField.delegate = self
         
+        // keyboard Hiding
+        registerForKeyboardNotifications()
+    }
+    deinit {
+        removeKeyboardNotifications()
+    }
+    
+    func registerForKeyboardNotifications() {
+        NotificationCenter.default.addObserver(self, selector: #selector(kbWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(kbWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    
+    func removeKeyboardNotifications() {
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
+    }
+    @objc func kbWillShow(_ notification: Notification) {
+        let userInfo = notification.userInfo
+        let kbFrameSize = (userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as! NSValue).cgRectValue
+        scrollView.contentOffset = CGPoint(x: 0.0, y: kbFrameSize.height/1.8)
+    }
+    @objc func kbWillHide() {
+        scrollView.contentOffset = CGPoint.zero
     }
     
     @IBAction func signUpButtonclicked(_ sender: Any) {
@@ -29,7 +55,7 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC {
         let optionalEmail = emailTextField.text
         guard let email = optionalEmail, email.contains("@") else {
             emailTextField.layer.borderColor = UIColor.red.cgColor
-            errorEmailLabel.text = "Enter correcnt email"
+            errorEmailLabel.text = "Enter correct email"
             errorEmailLabel.isHidden = false
             return
         }
@@ -39,7 +65,7 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC {
         let optionalPassword = passwordTextField.text
         guard let password = optionalPassword, password.count >= 6 else {
             passwordTextField.layer.borderColor = UIColor.red.cgColor
-            errorPasswordLabel.text = "Enter password lager then 6"
+            errorPasswordLabel.text = "Enter password > 5"
             errorPasswordLabel.isHidden = false
             return
         }
@@ -55,10 +81,10 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC {
                 alert.addAction(UIAlertAction(title: "Fine", style: UIAlertAction.Style.default))
                 self.present(alert, animated: true)
             } else {
-                guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
+                guard let GradeSelect = self.storyboard?.instantiateViewController(withIdentifier: "GradeSelectVC") as? GradeSelectVC else {
                     return
                 }
-                self.navigationController?.pushViewController(homeVC, animated: true)
+                self.navigationController?.pushViewController(GradeSelect, animated: true)
             }
         }
     }
