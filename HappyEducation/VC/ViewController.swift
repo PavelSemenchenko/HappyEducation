@@ -27,7 +27,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func skipSignUpButton(_ sender: Any) {
-        guard let skip = self.storyboard?.instantiateViewController(withIdentifier: "SignIn") as? SignInVC else {
+        guard let skip = self.storyboard?.instantiateViewController(withIdentifier: "GradeSelectVC") as? GradeSelectVC else {
             return
         }
         self.navigationController?.pushViewController(skip, animated: true)

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2A0CD3A529533481007942A8 /* GradeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0CD3A429533481007942A8 /* GradeView.xib */; };
+		2A0CD3A729533494007942A8 /* GradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CD3A629533494007942A8 /* GradeView.swift */; };
+		2A0CD3A929536C9A007942A8 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CD3A829536C9A007942A8 /* NameTextField.swift */; };
+		2A78283C294BC07C0032AD4F /* GradeSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */; };
+		2A8695BC294CE18700B73D98 /* GradeCustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */; };
+		2A8695BE294CED9200B73D98 /* ProvinceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8695BD294CED9200B73D98 /* ProvinceVC.swift */; };
 		2A9475672947DF48000C3043 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A9475662947DF48000C3043 /* GoogleService-Info.plist */; };
 		2A94756A2947E073000C3043 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2A9475692947E073000C3043 /* FirebaseAnalytics */; };
 		2A94756C2947E073000C3043 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 2A94756B2947E073000C3043 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -71,6 +77,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2A0CD3A429533481007942A8 /* GradeView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GradeView.xib; sourceTree = "<group>"; };
+		2A0CD3A629533494007942A8 /* GradeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeView.swift; sourceTree = "<group>"; };
+		2A0CD3A829536C9A007942A8 /* NameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameTextField.swift; sourceTree = "<group>"; };
+		2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeSelectVC.swift; sourceTree = "<group>"; };
+		2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCustomVC.swift; sourceTree = "<group>"; };
+		2A8695BD294CED9200B73D98 /* ProvinceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceVC.swift; sourceTree = "<group>"; };
 		2A9475662947DF48000C3043 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2AA09B032947B85400017E46 /* HappyEducation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HappyEducation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2AA09B062947B85400017E46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -219,6 +231,9 @@
 				2AD5D6A7294A3064000F6256 /* SignInVC.swift */,
 				2AD5D6A5294A305C000F6256 /* HomeVC.swift */,
 				2AA09B0A2947B85500017E46 /* ViewController.swift */,
+				2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */,
+				2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */,
+				2A8695BD294CED9200B73D98 /* ProvinceVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -253,6 +268,9 @@
 			children = (
 				DA5C05B229488E0200799A16 /* EmailTextField.swift */,
 				DA5C05B429488E1B00799A16 /* PasswordTextField.swift */,
+				2A0CD3A429533481007942A8 /* GradeView.xib */,
+				2A0CD3A629533494007942A8 /* GradeView.swift */,
+				2A0CD3A829536C9A007942A8 /* NameTextField.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -393,6 +411,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A0CD3A529533481007942A8 /* GradeView.xib in Resources */,
 				2AA09B132947B85500017E46 /* LaunchScreen.storyboard in Resources */,
 				2A9475672947DF48000C3043 /* GoogleService-Info.plist in Resources */,
 				2AA09B102947B85500017E46 /* Assets.xcassets in Resources */,
@@ -424,13 +443,18 @@
 				DA5C05B0294859DA00799A16 /* BaseAuthentiticationVC.swift in Sources */,
 				2AD5D6A6294A305C000F6256 /* HomeVC.swift in Sources */,
 				2AD5D6A8294A3064000F6256 /* SignInVC.swift in Sources */,
+				2A0CD3A929536C9A007942A8 /* NameTextField.swift in Sources */,
+				2A8695BE294CED9200B73D98 /* ProvinceVC.swift in Sources */,
 				2AA09B0B2947B85500017E46 /* ViewController.swift in Sources */,
 				DA5C05B529488E1B00799A16 /* PasswordTextField.swift in Sources */,
+				2A0CD3A729533494007942A8 /* GradeView.swift in Sources */,
 				DA5C05B329488E0200799A16 /* EmailTextField.swift in Sources */,
 				2AA09B072947B85400017E46 /* AppDelegate.swift in Sources */,
 				2AA09B092947B85500017E46 /* SceneDelegate.swift in Sources */,
 				2AD5D6AA294A3069000F6256 /* SignUpVC.swift in Sources */,
+				2A8695BC294CE18700B73D98 /* GradeCustomVC.swift in Sources */,
 				DA5C05AD2948578200799A16 /* Authetitication.swift in Sources */,
+				2A78283C294BC07C0032AD4F /* GradeSelectVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,6 +630,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8MJN994E42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HappyEducation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -618,6 +647,8 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = PavelSemenchenkoHappyEducation;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -630,6 +661,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = 8MJN994E42;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = HappyEducation/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -642,6 +674,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = PavelSemenchenkoHappyEducation;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

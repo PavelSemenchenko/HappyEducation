@@ -8,9 +8,9 @@
 import Foundation
 import UIKit
 
-class SignUpVC: UIViewController, BaseAuthentiticationVC {
+class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
     
-    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var nameTextField: NameTextField!
     @IBOutlet weak var emailTextField: EmailTextField!
     @IBOutlet weak var passwordTextField: PasswordTextField!
     @IBOutlet weak var errorEmailLabel: UILabel!
@@ -20,6 +20,8 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        emailTextField.delegate = self
+        passwordTextField.delegate = self
         
     }
     
@@ -29,7 +31,7 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC {
         let optionalEmail = emailTextField.text
         guard let email = optionalEmail, email.contains("@") else {
             emailTextField.layer.borderColor = UIColor.red.cgColor
-            errorEmailLabel.text = "Enter correcnt email"
+            errorEmailLabel.text = "Enter correct email"
             errorEmailLabel.isHidden = false
             return
         }
@@ -39,7 +41,7 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC {
         let optionalPassword = passwordTextField.text
         guard let password = optionalPassword, password.count >= 6 else {
             passwordTextField.layer.borderColor = UIColor.red.cgColor
-            errorPasswordLabel.text = "Enter password lager then 6"
+            errorPasswordLabel.text = "Enter password > 5"
             errorPasswordLabel.isHidden = false
             return
         }
@@ -55,10 +57,10 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC {
                 alert.addAction(UIAlertAction(title: "Fine", style: UIAlertAction.Style.default))
                 self.present(alert, animated: true)
             } else {
-                guard let homeVC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
+                guard let GradeSelect = self.storyboard?.instantiateViewController(withIdentifier: "GradeSelectVC") as? GradeSelectVC else {
                     return
                 }
-                self.navigationController?.pushViewController(homeVC, animated: true)
+                self.navigationController?.pushViewController(GradeSelect, animated: true)
             }
         }
     }
