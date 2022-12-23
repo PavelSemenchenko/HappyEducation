@@ -38,6 +38,7 @@ class ProvinceVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         if province != .none {
             nextButton.isEnabled = true
         } else {
@@ -45,6 +46,22 @@ class ProvinceVC: UIViewController {
         }
     }
     
+    
+    // создать массив - если выбран -> запись в массив
+    // если выбран - удалить из массив
+    
+    var zoe = [Int]()
+    if zoe.isEmpty {
+        nextButton.isEnabled = false
+    } else {
+        nextButton.isEnabled = true
+    }
+    
+    if array.count <= 3
+    
+    
+    get(4)
+    set(5,B)
     /*
      выбор 3х максимум
      ценность каждого = 1
