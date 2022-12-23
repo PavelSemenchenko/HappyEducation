@@ -47,7 +47,7 @@ class ProvinceVC: UIViewController {
     
     
     let arrayProvince: [String] = ["Central", "Eastern", "Noth Central", "Nothern"]
-    var arrayProvinceSum: [String] = []
+    var arrayProvinceSum: [String] = ["", "", "", ""]
     
     func closesProvince() {
         if arrayProvinceSum.count == 4 {
