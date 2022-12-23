@@ -46,20 +46,22 @@ class ProvinceVC: UIViewController {
     }
     
     
-    var arrayProvince: [String] = []
+    let arrayProvince: [String] = ["Central", "Eastern", "Noth Central", "Nothern"]
+    var arrayProvinceSum: [String] = []
+    
     func validateProvince() {
-        if arrayProvince.contains(<#T##other: Collection##Collection#>) {
+        if arrayProvinceSum.contains("Central") {
             nextButton.isEnabled = true
-        } else if arrayProvince.contains(<#T##other: Collection##Collection#>) {
+        } else if arrayProvince.contains("Central") {
             nextButton.isEnabled = true
         }
     }
     
     @IBAction func firstButtonClicked(_ sender: Any) {
-        if arrayProvince.contains(<#T##Self.Element#>) {
-            arrayProvince.remove(at: <#T##Int#>)
+        if arrayProvinceSum.contains("Central") {
+            arrayProvinceSum.remove(at: <#T##Int#>)
         } else {
-            arrayProvince.append(<#T##newElement: String##String#>)
+            arrayProvinceSum.append("Central")
         }
     }
     @IBAction func secondButtonClicked(_ sender: Any) {
