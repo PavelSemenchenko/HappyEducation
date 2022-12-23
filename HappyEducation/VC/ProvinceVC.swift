@@ -45,72 +45,22 @@ class ProvinceVC: UIViewController {
         }
     }
     
-    /*
-     выбор 3х максимум
-     ценность каждого = 1
-     
-     let checkSum = 0
-     
-     кнопка :
-     checkSum + 1
-     else
-     if checkSum <= 3 }
-     } else {
-     provinces.isEnabled = false
-     
-     -- опеределить ценность одного и назначить кто считает
-     -- проверка суммы после нажатия провинции
-     и если нажата - оставить выбор ранее нажатой
-     validateProvince()
-       
-     
-     if num >=1 || <=3 {
-     nextButton.isEnabled = true
-     firstButton.isEnabled = false ???
-     secondButton.isEnabled = false ... ???
-     } else {
-     nextButton.isEnabled = false
     
-     
-    
-    переменная подсчета баллов <= 3
-    при нажатии кнопки счетчик + 1
-    
-    если счетчик = 0 то блокировка далее
-    если нажата 1 привинция = счетчик +1 и разблокировка далее
-    если счетчик < 3 то счетчик +1 разблокировка далее
-    если счетчик = 3 то закрыть выбор привинций
-    ?? как определить выбранные от не выбранныъ привинций
-    
-    
-    var checkSum: Int = 0
-    var province: Province = .none
-    
-    if checkSum == 0
-        nextButton.isEnabled = false
-        
-   if checkSum < 3
-       checkSum + 1
-       nextButton.isEnabled = true
-   
-   if checkSum == 3
-       alert выбрано максимальное колличество привинций
-       nextButton.isEnabled = true
-    
-   if province == provinceID
-       province = .none
-       
+    var arrayProvince: [String] = []
     func validateProvince() {
-        if checkSum < 3 {
-            checkSum + 1
+        if arrayProvince.contains(<#T##other: Collection##Collection#>) {
             nextButton.isEnabled = true
-        } else if checkSum == 3 {
-            firstButton.isEnabled = false
+        } else if arrayProvince.contains(<#T##other: Collection##Collection#>) {
+            nextButton.isEnabled = true
         }
-        
-    }*/
+    }
     
     @IBAction func firstButtonClicked(_ sender: Any) {
+        if arrayProvince.contains(<#T##Self.Element#>) {
+            arrayProvince.remove(at: <#T##Int#>)
+        } else {
+            arrayProvince.append(<#T##newElement: String##String#>)
+        }
     }
     @IBAction func secondButtonClicked(_ sender: Any) {
     }
