@@ -831,7 +831,7 @@ recommendations</string>
                                         </attributedString>
                                         <color key="highlightedColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wet-id-5sM">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Wet-id-5sM" customClass="ProvinceButton" customModule="HappyEducation" customModuleProvider="target">
                                         <rect key="frame" x="15" y="56.333333333333343" width="137" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="137" id="6iM-OK-RjU"/>
@@ -844,7 +844,7 @@ recommendations</string>
                                             <action selector="firstButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="1d1-mj-EUb"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpn-Ur-q4s">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vpn-Ur-q4s" customClass="ProvinceButton" customModule="HappyEducation" customModuleProvider="target">
                                         <rect key="frame" x="168" y="55.333333333333343" width="142" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="6gc-5z-cMv"/>
@@ -857,7 +857,7 @@ recommendations</string>
                                             <action selector="secondButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="kAi-pj-Q9F"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-TK-6Zk">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dPO-TK-6Zk" customClass="ProvinceButton" customModule="HappyEducation" customModuleProvider="target">
                                         <rect key="frame" x="15" y="125.33333333333331" width="137" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="137" id="H1u-sU-sWc"/>
@@ -870,7 +870,7 @@ recommendations</string>
                                             <action selector="thirdButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="Vy3-Ac-Ebr"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHK-FQ-5XW">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHK-FQ-5XW" customClass="ProvinceButton" customModule="HappyEducation" customModuleProvider="target">
                                         <rect key="frame" x="168" y="124.33333333333331" width="142" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="JiV-TG-uko"/>
@@ -883,7 +883,7 @@ recommendations</string>
                                             <action selector="forthButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="lqZ-kS-JiZ"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lA-lw-3GJ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1lA-lw-3GJ" customClass="ProvinceButton" customModule="HappyEducation" customModuleProvider="target">
                                         <rect key="frame" x="15" y="194.33333333333331" width="137" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="jvn-Lz-WUq"/>
@@ -896,7 +896,7 @@ recommendations</string>
                                             <action selector="fifthButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="k2v-Ft-ec6"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fm-dL-TDF">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fm-dL-TDF" customClass="ProvinceButton" customModule="HappyEducation" customModuleProvider="target">
                                         <rect key="frame" x="168" y="193.33333333333331" width="142" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="0h3-1c-87z"/>
@@ -909,7 +909,7 @@ recommendations</string>
                                             <action selector="sixButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="ZWz-jX-PVS"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPJ-uo-c2H">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPJ-uo-c2H" customClass="ProvinceButton" customModule="HappyEducation" customModuleProvider="target">
                                         <rect key="frame" x="15" y="263.33333333333331" width="137" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="137" id="hp6-Vy-qIN"/>
@@ -922,7 +922,7 @@ recommendations</string>
                                             <action selector="sevenButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="2rd-lt-xw8"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-2f-Ydb">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SdN-2f-Ydb" customClass="ProvinceButton" customModule="HappyEducation" customModuleProvider="target">
                                         <rect key="frame" x="173" y="263.33333333333331" width="137" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="SrX-KY-ZtH"/>
@@ -935,7 +935,7 @@ recommendations</string>
                                             <action selector="eightButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="OqF-RC-eMn"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-zz-aCZ">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-zz-aCZ" customClass="ProvinceButton" customModule="HappyEducation" customModuleProvider="target">
                                         <rect key="frame" x="15" y="330.33333333333331" width="137" height="53"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="53" id="dkW-Xf-h6f"/>

@@ -20,112 +20,108 @@ enum Province {
     case uva
     case western
 }
+class ProvinceButton: UIButton {
+    var province: Province = .none
+}
 
 class ProvinceVC: UIViewController {
     
-    @IBOutlet weak var firstButton: UIButton!
-    @IBOutlet weak var secondButton: UIButton!
-    @IBOutlet weak var thirdButton: UIButton!
-    @IBOutlet weak var forthButton: UIButton!
-    @IBOutlet weak var fifthButton: UIButton!
-    @IBOutlet weak var sixButton: UIButton!
-    @IBOutlet weak var sevenButton: UIButton!
-    @IBOutlet weak var eightButton: UIButton!
-    @IBOutlet weak var nineButton: UIButton!
+    @IBOutlet weak var firstButton: ProvinceButton!
+    @IBOutlet weak var secondButton: ProvinceButton!
+    @IBOutlet weak var thirdButton: ProvinceButton!
+    @IBOutlet weak var forthButton: ProvinceButton!
+    @IBOutlet weak var fifthButton: ProvinceButton!
+    @IBOutlet weak var sixButton: ProvinceButton!
+    @IBOutlet weak var sevenButton: ProvinceButton!
+    @IBOutlet weak var eightButton: ProvinceButton!
+    @IBOutlet weak var nineButton: ProvinceButton!
     
     @IBOutlet weak var nextButton: UIButton!
-    var province: Province = .none
+    
+    var selectedProvinces: Set<Province> = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if arrayProvinceSum.count <= 3 {
-            nextButton.isEnabled = true
-        } else if arrayProvince.count < 1 || arrayProvinceSum.count > 3 {
-            nextButton.isEnabled = false
-        }
-    }
-    
-    
-    let arrayProvince: [String] = ["Central", "Eastern", "Noth Central", "Nothern"]
-    var arrayProvinceSum: [String] = ["", "", "", ""]
-    
-    func closesProvince() {
-        if arrayProvinceSum.count == 4 {
-            arrayProvinceSum.removeAll()
-            // поп ап алерт выбор только трех провинций
-        }
+        firstButton.province = .central
+        secondButton.province = .eastern
+        thirdButton.province = .nothCentral
+        forthButton.province = .nothern
+        fifthButton.province = .nothWestern
+        sixButton.province = .sabaragamuwa
+        sevenButton.province = .southern
+        eightButton.province = .uva
+        nineButton.province = .western
+        nextButton.isEnabled = false
     }
     
     func validateProvince() {
-        if arrayProvinceSum.contains("Central") {
-            firstButton.backgroundColor = .systemIndigo
-            firstButton.tintColor = .white
-        } else if arrayProvinceSum.contains("Eastern") {
-            secondButton.backgroundColor = .systemIndigo
-            secondButton.tintColor = .white
-        } else if arrayProvinceSum.contains("Noth Central") {
-            thirdButton.backgroundColor = .systemIndigo
-            thirdButton.tintColor = .white
-        } else if arrayProvinceSum.contains("Nothern") {
-            forthButton.backgroundColor = .systemIndigo
-            forthButton.tintColor = .white
+        let buttons: [ProvinceButton] = [firstButton, secondButton, thirdButton, forthButton, fifthButton, sixButton, sevenButton, eightButton, nineButton]
+        
+        for button in buttons {
+            let province = button.province
+            
+            if selectedProvinces.contains(province) {
+                button.backgroundColor = .systemIndigo
+                button.tintColor = .white
+            } else {
+                button.backgroundColor = .systemGray6
+                button.tintColor = .darkGray
+            }
         }
-    }
-    
-    
-    @IBAction func firstButtonClicked(_ sender: Any) {
-        if arrayProvinceSum.contains("Central") {
-            arrayProvinceSum.remove(at: 0)
+        
+        if selectedProvinces.count >= 1 {
+            nextButton.isEnabled = true
         } else {
-            arrayProvinceSum.insert("Central", at: 0)
-            validateProvince()
+            nextButton.isEnabled = false
         }
     }
-    @IBAction func secondButtonClicked(_ sender: Any) {
-        if arrayProvinceSum.contains("Eastern") {
-            arrayProvinceSum.remove(at: 1)
+        
+    func onProvinceChanged(province: Province) {
+        if selectedProvinces.contains(province) {
+            selectedProvinces.remove(province)
         } else {
-            arrayProvinceSum.insert("Eastern", at: 1)
-            validateProvince()
+            if selectedProvinces.count < 3 {
+                selectedProvinces.insert(province)
+            }
         }
+        validateProvince()
     }
-    @IBAction func thirdButtonClicked(_ sender: Any) {
-        if arrayProvinceSum.contains("Noth Central") {
-            arrayProvinceSum.remove(at: 2)
-        } else {
-            arrayProvinceSum.insert("Noth Central", at: 2)
-            validateProvince()
+    
+        @IBAction func firstButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .central)
         }
-    }
-    @IBAction func forthButtonClicked(_ sender: Any) {
-        if arrayProvinceSum.contains("Nothern") {
-            arrayProvinceSum.remove(at: 3)
-        } else {
-            arrayProvinceSum.insert("Nothern", at: 3)
+        @IBAction func secondButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .eastern)
         }
-    }
-    @IBAction func fifthButtonClicked(_ sender: Any) {
-    }
-    @IBAction func sixButtonClicked(_ sender: Any) {
-    }
-    @IBAction func sevenButtonClicked(_ sender: Any) {
-    }
-    @IBAction func eightButtonClicked(_ sender: Any) {
-    }
-    @IBAction func nineButtonClicked(_ sender: Any) {
-    }
-    
-    
-    
-    
-    
-    @IBAction func nextButtonClicked(_ sender: Any) {
-        guard let VC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
-            return
+        @IBAction func thirdButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .nothCentral)
         }
-        self.navigationController?.pushViewController(VC, animated: true)
+        @IBAction func forthButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .nothern)
+        }
+        @IBAction func fifthButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .nothWestern)
+        }
+        @IBAction func sixButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .sabaragamuwa)
+        }
+        @IBAction func sevenButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .southern)
+        }
+        @IBAction func eightButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .uva)
+        }
+        @IBAction func nineButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .western)
+        }
+        
+        @IBAction func nextButtonClicked(_ sender: Any) {
+            guard let VC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
+                return
+            }
+            self.navigationController?.pushViewController(VC, animated: true)
+        }
+        @IBAction func skipButtonClicked(_ sender: Any) {
+        }
+        
     }
-    @IBAction func skipButtonClicked(_ sender: Any) {
-    }
-    
-}
