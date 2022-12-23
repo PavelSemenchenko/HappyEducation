@@ -50,25 +50,43 @@ class ProvinceVC: UIViewController {
     var arrayProvinceSum: [String] = []
     
     func validateProvince() {
-        if arrayProvinceSum.contains("Central") {
+        if arrayProvinceSum.count <= 3 {
             nextButton.isEnabled = true
-        } else if arrayProvince.contains("Central") {
-            nextButton.isEnabled = true
+        } else if arrayProvince.count < 1 || arrayProvinceSum.count > 3 {
+            nextButton.isEnabled = false
         }
     }
     
     @IBAction func firstButtonClicked(_ sender: Any) {
         if arrayProvinceSum.contains("Central") {
-            arrayProvinceSum.remove(at: <#T##Int#>)
+            arrayProvinceSum.remove(at: 0)
         } else {
-            arrayProvinceSum.append("Central")
+            arrayProvinceSum.insert("Central", at: 0)
+            validateProvince()
         }
     }
     @IBAction func secondButtonClicked(_ sender: Any) {
+        if arrayProvinceSum.contains("Eastern") {
+            arrayProvinceSum.remove(at: 1)
+        } else {
+            arrayProvinceSum.insert("Eastern", at: 1)
+            validateProvince()
+        }
     }
     @IBAction func thirdButtonClicked(_ sender: Any) {
+        if arrayProvinceSum.contains("Noth Central") {
+            arrayProvinceSum.remove(at: 2)
+        } else {
+            arrayProvinceSum.insert("Noth Central", at: 2)
+            validateProvince()
+        }
     }
     @IBAction func forthButtonClicked(_ sender: Any) {
+        if arrayProvinceSum.contains("Nothern") {
+            arrayProvinceSum.remove(at: 3)
+        } else {
+            arrayProvinceSum.insert("Nothern", at: 3)
+        }
     }
     @IBAction func fifthButtonClicked(_ sender: Any) {
     }
@@ -86,6 +104,10 @@ class ProvinceVC: UIViewController {
     
     
     @IBAction func nextButtonClicked(_ sender: Any) {
+        guard let VC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
+            return
+        }
+        self.navigationController?.pushViewController(VC, animated: true)
     }
     @IBAction func skipButtonClicked(_ sender: Any) {
     }
