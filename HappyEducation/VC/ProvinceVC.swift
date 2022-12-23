@@ -38,9 +38,9 @@ class ProvinceVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        if province != .none {
+        if arrayProvinceSum.count <= 3 {
             nextButton.isEnabled = true
-        } else {
+        } else if arrayProvince.count < 1 || arrayProvinceSum.count > 3 {
             nextButton.isEnabled = false
         }
     }
@@ -49,13 +49,29 @@ class ProvinceVC: UIViewController {
     let arrayProvince: [String] = ["Central", "Eastern", "Noth Central", "Nothern"]
     var arrayProvinceSum: [String] = []
     
-    func validateProvince() {
-        if arrayProvinceSum.count <= 3 {
-            nextButton.isEnabled = true
-        } else if arrayProvince.count < 1 || arrayProvinceSum.count > 3 {
-            nextButton.isEnabled = false
+    func closesProvince() {
+        if arrayProvinceSum.count == 4 {
+            arrayProvinceSum.removeAll()
+            // поп ап алерт выбор только трех провинций
         }
     }
+    
+    func validateProvince() {
+        if arrayProvinceSum.contains("Central") {
+            firstButton.backgroundColor = .systemIndigo
+            firstButton.tintColor = .white
+        } else if arrayProvinceSum.contains("Eastern") {
+            secondButton.backgroundColor = .systemIndigo
+            secondButton.tintColor = .white
+        } else if arrayProvinceSum.contains("Noth Central") {
+            thirdButton.backgroundColor = .systemIndigo
+            thirdButton.tintColor = .white
+        } else if arrayProvinceSum.contains("Nothern") {
+            forthButton.backgroundColor = .systemIndigo
+            forthButton.tintColor = .white
+        }
+    }
+    
     
     @IBAction func firstButtonClicked(_ sender: Any) {
         if arrayProvinceSum.contains("Central") {
