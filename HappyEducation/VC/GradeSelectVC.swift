@@ -17,15 +17,12 @@ enum Grade {
 }
 
 class GradeSelectVC: UIViewController {
-    
     @IBOutlet weak var grade1to5Button: UIButton!
     @IBOutlet weak var grade6to9Button: UIButton!
     @IBOutlet weak var grade10to11Button: UIButton!
     @IBOutlet weak var grade12to13Button: UIButton!
     @IBOutlet weak var nextButton: UIButton!
-    
     var grade: Grade = .none
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         if grade != .none {
@@ -34,7 +31,6 @@ class GradeSelectVC: UIViewController {
             nextButton.isEnabled = false
         }
     }
-    
     func validateGrades() {
         if grade == .from1to5 {
             nextButton.isEnabled = true
@@ -88,7 +84,6 @@ class GradeSelectVC: UIViewController {
             grade12to13Button.tintColor = .darkGray
         }
     }
-    
     @IBAction func grade1to5Clicked(_ sender: Any) {
         if grade == .from1to5 {
             grade = .none
@@ -97,7 +92,6 @@ class GradeSelectVC: UIViewController {
         }
         validateGrades()
     }
-    
     @IBAction func grade6to9Clicked(_ sender: Any) {
         if grade == .from6to9 {
             grade = .none
@@ -106,7 +100,6 @@ class GradeSelectVC: UIViewController {
         }
         validateGrades()
     }
-    
     @IBAction func grade10to11Clicked(_ sender: Any) {
         if grade == .from10to11 {
             grade = .none
@@ -115,7 +108,6 @@ class GradeSelectVC: UIViewController {
         }
         validateGrades()
     }
-    
     @IBAction func grade12to13Clicked(_ sender: Any) {
         if grade == .from12to13 {
             grade = .none
@@ -124,15 +116,11 @@ class GradeSelectVC: UIViewController {
         }
         validateGrades()
     }
-    
-    
     @IBAction func nextButtonClicked(_ sender: Any) {
         guard let province = self.storyboard?.instantiateViewController(withIdentifier: "ProvinceVC") as? ProvinceVC else { return
-            
         }
         self.navigationController?.pushViewController(province, animated: true)
     }
-    
     @IBAction func skipButtonClicked(_ sender: Any) {
     }
 }

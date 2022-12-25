@@ -9,7 +9,6 @@ import Foundation
 import UIKit
 
 class GradeCustumVC: UIViewController {
-    
     lazy var gradeLabel: UILabel = {
         let label = UILabel(frame: CGRect(x: 16, y: 100, width: 300, height: 36))
         label.text = "What's your grade?"
@@ -18,7 +17,6 @@ class GradeCustumVC: UIViewController {
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
-    
     lazy var gradeFirst: UIView = {
        let view = UIView()
         view.backgroundColor = UIColor.systemGray5

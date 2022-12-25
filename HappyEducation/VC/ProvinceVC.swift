@@ -25,7 +25,6 @@ class ProvinceButton: UIButton {
 }
 
 class ProvinceVC: UIViewController {
-    
     @IBOutlet weak var firstButton: ProvinceButton!
     @IBOutlet weak var secondButton: ProvinceButton!
     @IBOutlet weak var thirdButton: ProvinceButton!
@@ -35,11 +34,8 @@ class ProvinceVC: UIViewController {
     @IBOutlet weak var sevenButton: ProvinceButton!
     @IBOutlet weak var eightButton: ProvinceButton!
     @IBOutlet weak var nineButton: ProvinceButton!
-    
     @IBOutlet weak var nextButton: UIButton!
-    
     var selectedProvinces: Set<Province> = []
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         firstButton.province = .central
@@ -53,13 +49,10 @@ class ProvinceVC: UIViewController {
         nineButton.province = .western
         nextButton.isEnabled = false
     }
-    
     func validateProvince() {
         let buttons: [ProvinceButton] = [firstButton, secondButton, thirdButton, forthButton, fifthButton, sixButton, sevenButton, eightButton, nineButton]
-        
         for button in buttons {
             let province = button.province
-            
             if selectedProvinces.contains(province) {
                 button.backgroundColor = .systemIndigo
                 button.tintColor = .white
@@ -68,14 +61,12 @@ class ProvinceVC: UIViewController {
                 button.tintColor = .darkGray
             }
         }
-        
         if selectedProvinces.count >= 1 {
             nextButton.isEnabled = true
         } else {
             nextButton.isEnabled = false
         }
     }
-        
     func onProvinceChanged(province: Province) {
         if selectedProvinces.contains(province) {
             selectedProvinces.remove(province)
@@ -86,7 +77,6 @@ class ProvinceVC: UIViewController {
         }
         validateProvince()
     }
-    
         @IBAction func firstButtonClicked(_ sender: Any) {
             onProvinceChanged(province: .central)
         }
@@ -114,7 +104,6 @@ class ProvinceVC: UIViewController {
         @IBAction func nineButtonClicked(_ sender: Any) {
             onProvinceChanged(province: .western)
         }
-        
         @IBAction func nextButtonClicked(_ sender: Any) {
             guard let VC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
                 return
@@ -123,5 +112,4 @@ class ProvinceVC: UIViewController {
         }
         @IBAction func skipButtonClicked(_ sender: Any) {
         }
-        
     }
