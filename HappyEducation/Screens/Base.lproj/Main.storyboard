@@ -97,7 +97,7 @@ recommendations</string>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="signUpButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="s1G-lk-IfS"/>
@@ -173,7 +173,7 @@ recommendations</string>
                                                     <constraint firstAttribute="height" constant="50" id="S7A-7l-pdX"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="********" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="O7p-zY-pxe" customClass="PasswordTextField" customModule="HappyEducation" customModuleProvider="target">
                                                 <rect key="frame" x="34" y="582" width="325" height="50"/>
@@ -205,7 +205,7 @@ recommendations</string>
                                                             </attributes>
                                                         </fragment>
                                                     </attributedString>
-                                                    <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="signInButtonClicked:" destination="wZs-BE-1ef" eventType="touchUpInside" id="YMu-e7-zX2"/>
@@ -358,7 +358,7 @@ recommendations</string>
                                                 </constraints>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Sign up">
-                                                    <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                                 </buttonConfiguration>
                                                 <connections>
                                                     <action selector="signUpButtonclicked:" destination="nvO-cf-WUn" eventType="touchUpInside" id="2kS-j9-jXM"/>
@@ -375,12 +375,12 @@ recommendations</string>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="name@example.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xvs-p6-HSp" customClass="EmailTextField" customModule="HappyEducation" customModuleProvider="target">
                                                 <rect key="frame" x="34" y="462" width="325" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                             </textField>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="*******" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tut-Dp-3Uc" customClass="PasswordTextField" customModule="HappyEducation" customModuleProvider="target">
                                                 <rect key="frame" x="34" y="568" width="325" height="50"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
                                             <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="errEmail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56D-MO-CN1">
                                                 <rect key="frame" x="160" y="431" width="180" height="18"/>
@@ -487,7 +487,7 @@ recommendations</string>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonClicked:" destination="cCN-SP-L4G" eventType="touchUpInside" id="Go7-b6-8lp"/>
@@ -795,7 +795,7 @@ recommendations</string>
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                    <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
                                 <connections>
                                     <action selector="nextButtonClicked:" destination="XZf-Nr-9Df" eventType="touchUpInside" id="2dG-rj-Rvd"/>
@@ -1065,6 +1065,9 @@ recommendations</string>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
