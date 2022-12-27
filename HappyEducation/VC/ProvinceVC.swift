@@ -20,139 +20,96 @@ enum Province {
     case uva
     case western
 }
+class ProvinceButton: UIButton {
+    var province: Province = .none
+}
 
 class ProvinceVC: UIViewController {
-    
-    @IBOutlet weak var firstButton: UIButton!
-    @IBOutlet weak var secondButton: UIButton!
-    @IBOutlet weak var thirdButton: UIButton!
-    @IBOutlet weak var forthButton: UIButton!
-    @IBOutlet weak var fifthButton: UIButton!
-    @IBOutlet weak var sixButton: UIButton!
-    @IBOutlet weak var sevenButton: UIButton!
-    @IBOutlet weak var eightButton: UIButton!
-    @IBOutlet weak var nineButton: UIButton!
-    
+    @IBOutlet weak var firstButton: ProvinceButton!
+    @IBOutlet weak var secondButton: ProvinceButton!
+    @IBOutlet weak var thirdButton: ProvinceButton!
+    @IBOutlet weak var forthButton: ProvinceButton!
+    @IBOutlet weak var fifthButton: ProvinceButton!
+    @IBOutlet weak var sixButton: ProvinceButton!
+    @IBOutlet weak var sevenButton: ProvinceButton!
+    @IBOutlet weak var eightButton: ProvinceButton!
+    @IBOutlet weak var nineButton: ProvinceButton!
     @IBOutlet weak var nextButton: UIButton!
-    var province: Province = .none
-    
+    var selectedProvinces: Set<Province> = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if province != .none {
+        firstButton.province = .central
+        secondButton.province = .eastern
+        thirdButton.province = .nothCentral
+        forthButton.province = .nothern
+        fifthButton.province = .nothWestern
+        sixButton.province = .sabaragamuwa
+        sevenButton.province = .southern
+        eightButton.province = .uva
+        nineButton.province = .western
+        nextButton.isEnabled = false
+    }
+    func validateProvince() {
+        let buttons: [ProvinceButton] = [firstButton, secondButton, thirdButton, forthButton, fifthButton, sixButton, sevenButton, eightButton, nineButton]
+        for button in buttons {
+            let province = button.province
+            if selectedProvinces.contains(province) {
+                button.backgroundColor = .systemIndigo
+                button.tintColor = .white
+            } else {
+                button.backgroundColor = .systemGray6
+                button.tintColor = .darkGray
+            }
+        }
+        if selectedProvinces.count >= 1 {
             nextButton.isEnabled = true
         } else {
             nextButton.isEnabled = false
         }
     }
-    
-    
-    // создать массив - если выбран -> запись в массив
-    // если выбран - удалить из массив
-    
-    var zoe = [Int]()
-    if zoe.isEmpty {
-        nextButton.isEnabled = false
-    } else {
-        nextButton.isEnabled = true
-    }
-    
-    if array.count <= 3
-    
-    
-    get(4)
-    set(5,B)
-    /*
-     выбор 3х максимум
-     ценность каждого = 1
-     
-     let checkSum = 0
-     
-     кнопка :
-     checkSum + 1
-     else
-     if checkSum <= 3 }
-     } else {
-     provinces.isEnabled = false
-     
-     -- опеределить ценность одного и назначить кто считает
-     -- проверка суммы после нажатия провинции
-     и если нажата - оставить выбор ранее нажатой
-     validateProvince()
-       
-     
-     if num >=1 || <=3 {
-     nextButton.isEnabled = true
-     firstButton.isEnabled = false ???
-     secondButton.isEnabled = false ... ???
-     } else {
-     nextButton.isEnabled = false
-    
-     
-    
-    переменная подсчета баллов <= 3
-    при нажатии кнопки счетчик + 1
-    
-    если счетчик = 0 то блокировка далее
-    если нажата 1 привинция = счетчик +1 и разблокировка далее
-    если счетчик < 3 то счетчик +1 разблокировка далее
-    если счетчик = 3 то закрыть выбор привинций
-    ?? как определить выбранные от не выбранныъ привинций
-    
-    
-    var checkSum: Int = 0
-    var province: Province = .none
-    
-    if checkSum == 0
-        nextButton.isEnabled = false
-        
-   if checkSum < 3
-       checkSum + 1
-       nextButton.isEnabled = true
-   
-   if checkSum == 3
-       alert выбрано максимальное колличество привинций
-       nextButton.isEnabled = true
-    
-   if province == provinceID
-       province = .none
-       
-    func validateProvince() {
-        if checkSum < 3 {
-            checkSum + 1
-            nextButton.isEnabled = true
-        } else if checkSum == 3 {
-            firstButton.isEnabled = false
+    func onProvinceChanged(province: Province) {
+        if selectedProvinces.contains(province) {
+            selectedProvinces.remove(province)
+        } else {
+            if selectedProvinces.count < 3 {
+                selectedProvinces.insert(province)
+            }
         }
-        
-    }*/
-    
-    @IBAction func firstButtonClicked(_ sender: Any) {
+        validateProvince()
     }
-    @IBAction func secondButtonClicked(_ sender: Any) {
+        @IBAction func firstButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .central)
+        }
+        @IBAction func secondButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .eastern)
+        }
+        @IBAction func thirdButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .nothCentral)
+        }
+        @IBAction func forthButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .nothern)
+        }
+        @IBAction func fifthButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .nothWestern)
+        }
+        @IBAction func sixButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .sabaragamuwa)
+        }
+        @IBAction func sevenButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .southern)
+        }
+        @IBAction func eightButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .uva)
+        }
+        @IBAction func nineButtonClicked(_ sender: Any) {
+            onProvinceChanged(province: .western)
+        }
+        @IBAction func nextButtonClicked(_ sender: Any) {
+            guard let VC = self.storyboard?.instantiateViewController(withIdentifier: "HomeVC") as? HomeVC else {
+                return
+            }
+            self.navigationController?.pushViewController(VC, animated: true)
+        }
+        @IBAction func skipButtonClicked(_ sender: Any) {
+        }
     }
-    @IBAction func thirdButtonClicked(_ sender: Any) {
-    }
-    @IBAction func forthButtonClicked(_ sender: Any) {
-    }
-    @IBAction func fifthButtonClicked(_ sender: Any) {
-    }
-    @IBAction func sixButtonClicked(_ sender: Any) {
-    }
-    @IBAction func sevenButtonClicked(_ sender: Any) {
-    }
-    @IBAction func eightButtonClicked(_ sender: Any) {
-    }
-    @IBAction func nineButtonClicked(_ sender: Any) {
-    }
-    
-    
-    
-    
-    
-    @IBAction func nextButtonClicked(_ sender: Any) {
-    }
-    @IBAction func skipButtonClicked(_ sender: Any) {
-    }
-    
-}

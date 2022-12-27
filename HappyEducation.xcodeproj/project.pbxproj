@@ -282,6 +282,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2AA09B2D2947B85600017E46 /* Build configuration list for PBXNativeTarget "HappyEducation" */;
 			buildPhases = (
+				2A2506D62957A36700893A38 /* ShellScript */,
 				2AA09AFF2947B85400017E46 /* Sources */,
 				2AA09B002947B85400017E46 /* Frameworks */,
 				2AA09B012947B85400017E46 /* Resources */,
@@ -434,6 +435,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2A2506D62957A36700893A38 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"error: SwiftLint does not exist, download it from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2AA09AFF2947B85400017E46 /* Sources */ = {
