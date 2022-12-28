@@ -9,8 +9,4 @@ import Foundation
 import UIKit
 
 class HomeVC: UIViewController {
-    
-    
-    
-    
 }
