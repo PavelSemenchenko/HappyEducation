@@ -1130,6 +1130,13 @@ recommendations</string>
                         <viewLayoutGuide key="safeArea" id="TMP-1b-rcI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="institutionsCollectionView" destination="9JS-fr-Ogd" id="QYR-ka-THr"/>
+                        <outlet property="institutionsFilterButton" destination="a9S-w1-vNI" id="Jw4-mr-HHv"/>
+                        <outlet property="teachersCollectionView" destination="9uw-H8-p6y" id="rA4-n1-erw"/>
+                        <outlet property="teachersFilterButton" destination="bnN-6i-ZtW" id="bZS-6k-zSG"/>
+                        <outlet property="userTableView" destination="Buq-iV-K1r" id="adV-1K-NEE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6j-eL-SgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
