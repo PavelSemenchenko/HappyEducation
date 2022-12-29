@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TeacherCell" customModule="HappyEducation" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="134" height="238"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="134" height="238"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="TeachersName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gk4-p4-oPI">
+                        <rect key="frame" x="12" y="173" width="109" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aw-K1-9RB">
+                        <rect key="frame" x="11" y="196" width="44" height="15"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jqo-H2-kx9">
+                        <rect key="frame" x="12" y="53" width="110" height="115"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="115" id="LS2-Aj-ENI"/>
+                            <constraint firstAttribute="width" constant="110" id="iuN-tB-yLS"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Jqo-H2-kx9" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" constant="8" id="Fxh-Z1-klh"/>
+                <constraint firstItem="Gk4-p4-oPI" firstAttribute="top" secondItem="Jqo-H2-kx9" secondAttribute="bottom" constant="8" id="Ws3-A1-qPm"/>
+                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="Jqo-H2-kx9" secondAttribute="top" constant="8" id="Zpi-7b-xSB"/>
+                <constraint firstItem="Gk4-p4-oPI" firstAttribute="leading" secondItem="Jqo-H2-kx9" secondAttribute="leading" id="Zv3-KJ-2h1"/>
+                <constraint firstItem="2aw-K1-9RB" firstAttribute="top" secondItem="Gk4-p4-oPI" secondAttribute="bottom" constant="1" id="rkI-Wl-766"/>
+                <constraint firstItem="2aw-K1-9RB" firstAttribute="leading" secondItem="Gk4-p4-oPI" secondAttribute="leading" id="yqf-UL-S0y"/>
+            </constraints>
+            <size key="customSize" width="134" height="238"/>
+            <point key="canvasLocation" x="203.0534351145038" y="140.84507042253523"/>
+        </collectionViewCell>
+    </objects>
+</document>
