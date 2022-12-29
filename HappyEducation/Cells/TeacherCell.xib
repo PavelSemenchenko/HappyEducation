@@ -18,6 +18,10 @@
                 <rect key="frame" x="0.0" y="0.0" width="199" height="309"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bph-zA-UgG">
+                        <rect key="frame" x="-1" y="99" width="200" height="110"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </stackView>
                     <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NN6-jb-5lz">
                         <rect key="frame" x="35" y="86" width="126.00000000000001" height="176"/>
                         <subviews>

@@ -18,6 +18,11 @@
                 <rect key="frame" x="0.0" y="0.0" width="349" height="221"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" id="hp5-kE-57z">
+                        <rect key="frame" x="119" y="10" width="110" height="200"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <viewLayoutGuide key="safeArea" id="3lA-lC-lNf"/>
+                    </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wW4-b8-G7x">
                         <rect key="frame" x="6" y="51" width="145" height="160"/>
                         <constraints>
