@@ -10,6 +10,8 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseAuth
 import UIKit
+import AlamofireImage
+import Alamofire
 
 struct Teacher: Codable {
     let name: String

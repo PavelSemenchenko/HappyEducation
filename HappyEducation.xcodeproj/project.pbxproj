@@ -10,6 +10,8 @@
 		2A0CD3A529533481007942A8 /* GradeView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A0CD3A429533481007942A8 /* GradeView.xib */; };
 		2A0CD3A729533494007942A8 /* GradeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CD3A629533494007942A8 /* GradeView.swift */; };
 		2A0CD3A929536C9A007942A8 /* NameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A0CD3A829536C9A007942A8 /* NameTextField.swift */; };
+		2A1DBA072961C4CD00D87CF1 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 2A1DBA062961C4CD00D87CF1 /* Alamofire */; };
+		2A1DBA0A2961C61600D87CF1 /* AlamofireImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2A1DBA092961C61600D87CF1 /* AlamofireImage */; };
 		2A6660CA295B93A400550F62 /* HelloUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6660C8295B93A400550F62 /* HelloUserCell.swift */; };
 		2A6660CB295B93A400550F62 /* HelloUserCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2A6660C9295B93A400550F62 /* HelloUserCell.xib */; };
 		2A78283C294BC07C0032AD4F /* GradeSelectVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A78283B294BC07C0032AD4F /* GradeSelectVC.swift */; };
@@ -132,8 +134,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2A94757C2947E073000C3043 /* FirebaseDatabase in Frameworks */,
+				2A1DBA072961C4CD00D87CF1 /* Alamofire in Frameworks */,
 				2A94758A2947E073000C3043 /* FirebaseFunctionsCombine-Community in Frameworks */,
 				2A9475822947E073000C3043 /* FirebaseFirestore in Frameworks */,
+				2A1DBA0A2961C61600D87CF1 /* AlamofireImage in Frameworks */,
 				2A94756E2947E073000C3043 /* FirebaseAnalyticsSwift in Frameworks */,
 				2A94756A2947E073000C3043 /* FirebaseAnalytics in Frameworks */,
 				2A94756C2947E073000C3043 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
@@ -363,6 +367,8 @@
 				2A9475992947E073000C3043 /* FirebaseRemoteConfigSwift */,
 				2A94759B2947E073000C3043 /* FirebaseStorage */,
 				2A94759D2947E073000C3043 /* FirebaseStorageCombine-Community */,
+				2A1DBA062961C4CD00D87CF1 /* Alamofire */,
+				2A1DBA092961C61600D87CF1 /* AlamofireImage */,
 			);
 			productName = HappyEducation;
 			productReference = 2AA09B032947B85400017E46 /* HappyEducation.app */;
@@ -438,6 +444,8 @@
 			mainGroup = 2AA09AFA2947B85400017E46;
 			packageReferences = (
 				2A9475682947E073000C3043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				2A1DBA052961C4CD00D87CF1 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				2A1DBA082961C61600D87CF1 /* XCRemoteSwiftPackageReference "AlamofireImage" */,
 			);
 			productRefGroup = 2AA09B042947B85400017E46 /* Products */;
 			projectDirPath = "";
@@ -872,6 +880,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2A1DBA052961C4CD00D87CF1 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		2A1DBA082961C61600D87CF1 /* XCRemoteSwiftPackageReference "AlamofireImage" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/AlamofireImage";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
 		2A9475682947E073000C3043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -883,6 +907,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2A1DBA062961C4CD00D87CF1 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A1DBA052961C4CD00D87CF1 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		2A1DBA092961C61600D87CF1 /* AlamofireImage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2A1DBA082961C61600D87CF1 /* XCRemoteSwiftPackageReference "AlamofireImage" */;
+			productName = AlamofireImage;
+		};
 		2A9475692947E073000C3043 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 2A9475682947E073000C3043 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

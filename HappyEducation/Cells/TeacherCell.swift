@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class TeacherCell: UICollectionViewCell {
 
@@ -28,6 +29,10 @@ class TeacherCell: UICollectionViewCell {
         super.prepareForReuse()
         teacherNameLabel.text = teacher.name
         teacherSubjectLabel.text = teacher.subject
-    }
-
+        guard let url = URL(string: teacher.image) else {
+            teacherImageView.image = nil
+            return
+        }
+        teacherImageView.af.setImage(withURL: url)
+        }
 }
