@@ -31,6 +31,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
                                         , forCellWithReuseIdentifier: "TeachersCell")
         institutionsCollectionView.register(UINib(nibName: "InstitutionCell", bundle: nil)
                                             , forCellWithReuseIdentifier: "InstitutionCell")
+        loadAll()
     }
     /*
      // tableView User
@@ -42,6 +43,12 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
      
      }
      */
+    func loadAll() {
+        teachersRepository.getAll { teachers in
+            self.teachers = teachers
+            self.teachersCollectionView.reloadData()
+        }
+    }
     // collectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return teachers.count
@@ -51,8 +58,8 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TeachersCell", for: indexPath) as! TeacherCell
         
         cell.teacher = teachers[indexPath.row]
-        cell.teacherRepository = TeachersRepository
-        
+        // cell.teacherRepository = TeachersRepository
+        cell.teacherRepository = teachersRepository
         return cell
         
     }
