@@ -17,6 +17,7 @@ struct UserProfile: Codable {
     let password: String
 }
 
+
 protocol UserProfilesRepository {
     func getAll()
     func getOne(userId: String, completion: @escaping (UserProfile?) -> Void)

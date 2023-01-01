@@ -36,11 +36,14 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     /*
      // tableView User
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     return user?.count
+     return 1
      }
      
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-     
+         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HelloUserCell", for: indexPath) as? HelloUserCell else {
+             fatalError("Cell user is bad")
+         }
+         // cell.data = UserProfile[indexPath.row]
      }
      */
     func loadAll() {
