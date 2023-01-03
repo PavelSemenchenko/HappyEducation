@@ -20,6 +20,7 @@ class TeacherCell: UICollectionViewCell {
     
     var teacher: Teacher! {
         didSet {
+            teacherNameLabel.text = "temple"
             prepareForReuse()
         }
     }
