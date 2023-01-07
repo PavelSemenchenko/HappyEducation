@@ -13,8 +13,8 @@ import UIKit
 import AlamofireImage
 import Alamofire
 
-struct Teacher: Identifiable, Codable {
-    @DocumentID var id: String?
+struct Teacher: Codable {
+    // @DocumentID var id: String?
     let name: String
     let subject: String
     let image: String
@@ -45,7 +45,7 @@ class FirebaseTeachersRepository: TeachersRepository {
                 guard let teacher = try? doc.data(as: Teacher.self) else {
                     continue
                 }
-                teachers.append(teacher)
+                // teachers.append(teacher)
             }
             complletion(teachers)
         }

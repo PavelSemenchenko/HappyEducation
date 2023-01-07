@@ -21,7 +21,7 @@ struct UserProfile: Codable {
 protocol UserProfilesRepository {
     func getAll()
     func getOne(userId: String, completion: @escaping (UserProfile?) -> Void)
-    func create(profile: UserProfile)
+    // func create(profile: UserProfile)
     func delete()
 }
 
@@ -42,7 +42,7 @@ class FirebaseUsesrProfilesRepository: UserProfilesRepository {
             }
         }
     }
-    
+    /*
     func create(profile: UserProfile) {
         var userProfile = profile
         guard let currentUserId = Auth.auth().currentUser?.uid else {
@@ -53,7 +53,7 @@ class FirebaseUsesrProfilesRepository: UserProfilesRepository {
             .collection("profiles")
             .document(currentUserId)
             .setData(from: userProfile)
-    }
+    }*/
     
     func delete() {
         
@@ -62,6 +62,4 @@ class FirebaseUsesrProfilesRepository: UserProfilesRepository {
     func update() {
         
     }
-    
-    
 }
