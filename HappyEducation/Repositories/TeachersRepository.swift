@@ -45,7 +45,7 @@ class FirebaseTeachersRepository: TeachersRepository {
                 guard let teacher = try? doc.data(as: Teacher.self) else {
                     continue
                 }
-                // teachers.append(teacher)
+                teachers.append(teacher)
             }
             complletion(teachers)
         }
