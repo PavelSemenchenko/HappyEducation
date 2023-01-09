@@ -106,6 +106,14 @@
                 <constraint firstItem="hp5-kE-57z" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ri0-Lm-66E"/>
             </constraints>
             <size key="customSize" width="207" height="389"/>
+            <connections>
+                <outlet property="institutionDescriptionTextView" destination="whd-Lj-dei" id="zbl-Q8-gEj"/>
+                <outlet property="institutionImageVew" destination="wW4-b8-G7x" id="1Xw-yT-YOK"/>
+                <outlet property="institutionNameLabel" destination="swA-YE-as0" id="wqw-mt-EvZ"/>
+                <outlet property="institutionStarsLabel" destination="XP3-qG-gtV" id="8ea-Ie-aJE"/>
+                <outlet property="institutionSubjectLabel" destination="zGb-TP-CgA" id="g7l-tl-rgB"/>
+                <outlet property="institutionVotesLabel" destination="UM3-XH-ppz" id="rOH-JL-djs"/>
+            </connections>
             <point key="canvasLocation" x="239.69465648854961" y="131.69014084507043"/>
         </collectionViewCell>
     </objects>
