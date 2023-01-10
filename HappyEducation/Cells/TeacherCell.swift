@@ -20,12 +20,10 @@ class TeacherCell: UICollectionViewCell {
     
     var teacher: Teacher! {
         didSet {
-            teacherNameLabel.text = "temple"
             prepareForReuse()
         }
     }
-    var teacherRepository: TeachersRepository!
-    
+        
     override func prepareForReuse() {
         super.prepareForReuse()
         teacherNameLabel.text = teacher.name
@@ -35,5 +33,5 @@ class TeacherCell: UICollectionViewCell {
             return
         }
         teacherImageView.af.setImage(withURL: url)
-        }
+    }
 }

@@ -27,8 +27,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         // register cells
         userTableView.register(UINib(nibName: "HelloUserCel", bundle: nil)
                                , forCellReuseIdentifier: "HelloUserCel")
-        teachersCollectionView.register(UINib(nibName: "TeachersCell", bundle: nil)
-                                        , forCellWithReuseIdentifier: "TeachersCell")
+        teachersCollectionView.register(UINib(nibName: "TeacherCell", bundle: nil)
+                                        , forCellWithReuseIdentifier: "TeachersCell_000")
+        teachersCollectionView.dataSource = self
         institutionsCollectionView.register(UINib(nibName: "InstitutionCell", bundle: nil)
                                             , forCellWithReuseIdentifier: "InstitutionCell")
         loadAll()
@@ -58,11 +59,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TeachersCell", for: indexPath) as! TeacherCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TeachersCell_000", for: indexPath) as! TeacherCell
         
         cell.teacher = teachers[indexPath.row]
-        // cell.teacherRepository = TeachersRepository
-        cell.teacherRepository = teachersRepository
         return cell
         
     }

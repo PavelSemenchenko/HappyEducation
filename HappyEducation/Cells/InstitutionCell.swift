@@ -28,7 +28,6 @@ class InstitutionCell: UICollectionViewCell {
             prepareForReuse()
         }
     }
-    var institutionRepository: InstitutionRepository!
     
     override func prepareForReuse() {
         super.prepareForReuse()

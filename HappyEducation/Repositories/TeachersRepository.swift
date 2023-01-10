@@ -14,16 +14,11 @@ import AlamofireImage
 import Alamofire
 
 struct Teacher: Codable {
-    // @DocumentID var id: String?
+    @DocumentID var id: String?
     let name: String
     let subject: String
     let image: String
 }
-/*
-struct TeachersList: View {
-    @FirestoreQuery(collectionPath: "teachers") var teacher: [Teacher]
-}
-*/
 
 protocol TeachersRepository {
     func getAll(complletion: @escaping ([Teacher]) -> Void)
@@ -34,6 +29,7 @@ class FirebaseTeachersRepository: TeachersRepository {
     lazy var teachersCollection: CollectionReference = {
         return Firestore.firestore().collection("teachers")
     }()
+    
     func getAll(complletion: @escaping ([Teacher]) -> Void) {
         teachersCollection.getDocuments { snapshot, _ in
             guard let docs = snapshot?.documents else {
