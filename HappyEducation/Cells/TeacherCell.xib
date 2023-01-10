@@ -63,6 +63,7 @@
                 <outlet property="teacherImageView" destination="Jqo-H2-kx9" id="yuY-h1-H0l"/>
                 <outlet property="teacherNameLabel" destination="Gk4-p4-oPI" id="KfS-Ft-B7S"/>
                 <outlet property="teacherSubjectLabel" destination="2aw-K1-9RB" id="ARd-z7-Ecq"/>
+                <outlet property="teacherView" destination="NN6-jb-5lz" id="PMN-FH-zLo"/>
             </connections>
             <point key="canvasLocation" x="238.1679389312977" y="129.57746478873241"/>
         </collectionViewCell>

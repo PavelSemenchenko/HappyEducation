@@ -13,8 +13,14 @@ class TeacherCell: UICollectionViewCell {
     @IBOutlet weak var teacherImageView: UIImageView!
     @IBOutlet weak var teacherNameLabel: UILabel!
     @IBOutlet weak var teacherSubjectLabel: UILabel!
+    @IBOutlet weak var teacherView: UIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
+        teacherView.layer.shadowOpacity = 1
+        teacherView.layer.shadowRadius = 12.0
+        teacherView.layer.shadowOffset = CGSize.zero
+        teacherView.layer.shadowColor = UIColor.gray.cgColor
         // Initialization code
     }
     

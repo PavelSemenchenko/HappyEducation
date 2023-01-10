@@ -22,6 +22,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     override func viewDidLoad() {
         super.viewDidLoad()
+               
         // hide back bar
         navigationItem.setHidesBackButton(true, animated: true)
         // register cells
