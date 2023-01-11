@@ -112,6 +112,7 @@
                 <outlet property="institutionNameLabel" destination="swA-YE-as0" id="wqw-mt-EvZ"/>
                 <outlet property="institutionStarsLabel" destination="XP3-qG-gtV" id="8ea-Ie-aJE"/>
                 <outlet property="institutionSubjectLabel" destination="zGb-TP-CgA" id="g7l-tl-rgB"/>
+                <outlet property="institutionView" destination="mUa-U4-ISy" id="2O8-yf-GvW"/>
                 <outlet property="institutionVotesLabel" destination="UM3-XH-ppz" id="rOH-JL-djs"/>
             </connections>
             <point key="canvasLocation" x="239.69465648854961" y="131.69014084507043"/>
