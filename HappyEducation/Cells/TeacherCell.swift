@@ -18,7 +18,7 @@ class TeacherCell: UICollectionViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         teacherView.layer.shadowOpacity = 1
-        teacherView.layer.shadowRadius = 12.0
+        teacherView.layer.shadowRadius = 8.0
         teacherView.layer.shadowOffset = CGSize.zero
         teacherView.layer.shadowColor = UIColor.gray.cgColor
         // Initialization code
