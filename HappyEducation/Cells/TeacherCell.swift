@@ -20,7 +20,8 @@ class TeacherCell: UICollectionViewCell {
         teacherView.layer.shadowOpacity = 1
         teacherView.layer.shadowRadius = 8.0
         teacherView.layer.shadowOffset = CGSize.zero
-        teacherView.layer.shadowColor = UIColor.gray.cgColor
+        teacherView.layer.shadowColor = UIColor.systemGray4.cgColor
+        teacherView.layer.cornerRadius = 10
         // Initialization code
     }
     
