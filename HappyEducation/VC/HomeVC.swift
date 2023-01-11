@@ -18,6 +18,10 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     
     let teachersRepository: TeachersRepository = FirebaseTeachersRepository()
     var teachers: [Teacher] = []
+    
+    let institutionsRepository: InstitutionRepository = FirebaseInstitutionRepository()
+    var intitutions: [Institution] = []
+    
     let authenticationService: AuthentiticationService = FirebaseAuthentiticationService()
     
     override func viewDidLoad() {
@@ -33,6 +37,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         teachersCollectionView.dataSource = self
         institutionsCollectionView.register(UINib(nibName: "InstitutionCell", bundle: nil)
                                             , forCellWithReuseIdentifier: "InstitutionCell")
+        institutionsCollectionView.dataSource = self
         loadAll()
     }
     /*
@@ -48,13 +53,19 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
          // cell.data = UserProfile[indexPath.row]
      }
      */
+    
+#if DEBUG
+    // how to repeat func loadAll for institutions?
+    // how to repeat init collectionView
+#endif
+    
     func loadAll() {
         teachersRepository.getAll { teachers in
             self.teachers = teachers
             self.teachersCollectionView.reloadData()
         }
     }
-    // collectionView
+    // Teachers collectionView
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return teachers.count
     }
@@ -66,4 +77,6 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
         return cell
         
     }
+    
+    
 }
