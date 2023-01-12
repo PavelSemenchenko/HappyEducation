@@ -19,7 +19,7 @@
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
                     <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NN6-jb-5lz">
-                        <rect key="frame" x="53.999999999999993" y="16" width="118.33333333333331" height="176"/>
+                        <rect key="frame" x="54" y="16" width="118.33333333333333" height="180"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2aw-K1-9RB">
                                 <rect key="frame" x="8" y="156.33333333333331" width="43.333333333333336" height="14.333333333333343"/>

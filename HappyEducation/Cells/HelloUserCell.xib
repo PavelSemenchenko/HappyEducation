@@ -38,16 +38,6 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search your teacher" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ljO-nd-93q">
-                        <rect key="frame" x="34" y="126" width="267" height="60"/>
-                        <color key="backgroundColor" systemColor="systemGray6Color"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="60" id="fgf-JQ-jBG"/>
-                            <constraint firstAttribute="width" constant="267" id="wuj-hq-VVK"/>
-                        </constraints>
-                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                        <textInputTraits key="textInputTraits"/>
-                    </textField>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fus-5u-z08">
                         <rect key="frame" x="243.33333333333334" y="134" width="49.666666666666657" height="44"/>
                         <color key="tintColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -70,6 +60,16 @@
                             <constraint firstAttribute="width" constant="62" id="vAB-6b-Xfl"/>
                         </constraints>
                     </imageView>
+                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search your teacher" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ljO-nd-93q">
+                        <rect key="frame" x="34" y="126" width="267" height="60"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="60" id="fgf-JQ-jBG"/>
+                            <constraint firstAttribute="width" constant="267" id="wuj-hq-VVK"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
                     <constraint firstItem="fus-5u-z08" firstAttribute="trailing" secondItem="ljO-nd-93q" secondAttribute="trailing" constant="-8" id="2Bi-wW-ZHZ"/>
