@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class HomeVC: UIViewController, UICollectionViewDelegate {
     
     @IBOutlet weak var userTableView: UITableView!
     @IBOutlet weak var teachersFilterButton: UIButton!
@@ -17,66 +17,69 @@ class HomeVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSo
     @IBOutlet weak var institutionsCollectionView: UICollectionView!
     
     let teachersRepository: TeachersRepository = FirebaseTeachersRepository()
-    var teachers: [Teacher] = []
-    
     let institutionsRepository: InstitutionRepository = FirebaseInstitutionRepository()
-    var intitutions: [Institution] = []
-    
     let authenticationService: AuthentiticationService = FirebaseAuthentiticationService()
+    
+    let teachersDataSource = TeachersDataSource()
+    let institutionsDataSource = InstitutionsDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-               
+        
         // hide back bar
         navigationItem.setHidesBackButton(true, animated: true)
         // register cells
         userTableView.register(UINib(nibName: "HelloUserCel", bundle: nil)
                                , forCellReuseIdentifier: "HelloUserCel")
         teachersCollectionView.register(UINib(nibName: "TeacherCell", bundle: nil)
-                                        , forCellWithReuseIdentifier: "TeachersCell_000")
-        teachersCollectionView.dataSource = self
+                                        , forCellWithReuseIdentifier: "TeachersCellId")
+        teachersCollectionView.dataSource = teachersDataSource
         institutionsCollectionView.register(UINib(nibName: "InstitutionCell", bundle: nil)
-                                            , forCellWithReuseIdentifier: "InstitutionCell")
-        institutionsCollectionView.dataSource = self
+                                            , forCellWithReuseIdentifier: "InstitutionCellId")
+        institutionsCollectionView.dataSource = institutionsDataSource
         loadAll()
     }
-    /*
-     // tableView User
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-     return 1
-     }
-     
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-         guard let cell = tableView.dequeueReusableCell(withIdentifier: "HelloUserCell", for: indexPath) as? HelloUserCell else {
-             fatalError("Cell user is bad")
-         }
-         // cell.data = UserProfile[indexPath.row]
-     }
-     */
-    
-#if DEBUG
-    // how to repeat func loadAll for institutions?
-    // how to repeat init collectionView
-#endif
     
     func loadAll() {
         teachersRepository.getAll { teachers in
-            self.teachers = teachers
+            self.teachersDataSource.teachers = teachers
             self.teachersCollectionView.reloadData()
         }
+        
+        institutionsRepository.getAll { institutions in
+            self.institutionsDataSource.institutions = institutions
+            self.institutionsCollectionView.reloadData()
+        }
     }
-    // Teachers collectionView
+    
+}
+
+class TeachersDataSource: NSObject, UICollectionViewDataSource {
+    var teachers: [Teacher] = []
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return teachers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TeachersCell_000", for: indexPath) as! TeacherCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TeachersCellId", for: indexPath) as! TeacherCell
         
         cell.teacher = teachers[indexPath.row]
         return cell
-        
+    }
+}
+
+class InstitutionsDataSource: NSObject, UICollectionViewDataSource {
+    var institutions: [Institution] = []
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return institutions.count
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "InstitutionCellId", for: indexPath) as! InstitutionCell
+        
+        cell.institution = institutions[indexPath.row]
+        return cell
+    }
 }
