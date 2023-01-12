@@ -51,10 +51,6 @@
                             <constraint firstItem="Gk4-p4-oPI" firstAttribute="top" secondItem="Jqo-H2-kx9" secondAttribute="bottom" constant="8" id="ne5-QU-TKM"/>
                         </constraints>
                     </view>
-                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bph-zA-UgG">
-                        <rect key="frame" x="0.0" y="0.0" width="126" height="176"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>

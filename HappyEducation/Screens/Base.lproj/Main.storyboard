@@ -1048,15 +1048,8 @@ recommendations</string>
                                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
-                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Buq-iV-K1r">
-                                                <rect key="frame" x="0.0" y="0.0" width="393" height="180"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="180" id="dx6-hW-IQX"/>
-                                                </constraints>
-                                            </tableView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9uw-H8-p6y">
-                                                <rect key="frame" x="0.0" y="230" width="393" height="190"/>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9uw-H8-p6y">
+                                                <rect key="frame" x="0.0" y="230" width="393" height="180"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="180" id="Wgk-HT-QTg"/>
@@ -1069,7 +1062,7 @@ recommendations</string>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeachersCell" id="5vg-Tg-LYn" customClass="TeacherCell" customModule="HappyEducation" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="10" width="145" height="170"/>
+                                                        <rect key="frame" x="10" y="5" width="145" height="170"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oqm-yc-ffP">
                                                             <rect key="frame" x="0.0" y="0.0" width="145" height="170"/>
@@ -1078,7 +1071,7 @@ recommendations</string>
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="BkX-rN-ZrM" customClass="TeacherCell" customModule="HappyEducation" customModuleProvider="target">
-                                                        <rect key="frame" x="160" y="10" width="145" height="170"/>
+                                                        <rect key="frame" x="160" y="5" width="145" height="170"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KfE-2A-F1U">
                                                             <rect key="frame" x="0.0" y="0.0" width="145" height="170"/>
@@ -1087,7 +1080,7 @@ recommendations</string>
                                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                     </collectionViewCell>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8It-TX-XZu" customClass="TeacherCell" customModule="HappyEducation" customModuleProvider="target">
-                                                        <rect key="frame" x="310" y="10" width="145" height="170"/>
+                                                        <rect key="frame" x="310" y="5" width="145" height="170"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qKD-7o-157">
                                                             <rect key="frame" x="0.0" y="0.0" width="145" height="170"/>
@@ -1096,10 +1089,10 @@ recommendations</string>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9JS-fr-Ogd">
-                                                <rect key="frame" x="0.0" y="460" width="393" height="350"/>
-                                                <color key="backgroundColor" systemColor="systemGray5Color"/>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="mtx-Eq-15x">
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9JS-fr-Ogd">
+                                                <rect key="frame" x="0.0" y="460" width="393" height="358"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="mtx-Eq-15x">
                                                     <size key="itemSize" width="344" height="176"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -1115,7 +1108,7 @@ recommendations</string>
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OjN-Ek-F0H">
-                                                        <rect key="frame" x="24.666666666666668" y="186" width="344" height="176"/>
+                                                        <rect key="frame" x="24.666666666666668" y="181" width="344" height="176"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="a5b-zM-vyZ">
                                                             <rect key="frame" x="0.0" y="0.0" width="344" height="176"/>
@@ -1123,7 +1116,7 @@ recommendations</string>
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8ca-fE-Kuu">
-                                                        <rect key="frame" x="24.666666666666668" y="372" width="344" height="176"/>
+                                                        <rect key="frame" x="24.666666666666668" y="362" width="344" height="176"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" insetsLayoutMarginsFromSafeArea="NO" id="f26-Ow-LgP">
                                                             <rect key="frame" x="0.0" y="0.0" width="344" height="176"/>
@@ -1161,21 +1154,18 @@ recommendations</string>
                                             <constraint firstItem="bnN-6i-ZtW" firstAttribute="trailing" secondItem="a9S-w1-vNI" secondAttribute="trailing" id="1yU-RP-5dR"/>
                                             <constraint firstItem="yzq-UR-hpR" firstAttribute="bottom" secondItem="9JS-fr-Ogd" secondAttribute="bottom" id="2bf-92-Uja"/>
                                             <constraint firstItem="XNi-Tk-End" firstAttribute="top" secondItem="9uw-H8-p6y" secondAttribute="bottom" constant="15" id="3cP-pa-grq"/>
-                                            <constraint firstItem="yzq-UR-hpR" firstAttribute="top" secondItem="Buq-iV-K1r" secondAttribute="top" constant="59" id="4si-dM-qWO"/>
-                                            <constraint firstItem="CRz-Mf-mee" firstAttribute="top" secondItem="Buq-iV-K1r" secondAttribute="bottom" constant="13" id="9xp-F8-v45"/>
                                             <constraint firstItem="9uw-H8-p6y" firstAttribute="width" secondItem="9s4-9m-agt" secondAttribute="width" id="CkU-UO-LIe"/>
                                             <constraint firstItem="CRz-Mf-mee" firstAttribute="leading" secondItem="XNi-Tk-End" secondAttribute="leading" id="DtA-KJ-aMt"/>
                                             <constraint firstItem="yzq-UR-hpR" firstAttribute="trailing" secondItem="9JS-fr-Ogd" secondAttribute="trailing" id="MHQ-BC-IMl"/>
                                             <constraint firstItem="XNi-Tk-End" firstAttribute="leading" secondItem="yzq-UR-hpR" secondAttribute="leading" constant="32" id="WNx-S5-gQM"/>
+                                            <constraint firstItem="CRz-Mf-mee" firstAttribute="top" secondItem="yzq-UR-hpR" secondAttribute="top" constant="134" id="XfM-xh-0Gv"/>
                                             <constraint firstItem="bnN-6i-ZtW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CRz-Mf-mee" secondAttribute="trailing" constant="8" symbolic="YES" id="Yxl-3u-sRk"/>
-                                            <constraint firstItem="Buq-iV-K1r" firstAttribute="width" secondItem="9s4-9m-agt" secondAttribute="width" id="art-Td-oKA"/>
+                                            <constraint firstItem="9uw-H8-p6y" firstAttribute="top" secondItem="CRz-Mf-mee" secondAttribute="bottom" constant="13" id="cXL-PA-tza"/>
                                             <constraint firstItem="9JS-fr-Ogd" firstAttribute="leading" secondItem="yzq-UR-hpR" secondAttribute="leading" id="drg-Cv-nX2"/>
-                                            <constraint firstItem="9uw-H8-p6y" firstAttribute="top" secondItem="Buq-iV-K1r" secondAttribute="bottom" constant="50" id="i1R-Kf-wUn"/>
                                             <constraint firstItem="yzq-UR-hpR" firstAttribute="trailing" secondItem="a9S-w1-vNI" secondAttribute="trailing" constant="55" id="l5p-RS-Umm"/>
                                             <constraint firstItem="bnN-6i-ZtW" firstAttribute="centerY" secondItem="CRz-Mf-mee" secondAttribute="centerY" id="sM5-U0-TbB"/>
                                             <constraint firstItem="9JS-fr-Ogd" firstAttribute="top" secondItem="9uw-H8-p6y" secondAttribute="bottom" constant="50" id="shF-a9-NrX"/>
                                             <constraint firstItem="a9S-w1-vNI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XNi-Tk-End" secondAttribute="trailing" id="tCN-Yt-2kJ"/>
-                                            <constraint firstItem="Buq-iV-K1r" firstAttribute="centerX" secondItem="yzq-UR-hpR" secondAttribute="centerX" id="wHO-cL-4TF"/>
                                             <constraint firstItem="a9S-w1-vNI" firstAttribute="centerY" secondItem="XNi-Tk-End" secondAttribute="centerY" id="yvd-v9-Zd4"/>
                                             <constraint firstItem="9uw-H8-p6y" firstAttribute="centerX" secondItem="yzq-UR-hpR" secondAttribute="centerX" id="z2h-92-zka"/>
                                         </constraints>
@@ -1193,7 +1183,6 @@ recommendations</string>
                         <outlet property="institutionsFilterButton" destination="a9S-w1-vNI" id="Jw4-mr-HHv"/>
                         <outlet property="teachersCollectionView" destination="9uw-H8-p6y" id="rA4-n1-erw"/>
                         <outlet property="teachersFilterButton" destination="bnN-6i-ZtW" id="bZS-6k-zSG"/>
-                        <outlet property="userTableView" destination="Buq-iV-K1r" id="adV-1K-NEE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u6j-eL-SgA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1225,9 +1214,6 @@ recommendations</string>
         <image name="signUplogo" width="235.33332824707031" height="157"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

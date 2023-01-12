@@ -10,7 +10,6 @@ import UIKit
 
 class HomeVC: UIViewController, UICollectionViewDelegate {
     
-    @IBOutlet weak var userTableView: UITableView!
     @IBOutlet weak var teachersFilterButton: UIButton!
     @IBOutlet weak var teachersCollectionView: UICollectionView!
     @IBOutlet weak var institutionsFilterButton: UIButton!
@@ -29,8 +28,6 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         // hide back bar
         navigationItem.setHidesBackButton(true, animated: true)
         // register cells
-        userTableView.register(UINib(nibName: "HelloUserCel", bundle: nil)
-                               , forCellReuseIdentifier: "HelloUserCel")
         teachersCollectionView.register(UINib(nibName: "TeacherCell", bundle: nil)
                                         , forCellWithReuseIdentifier: "TeachersCellId")
         teachersCollectionView.dataSource = teachersDataSource
