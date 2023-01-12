@@ -614,7 +614,7 @@ recommendations</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QXf-IU-quq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1474.0458015267175" y="350"/>
+            <point key="canvasLocation" x="1473" y="541"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="SJG-12-MOE">
@@ -1040,7 +1040,7 @@ recommendations</string>
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fRG-Yf-R4V">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" contentInsetAdjustmentBehavior="scrollableAxes" translatesAutoresizingMaskIntoConstraints="NO" id="fRG-Yf-R4V">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -1049,48 +1049,48 @@ recommendations</string>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                         <subviews>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9uw-H8-p6y">
-                                                <rect key="frame" x="0.0" y="334" width="393" height="180"/>
+                                                <rect key="frame" x="0.0" y="334" width="393" height="200"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="180" id="Wgk-HT-QTg"/>
+                                                    <constraint firstAttribute="height" constant="200" id="Wgk-HT-QTg"/>
                                                 </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="RuP-dk-h3u">
-                                                    <size key="itemSize" width="145" height="180"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="0.0" id="RuP-dk-h3u">
+                                                    <size key="itemSize" width="145" height="190"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                    <inset key="sectionInset" minX="5" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="TeachersCell" id="5vg-Tg-LYn" customClass="TeacherCell" customModule="HappyEducation" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="0.0" width="145" height="180"/>
+                                                        <rect key="frame" x="5" y="5" width="145" height="190"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="oqm-yc-ffP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="180"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="190"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <rect key="contentStretch" x="0.10000000000000001" y="0.0" width="1" height="1"/>
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="" id="BkX-rN-ZrM" customClass="TeacherCell" customModule="HappyEducation" customModuleProvider="target">
-                                                        <rect key="frame" x="160" y="0.0" width="145" height="180"/>
+                                                        <rect key="frame" x="152" y="5" width="145" height="190"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="KfE-2A-F1U">
-                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="180"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="190"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </collectionViewCellContentView>
                                                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                                                     </collectionViewCell>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8It-TX-XZu" customClass="TeacherCell" customModule="HappyEducation" customModuleProvider="target">
-                                                        <rect key="frame" x="310" y="0.0" width="145" height="180"/>
+                                                        <rect key="frame" x="299" y="5" width="145" height="190"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="qKD-7o-157">
-                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="180"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="145" height="190"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
                                                 </cells>
                                             </collectionView>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="9JS-fr-Ogd">
-                                                <rect key="frame" x="0.0" y="616" width="393" height="400"/>
+                                                <rect key="frame" x="0.0" y="616" width="393" height="600"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="0.0" id="mtx-Eq-15x">
                                                     <size key="itemSize" width="350" height="180"/>
@@ -1107,7 +1107,7 @@ recommendations</string>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OjN-Ek-F0H">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="OjN-Ek-F0H" customClass="InstitutionCell" customModule="HappyEducation" customModuleProvider="target">
                                                         <rect key="frame" x="21.666666666666668" y="185" width="350" height="180"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="a5b-zM-vyZ">
@@ -1115,7 +1115,7 @@ recommendations</string>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                         </collectionViewCellContentView>
                                                     </collectionViewCell>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8ca-fE-Kuu">
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="8ca-fE-Kuu" customClass="InstitutionCell" customModule="HappyEducation" customModuleProvider="target">
                                                         <rect key="frame" x="21.666666666666668" y="370" width="350" height="180"/>
                                                         <autoresizingMask key="autoresizingMask"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="f26-Ow-LgP">
@@ -1126,7 +1126,7 @@ recommendations</string>
                                                 </cells>
                                             </collectionView>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a9S-w1-vNI">
-                                                <rect key="frame" x="288.33333333333331" y="555.66666666666663" width="49.666666666666686" height="35"/>
+                                                <rect key="frame" x="288.33333333333331" y="575.66666666666663" width="49.666666666666686" height="35"/>
                                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="plain" image="magnifyingglass" catalog="system"/>

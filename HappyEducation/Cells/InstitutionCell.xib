@@ -35,7 +35,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGb-TP-CgA">
-                                <rect key="frame" x="153" y="61.666666666666664" width="43.333333333333343" height="15.666666666666664"/>
+                                <rect key="frame" x="153" y="61.666666666666657" width="43.333333333333343" height="14"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -57,7 +57,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Description of the college and information about it" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="whd-Lj-dei">
-                                <rect key="frame" x="153" y="79.333333333333329" width="175" height="69.999999999999986"/>
+                                <rect key="frame" x="151" y="77.666666666666671" width="175" height="70.000000000000014"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="175" id="7Le-Kv-Vk5"/>
@@ -65,9 +65,13 @@
                                 </constraints>
                                 <inset key="scrollIndicatorInsets" minX="0.0" minY="0.0" maxX="30" maxY="0.0"/>
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r9B-Y1-k2r">
+                                <rect key="frame" x="0.0" y="8" width="110" height="200"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="wIE-3K-yPA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -77,7 +81,6 @@
                             <constraint firstItem="wW4-b8-G7x" firstAttribute="top" secondItem="mUa-U4-ISy" secondAttribute="top" id="TTr-M3-hWh"/>
                             <constraint firstItem="UM3-XH-ppz" firstAttribute="leading" secondItem="XP3-qG-gtV" secondAttribute="trailing" constant="20" id="Uuf-dS-J6J"/>
                             <constraint firstItem="XP3-qG-gtV" firstAttribute="top" secondItem="swA-YE-as0" secondAttribute="bottom" constant="6" id="Vi6-17-hOj"/>
-                            <constraint firstItem="whd-Lj-dei" firstAttribute="top" secondItem="UM3-XH-ppz" secondAttribute="bottom" constant="31.66666666666665" id="XK6-b7-dBP"/>
                             <constraint firstItem="zGb-TP-CgA" firstAttribute="top" secondItem="XP3-qG-gtV" secondAttribute="bottom" constant="14" id="b3p-Gx-AYq"/>
                             <constraint firstItem="swA-YE-as0" firstAttribute="top" secondItem="mUa-U4-ISy" secondAttribute="top" constant="8" id="fPW-qg-Y4X"/>
                             <constraint firstItem="XP3-qG-gtV" firstAttribute="leading" secondItem="wW4-b8-G7x" secondAttribute="trailing" constant="8" id="fel-BQ-cgP"/>
@@ -85,13 +88,9 @@
                             <constraint firstItem="swA-YE-as0" firstAttribute="leading" secondItem="wW4-b8-G7x" secondAttribute="trailing" constant="11" id="oXp-ei-XDs"/>
                             <constraint firstItem="UM3-XH-ppz" firstAttribute="top" secondItem="swA-YE-as0" secondAttribute="bottom" constant="6" id="q8g-yr-Lkc"/>
                             <constraint firstItem="whd-Lj-dei" firstAttribute="top" secondItem="zGb-TP-CgA" secondAttribute="bottom" constant="2" id="roX-aJ-f0H"/>
-                            <constraint firstItem="whd-Lj-dei" firstAttribute="leading" secondItem="wW4-b8-G7x" secondAttribute="trailing" constant="8" id="v2j-uY-yNq"/>
+                            <constraint firstItem="whd-Lj-dei" firstAttribute="leading" secondItem="wW4-b8-G7x" secondAttribute="trailing" constant="6" id="v2j-uY-yNq"/>
                         </constraints>
                     </view>
-                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r9B-Y1-k2r">
-                        <rect key="frame" x="121" y="14" width="110" height="200"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </stackView>
                 </subviews>
             </view>
             <viewLayoutGuide key="safeArea" id="SIa-YW-d88"/>
