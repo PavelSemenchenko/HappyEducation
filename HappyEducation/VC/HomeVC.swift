@@ -36,16 +36,15 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         // User
         greatingLabel.text = "Good evening !"
         userNameLabel.text = authenticationService.userDisplayName()
-        /*
-        guard let userImageUrl = URL(string: userImage) else {
-            userImage.image = nil
-        }
-        userImage.af.setImage(withURL: userImageUrl)
-         */
-       // https://firebasestorage.googleapis.com/v0/b/happyeducation-bcb82.appspot.com/o/userImage.png?alt=media
+        
         
         // hide back bar
         navigationItem.setHidesBackButton(true, animated: true)
+        // logout in nav bar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "LogOut",
+                                                            style: UIBarButtonItem.Style.plain,
+                                                            target: self,
+                                                            action: #selector(logOutClicked))
         // register cells
         teachersCollectionView.register(UINib(nibName: "TeacherCell", bundle: nil)
                                         , forCellWithReuseIdentifier: "TeachersCellId")
@@ -54,6 +53,17 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
                                             , forCellWithReuseIdentifier: "InstitutionCellId")
         institutionsCollectionView.dataSource = institutionsDataSource
         loadAll()
+    }
+    @objc func logOutClicked() {
+        authenticationService.logOut()
+        if navigationController?.viewControllers.count == 1 {
+            guard let viewController = storyboard?.instantiateViewController(withIdentifier: "viewController") else {
+                return
+            }
+            navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     func loadAll() {
@@ -68,13 +78,11 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         }
     }
     
-    
     @IBAction func teacherSearchButtonClicked(_ sender: Any) {
     }
     
     @IBAction func teacherSearchCustomFilterButtonClicked(_ sender: Any) {
     }
-    
     
     @IBAction func popularTeacherSearchButtonClicked(_ sender: Any) {
     }
