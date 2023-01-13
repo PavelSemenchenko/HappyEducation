@@ -43,8 +43,8 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         switch currentTime {
         case 6...11: greatingLabel.text = "Good morning !"
         case 12...16: greatingLabel.text = "Good day !"
-        case 17...22: greatingLabel.text = "Good evening !"
-        case 23...5: greatingLabel.text = "Good night !"
+        case 17...23: greatingLabel.text = "Good evening !"
+        case 0...5: greatingLabel.text = "Good night !"
         default: print("Good time")
         }
         
