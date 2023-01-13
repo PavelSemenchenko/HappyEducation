@@ -10,13 +10,18 @@ import FirebaseAuth
 
 protocol AuthentiticationService {
     func signIn(email: String, password: String, completion: @escaping (String?) -> Void)
-    func signUp(email: String, password: String, completion: @escaping (String?) -> Void)
+    func signUp(name: String, email: String, password: String, completion: @escaping (String?) -> Void)
     func forgotPassword(email: String, completion: @escaping (String?) -> Void)
     func isAuthenticated() -> Bool
+    func userDisplayName() -> String?
     func logOut()
 }
 
 class FirebaseAuthentiticationService: AuthentiticationService {
+    
+    func userDisplayName() -> String? {
+        return Auth.auth().currentUser?.displayName
+    }
       
     func signIn(email: String, password: String, completion: @escaping (String?) -> Void) {
         Auth.auth().signIn(withEmail: email, password: password) { result, error in
@@ -28,9 +33,12 @@ class FirebaseAuthentiticationService: AuthentiticationService {
             }
         }
     }
-    func signUp(email: String, password: String, completion: @escaping (String?) -> Void) {
+    func signUp(name: String, email: String, password: String, completion: @escaping (String?) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) { result, error in
-            if result?.user != nil {
+            if let user = result?.user {
+                let request = user.createProfileChangeRequest()
+                request.displayName = name
+                request.commitChanges()
                 completion(nil)
             } else {
                 let message = error?.localizedDescription

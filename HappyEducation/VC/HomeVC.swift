@@ -9,10 +9,19 @@ import Foundation
 import UIKit
 
 class HomeVC: UIViewController, UICollectionViewDelegate {
+    // About User
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var greatingLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
+    // Search techer
+    @IBOutlet weak var teacherSearchTextField: UITextField!
+    // Custom search
+    @IBOutlet weak var teachersSearchCustomButton: UIButton!
     
-    @IBOutlet weak var teachersFilterButton: UIButton!
+    @IBOutlet weak var popularTeacherSearchButton: UIButton!
+    @IBOutlet weak var popularInstitutionsSearchButton: UIButton!
+    
     @IBOutlet weak var teachersCollectionView: UICollectionView!
-    @IBOutlet weak var institutionsFilterButton: UIButton!
     @IBOutlet weak var institutionsCollectionView: UICollectionView!
     
     let teachersRepository: TeachersRepository = FirebaseTeachersRepository()
@@ -47,6 +56,20 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
             self.institutionsDataSource.institutions = institutions
             self.institutionsCollectionView.reloadData()
         }
+    }
+    
+    
+    @IBAction func teacherSearchButtonClicked(_ sender: Any) {
+    }
+    
+    @IBAction func teacherSearchCustomFilterButtonClicked(_ sender: Any) {
+    }
+    
+    
+    @IBAction func popularTeacherSearchButtonClicked(_ sender: Any) {
+    }
+    
+    @IBAction func populatInstitutionsButtonClicked(_ sender: Any) {
     }
     
 }

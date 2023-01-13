@@ -15,6 +15,8 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
     @IBOutlet weak var passwordTextField: PasswordTextField!
     @IBOutlet weak var errorEmailLabel: UILabel!
     @IBOutlet weak var errorPasswordLabel: UILabel!
+    @IBOutlet weak var errorNameLabel: UILabel!
+    
     let authenticationService: AuthentiticationService = FirebaseAuthentiticationService()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,8 +44,18 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
     @objc func kbWillHide() {
         scrollView.contentOffset = CGPoint.zero
     }
+    
     @IBAction func signUpButtonclicked(_ sender: Any) {
         validateFields()
+        
+        let optionalName = nameTextField.text
+        guard let name = optionalName, name.count > 1 else {
+            errorNameLabel.text = "Name is empty"
+            errorNameLabel.isHidden = false
+            return
+        }
+        errorNameLabel.isHidden = true
+        
         let optionalEmail = emailTextField.text
         guard let email = optionalEmail, email.contains("@") else {
             emailTextField.layer.borderColor = UIColor.red.cgColor
@@ -53,6 +65,7 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
         }
         emailTextField.layer.borderColor = UIColor.green.cgColor
         errorEmailLabel.isHidden = true
+        
         let optionalPassword = passwordTextField.text
         guard let password = optionalPassword, password.count >= 6 else {
             passwordTextField.layer.borderColor = UIColor.red.cgColor
@@ -62,7 +75,8 @@ class SignUpVC: UIViewController, BaseAuthentiticationVC, UITextFieldDelegate {
         }
         passwordTextField.layer.borderColor = UIColor.green.cgColor
         errorPasswordLabel.isHidden = true
-        authenticationService.signUp(email: email, password: password) { errorMessage in
+        
+        authenticationService.signUp(name: name, email: email, password: password) { errorMessage in
             if let message = errorMessage {
                 let alert = UIAlertController(title: "Happe Education",
                                               message: message,
