@@ -33,10 +33,24 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // User
-        greatingLabel.text = "Good evening !"
-        userNameLabel.text = authenticationService.userDisplayName()
         
+        // try change greating
+        let date = Date()
+        let calendar = Calendar.current
+        let hour = calendar.component(.hour, from: date)
+
+        var currentTime = hour
+        switch currentTime {
+        case 6...11: greatingLabel.text = "Good morning !"
+        case 12...16: greatingLabel.text = "Good day !"
+        case 17...22: greatingLabel.text = "Good evening !"
+        case 23...5: greatingLabel.text = "Good night !"
+        default: print("Good time")
+        }
+        
+        //greatingLabel.text = "Greating !"
+        
+        userNameLabel.text = authenticationService.userDisplayName()
         
         // hide back bar
         navigationItem.setHidesBackButton(true, animated: true)
