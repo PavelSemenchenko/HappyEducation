@@ -10,8 +10,8 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 import FirebaseAuth
 import UIKit
-import AlamofireImage
-import Alamofire
+// import AlamofireImage
+// import Alamofire
 
 struct Teacher: Codable {
     @DocumentID var id: String?

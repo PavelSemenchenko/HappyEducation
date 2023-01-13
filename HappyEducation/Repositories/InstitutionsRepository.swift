@@ -11,6 +11,7 @@ import FirebaseFirestore
 import FirebaseFirestoreSwift
 
 struct Institution: Codable {
+    @DocumentID var id: String?
     let name: String
     let image: String
     let description: String
@@ -22,9 +23,11 @@ protocol InstitutionRepository {
     func getAll(completion: @escaping ([Institution]) -> Void)
 }
 class FirebaseInstitutionRepository: InstitutionRepository {
+    
     lazy var institutionsCollection: CollectionReference = {
         return Firestore.firestore().collection("institutions")
     }()
+    
     func getAll(completion: @escaping ([Institution]) -> Void) {
         institutionsCollection.getDocuments { snapshot, _ in
             guard let docs = snapshot?.documents else {
