@@ -9,10 +9,19 @@ import Foundation
 import UIKit
 
 class HomeVC: UIViewController, UICollectionViewDelegate {
+    // About User
+    @IBOutlet weak var userImage: UIImageView!
+    @IBOutlet weak var greatingLabel: UILabel!
+    @IBOutlet weak var userNameLabel: UILabel!
+    // Search techer
+    @IBOutlet weak var teacherSearchTextField: UITextField!
+    // Custom search
+    @IBOutlet weak var teachersSearchCustomButton: UIButton!
     
-    @IBOutlet weak var teachersFilterButton: UIButton!
+    @IBOutlet weak var popularTeacherSearchButton: UIButton!
+    @IBOutlet weak var popularInstitutionsSearchButton: UIButton!
+    
     @IBOutlet weak var teachersCollectionView: UICollectionView!
-    @IBOutlet weak var institutionsFilterButton: UIButton!
     @IBOutlet weak var institutionsCollectionView: UICollectionView!
     
     let teachersRepository: TeachersRepository = FirebaseTeachersRepository()
@@ -24,9 +33,18 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // User
+        greatingLabel.text = "Good evening !"
+        userNameLabel.text = authenticationService.userDisplayName()
+        
         
         // hide back bar
         navigationItem.setHidesBackButton(true, animated: true)
+        // logout in nav bar
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "LogOut",
+                                                            style: UIBarButtonItem.Style.plain,
+                                                            target: self,
+                                                            action: #selector(logOutClicked))
         // register cells
         teachersCollectionView.register(UINib(nibName: "TeacherCell", bundle: nil)
                                         , forCellWithReuseIdentifier: "TeachersCellId")
@@ -35,6 +53,17 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
                                             , forCellWithReuseIdentifier: "InstitutionCellId")
         institutionsCollectionView.dataSource = institutionsDataSource
         loadAll()
+    }
+    @objc func logOutClicked() {
+        authenticationService.logOut()
+        if navigationController?.viewControllers.count == 1 {
+            guard let viewController = storyboard?.instantiateViewController(withIdentifier: "viewController") else {
+                return
+            }
+            navigationController?.pushViewController(viewController, animated: true)
+        } else {
+            navigationController?.popToRootViewController(animated: true)
+        }
     }
     
     func loadAll() {
@@ -47,6 +76,18 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
             self.institutionsDataSource.institutions = institutions
             self.institutionsCollectionView.reloadData()
         }
+    }
+    
+    @IBAction func teacherSearchButtonClicked(_ sender: Any) {
+    }
+    
+    @IBAction func teacherSearchCustomFilterButtonClicked(_ sender: Any) {
+    }
+    
+    @IBAction func popularTeacherSearchButtonClicked(_ sender: Any) {
+    }
+    
+    @IBAction func populatInstitutionsButtonClicked(_ sender: Any) {
     }
     
 }
