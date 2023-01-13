@@ -33,6 +33,16 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // User
+        greatingLabel.text = "Good evening !"
+        userNameLabel.text = authenticationService.userDisplayName()
+        /*
+        guard let userImageUrl = URL(string: userImage) else {
+            userImage.image = nil
+        }
+        userImage.af.setImage(withURL: userImageUrl)
+         */
+       // https://firebasestorage.googleapis.com/v0/b/happyeducation-bcb82.appspot.com/o/userImage.png?alt=media
         
         // hide back bar
         navigationItem.setHidesBackButton(true, animated: true)
