@@ -23,16 +23,29 @@ struct Teacher: Codable {
 
 protocol TeachersRepository {
     func getAll(complletion: @escaping ([Teacher]) -> Void)
-    func createTeacher(name: String, subject: String) -> Teacher
+    func createTeacher(name: String, subject: String, image: String) -> Teacher
+    func update(value: Teacher)
+    func delete(teacherId: String)
 }
 
 class FirebaseTeachersRepository: TeachersRepository {
+    func delete(teacherId: String) {
+        teachersCollection.document(teacherId).delete()
+    }
+    
+    func update(value: Teacher) {
+        guard let documentId = value.id else {
+            return
+        }
+        try? teachersCollection.document(documentId).setData(from: value)
+    }
+    
      
-    func createTeacher(name: String, subject: String) -> Teacher {
+    func createTeacher(name: String, subject: String, image: String) -> Teacher {
         guard let currentUserId = Auth.auth().currentUser?.uid else {
             fatalError("Not authenticated user")
         }
-        var teacher = Teacher(name: name, subject: subject, image: <#String#>, authorId: currentUserId)
+        var teacher = Teacher(name: name, subject: subject, image: image, authorId: currentUserId)
         guard let reference = try? teachersCollection.addDocument(from: teacher) else {
             fatalError("Failed to create new teacher")
         }

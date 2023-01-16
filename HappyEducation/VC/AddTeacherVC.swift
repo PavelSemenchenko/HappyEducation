@@ -44,8 +44,10 @@ class AddTeacherVC: UIViewController {
             return
         }
         
-        let newTeacher = teacherRepository.createTeacher(name: name, subject: subject)
+        let newTeacher = teacherRepository.createTeacher(name: name, subject: subject, image:)
         self.onCreateCompletion?(newTeacher)
+        
+        
         
     }
 }

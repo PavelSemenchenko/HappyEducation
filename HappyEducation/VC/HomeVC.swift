@@ -105,6 +105,16 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     }
     
     @IBAction func addTeacherButtonClicked(_ sender: Any) {
+        // назначить контроллер
+        // получить данные
+        // перерисовать таблицу
+        let newTeacher = AddTeacherVC()
+        newTeacher.onCreateCompletion = { newTeacher in
+            if let teacher = newTeacher {
+                self.teachersDataSource.teachers.append(teacher)
+                self.teachersCollectionView.reloadData()
+            }
+        }
         let sbAddTeacher = UIStoryboard(name: "AddTeacherSB", bundle: nil)
         let ctlAddTeacher = sbAddTeacher.instantiateViewController(withIdentifier: "addTeacher")
         self.navigationController?.pushViewController(ctlAddTeacher, animated: true)
