@@ -104,6 +104,12 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     @IBAction func populatInstitutionsButtonClicked(_ sender: Any) {
     }
     
+    @IBAction func addTeacherButtonClicked(_ sender: Any) {
+        let sbAddTeacher = UIStoryboard(name: "AddTeacherSB", bundle: nil)
+        let ctlAddTeacher = sbAddTeacher.instantiateViewController(withIdentifier: "addTeacher")
+        self.navigationController?.pushViewController(ctlAddTeacher, animated: true)
+    }
+    
 }
 
 class TeachersDataSource: NSObject, UICollectionViewDataSource {
