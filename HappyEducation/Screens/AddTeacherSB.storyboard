@@ -39,6 +39,9 @@
                                                 </fragment>
                                             </attributedString>
                                         </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addTeacherImageClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="im3-KU-KHi"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2t-rI-3rl">
                                         <rect key="frame" x="16" y="266" width="261" height="32"/>
@@ -50,8 +53,14 @@
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G11-CU-Ggi">
                                         <rect key="frame" x="85" y="380" width="123" height="35"/>
+                                        <color key="tintColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="filled" title="Save teacher"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save teacher">
+                                            <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addTeacherSaveClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hDb-eT-p6i"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eyi-2s-owW">
                                         <rect key="frame" x="16" y="314" width="261" height="34"/>
@@ -91,6 +100,9 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addTeacherImageView" destination="GUb-RD-JpK" id="66n-gg-dt0"/>
+                        <outlet property="addTeacherSubjectTextField" destination="eyi-2s-owW" id="Hny-tS-uGn"/>
+                        <outlet property="addTeacherUserNameTextField" destination="Z2t-rI-3rl" id="zyZ-aB-fXP"/>
                         <outlet property="addTeacherView" destination="Cek-hZ-yBa" id="DKQ-dD-BdR"/>
                     </connections>
                 </viewController>

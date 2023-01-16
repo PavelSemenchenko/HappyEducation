@@ -18,13 +18,27 @@ struct Teacher: Codable {
     let name: String
     let subject: String
     let image: String
+    let authorId: String
 }
 
 protocol TeachersRepository {
     func getAll(complletion: @escaping ([Teacher]) -> Void)
+    func createTeacher(name: String, subject: String) -> Teacher
 }
 
 class FirebaseTeachersRepository: TeachersRepository {
+     
+    func createTeacher(name: String, subject: String) -> Teacher {
+        guard let currentUserId = Auth.auth().currentUser?.uid else {
+            fatalError("Not authenticated user")
+        }
+        var teacher = Teacher(name: name, subject: subject, image: <#String#>, authorId: currentUserId)
+        guard let reference = try? teachersCollection.addDocument(from: teacher) else {
+            fatalError("Failed to create new teacher")
+        }
+        teacher.id = reference.documentID
+        return teacher
+    }
         
     lazy var teachersCollection: CollectionReference = {
         return Firestore.firestore().collection("teachers")
