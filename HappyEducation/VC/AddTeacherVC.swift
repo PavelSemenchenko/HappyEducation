@@ -11,8 +11,11 @@ import UIKit
 class AddTeacherVC: UIViewController {
     let teacherRepository: TeachersRepository = FirebaseTeachersRepository()
     var onCreateCompletion: ((Teacher?) -> Void)?
+    
     @IBOutlet weak var addTeacherView: UIView!
     @IBOutlet weak var addTeacherImageView: UIImageView!
+    
+    @IBOutlet weak var addTeacherImageURL: UITextField!
     
     @IBOutlet weak var addTeacherUserNameTextField: UITextField!
     @IBOutlet weak var addTeacherSubjectTextField: UITextField!
@@ -43,11 +46,13 @@ class AddTeacherVC: UIViewController {
         guard let subject = addTeacherSubjectTextField.text, subject.count > 2 else {
             return
         }
+        // temple image <- string
+        guard let image = addTeacherImageURL.text else {
+            return
+        }
         
-        let newTeacher = teacherRepository.createTeacher(name: name, subject: subject, image:)
+        let newTeacher = teacherRepository.createTeacher(name: name, subject: subject, image: image)
         self.onCreateCompletion?(newTeacher)
-        
-        
-        
+        self.navigationController?.popViewController(animated: true)
     }
 }

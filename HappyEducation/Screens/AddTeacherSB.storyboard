@@ -70,6 +70,12 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rui-uI-Zff">
+                                        <rect key="frame" x="16" y="218" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
@@ -100,6 +106,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addTeacherImageURL" destination="Rui-uI-Zff" id="box-5X-uaq"/>
                         <outlet property="addTeacherImageView" destination="GUb-RD-JpK" id="66n-gg-dt0"/>
                         <outlet property="addTeacherSubjectTextField" destination="eyi-2s-owW" id="Hny-tS-uGn"/>
                         <outlet property="addTeacherUserNameTextField" destination="Z2t-rI-3rl" id="zyZ-aB-fXP"/>
