@@ -20,6 +20,8 @@
 		2A8695BC294CE18700B73D98 /* GradeCustomVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */; };
 		2A8695BE294CED9200B73D98 /* ProvinceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8695BD294CED9200B73D98 /* ProvinceVC.swift */; };
 		2A8C3523297746AF00922390 /* FileStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C3522297746AF00922390 /* FileStorage.swift */; };
+		2A8C3525297759EE00922390 /* AddInstitutionSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2A8C3524297759EE00922390 /* AddInstitutionSB.storyboard */; };
+		2A8C352729775A7000922390 /* AddInstitutionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A8C352629775A7000922390 /* AddInstitutionVC.swift */; };
 		2A9475672947DF48000C3043 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2A9475662947DF48000C3043 /* GoogleService-Info.plist */; };
 		2A94756A2947E073000C3043 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 2A9475692947E073000C3043 /* FirebaseAnalytics */; };
 		2A94756C2947E073000C3043 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */ = {isa = PBXBuildFile; productRef = 2A94756B2947E073000C3043 /* FirebaseAnalyticsOnDeviceConversion */; };
@@ -102,6 +104,8 @@
 		2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeCustomVC.swift; sourceTree = "<group>"; };
 		2A8695BD294CED9200B73D98 /* ProvinceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProvinceVC.swift; sourceTree = "<group>"; };
 		2A8C3522297746AF00922390 /* FileStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileStorage.swift; sourceTree = "<group>"; };
+		2A8C3524297759EE00922390 /* AddInstitutionSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddInstitutionSB.storyboard; sourceTree = "<group>"; };
+		2A8C352629775A7000922390 /* AddInstitutionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInstitutionVC.swift; sourceTree = "<group>"; };
 		2A9475662947DF48000C3043 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2A9F214E295E09CB00C965B2 /* TeachersRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeachersRepository.swift; sourceTree = "<group>"; };
 		2A9F2150295E0CD300C965B2 /* UserProfilesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilesRepository.swift; sourceTree = "<group>"; };
@@ -274,6 +278,7 @@
 			children = (
 				2AA09B0C2947B85500017E46 /* Main.storyboard */,
 				2A6AE57D2975D09C00C7AD3E /* AddTeacherSB.storyboard */,
+				2A8C3524297759EE00922390 /* AddInstitutionSB.storyboard */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -289,6 +294,7 @@
 				2A8695BB294CE18700B73D98 /* GradeCustomVC.swift */,
 				2A8695BD294CED9200B73D98 /* ProvinceVC.swift */,
 				2A6AE57F2975D3D500C7AD3E /* AddTeacherVC.swift */,
+				2A8C352629775A7000922390 /* AddInstitutionVC.swift */,
 			);
 			path = VC;
 			sourceTree = "<group>";
@@ -480,6 +486,7 @@
 				2AA09B102947B85500017E46 /* Assets.xcassets in Resources */,
 				2A6660CB295B93A400550F62 /* HelloUserCell.xib in Resources */,
 				DAAF32BF295D7FCB00E3279D /* InstitutionCell.xib in Resources */,
+				2A8C3525297759EE00922390 /* AddInstitutionSB.storyboard in Resources */,
 				2AA09B0E2947B85500017E46 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -546,6 +553,7 @@
 				DAAF32BE295D7FCB00E3279D /* InstitutionCell.swift in Sources */,
 				DA5C05AD2948578200799A16 /* Authetitication.swift in Sources */,
 				DAAF32BA295D6F7100E3279D /* TeacherCell.swift in Sources */,
+				2A8C352729775A7000922390 /* AddInstitutionVC.swift in Sources */,
 				2A9F2151295E0CD300C965B2 /* UserProfilesRepository.swift in Sources */,
 				2A78283C294BC07C0032AD4F /* GradeSelectVC.swift in Sources */,
 			);

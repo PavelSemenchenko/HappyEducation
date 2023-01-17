@@ -13,14 +13,16 @@ import FirebaseFirestoreSwift
 struct Institution: Codable {
     @DocumentID var id: String?
     let name: String
-    let image: String
+    fileprivate(set) var image: String = ""
     let description: String
     let rating: Double
     let voted: Int
     let subject: String
+    let authorId: String?
 }
 protocol InstitutionRepository {
     func getAll(completion: @escaping ([Institution]) -> Void)
+    func createInstitution(name: String, image: URL, description: String, subject: String) -> Institution
 }
 class FirebaseInstitutionRepository: InstitutionRepository {
     

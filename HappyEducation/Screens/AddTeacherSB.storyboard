@@ -38,6 +38,7 @@
                                             <attributedString key="attributedTitle">
                                                 <fragment content="upload">
                                                     <attributes>
+                                                        <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <font key="NSFont" size="12" name="Helvetica"/>
                                                     </attributes>
                                                 </fragment>
@@ -56,7 +57,7 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G11-CU-Ggi">
-                                        <rect key="frame" x="85" y="380" width="123" height="35"/>
+                                        <rect key="frame" x="72" y="380" width="149" height="35"/>
                                         <color key="tintColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="filled" title="Save teacher">
@@ -89,12 +90,14 @@
                                     <constraint firstAttribute="trailing" secondItem="Z2t-rI-3rl" secondAttribute="trailing" constant="16" id="HCu-F4-oZB"/>
                                     <constraint firstAttribute="trailing" secondItem="GUb-RD-JpK" secondAttribute="trailing" constant="64" id="HoI-v3-GqU"/>
                                     <constraint firstItem="eyi-2s-owW" firstAttribute="leading" secondItem="Z2t-rI-3rl" secondAttribute="leading" id="Run-Jp-GpB"/>
+                                    <constraint firstItem="G11-CU-Ggi" firstAttribute="leading" secondItem="Cek-hZ-yBa" secondAttribute="leading" constant="72" id="UsS-jr-8aP"/>
                                     <constraint firstItem="eyi-2s-owW" firstAttribute="top" secondItem="Z2t-rI-3rl" secondAttribute="bottom" constant="16" id="Z6h-Pw-Tpe"/>
                                     <constraint firstItem="Z2t-rI-3rl" firstAttribute="leading" secondItem="Cek-hZ-yBa" secondAttribute="leading" constant="16" id="ata-f4-2mZ"/>
                                     <constraint firstItem="G11-CU-Ggi" firstAttribute="top" secondItem="eyi-2s-owW" secondAttribute="bottom" constant="32" id="byt-rZ-4o3"/>
                                     <constraint firstItem="GUb-RD-JpK" firstAttribute="leading" secondItem="Cek-hZ-yBa" secondAttribute="leading" constant="64" id="lIQ-jt-7xX"/>
                                     <constraint firstItem="FAf-qE-FJY" firstAttribute="top" secondItem="GUb-RD-JpK" secondAttribute="bottom" constant="8" symbolic="YES" id="rc5-kj-tFh"/>
                                     <constraint firstItem="FAf-qE-FJY" firstAttribute="trailing" secondItem="GUb-RD-JpK" secondAttribute="trailing" id="sKS-YS-yMj"/>
+                                    <constraint firstAttribute="trailing" secondItem="G11-CU-Ggi" secondAttribute="trailing" constant="72" id="uM8-eB-bjR"/>
                                     <constraint firstItem="Z2t-rI-3rl" firstAttribute="top" secondItem="GUb-RD-JpK" secondAttribute="bottom" constant="50" id="ula-c6-b5a"/>
                                 </constraints>
                             </view>
