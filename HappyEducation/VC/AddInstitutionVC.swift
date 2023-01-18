@@ -21,10 +21,17 @@ class AddInstitutionVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     @IBOutlet weak var addInstitutionSubjectTextField: UITextField!
     @IBOutlet weak var addInstitutionDescriptionTextField: UITextField!
     
+    @IBOutlet weak var addInstitutionView: UIView!
     var photoURL: URL?
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        /*
+        addInstitutionView.layer.shadowOpacity = 1
+        addInstitutionView.layer.shadowRadius = 12.0
+        addInstitutionView.layer.shadowOffset = CGSize.zero
+        addInstitutionView.layer.shadowColor = UIColor.gray.cgColor
+         */
     }
     
     @IBAction func addInstitutionImageClicked(_ sender: Any) {

@@ -48,9 +48,13 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         default: print("Good time")
         }
         
-        //greatingLabel.text = "Greating !"
-        
         userNameLabel.text = authenticationService.userDisplayName()
+        
+        // add shadow to search teacher field
+        teacherSearchTextField.layer.shadowOpacity = 1
+        teacherSearchTextField.layer.shadowRadius = 12.0
+        teacherSearchTextField.layer.shadowOffset = CGSize.zero
+        teacherSearchTextField.layer.shadowColor = UIColor.systemGray4.cgColor
         
         // hide back bar
         navigationItem.setHidesBackButton(true, animated: true)

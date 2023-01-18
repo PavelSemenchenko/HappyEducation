@@ -132,6 +132,7 @@
                         <outlet property="addInstitutionNameTextField" destination="1Lj-r6-nKs" id="J55-jw-Uen"/>
                         <outlet property="addInstitutionRatingTextField" destination="a5W-Fy-WAk" id="0fe-TT-yDE"/>
                         <outlet property="addInstitutionSubjectTextField" destination="owC-Nu-bpa" id="Iht-E0-0sT"/>
+                        <outlet property="addInstitutionView" destination="zo6-77-sv7" id="Lnl-b0-fAu"/>
                         <outlet property="addInstitutionVotedTextField" destination="Odj-Ka-GFQ" id="TAK-mt-NtI"/>
                     </connections>
                 </viewController>
