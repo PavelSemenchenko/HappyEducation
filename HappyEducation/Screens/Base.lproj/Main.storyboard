@@ -1204,6 +1204,9 @@ recommendations</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
+                                                <connections>
+                                                    <action selector="searchTeacherTextField:" destination="mRu-x2-Se0" eventType="editingChanged" id="wHC-m4-3jd"/>
+                                                </connections>
                                             </textField>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zrf-1Z-8Km">
                                                 <rect key="frame" x="299" y="190" width="28" height="28"/>

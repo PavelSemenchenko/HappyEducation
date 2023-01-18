@@ -31,6 +31,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     let teachersDataSource = TeachersDataSource()
     let institutionsDataSource = InstitutionsDataSource()
     
+    var teachers: [Teacher] = []
+    // var allTeachers: [Teacher] // = где хранятся все учителя
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -94,6 +97,24 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
             self.institutionsDataSource.institutions = institutions
             self.institutionsCollectionView.reloadData()
         }
+    }
+    // textfield search teacher
+    @IBAction func searchTeacherTextField(_ sender: Any) {
+        guard let searchName = teacherSearchTextField.text?.lowercased() else { return }
+        if searchName.isEmpty {
+            // перезаписать таблицу нашими тичер allTeachers
+            teachers = allTeachers // наш массив учиетелей
+            teachersCollectionView.reloadData()
+            return
+        }
+        var searchTeachers: [Teacher] = []
+        for teacher in allTeachers {
+            if teacher.name.lowercased().contains(searchName) {
+                searchTeachers.append(teacher)
+            }
+        }
+        teachers = searchTeachers
+        teachersCollectionView.reloadData()
     }
     
     @IBAction func teacherSearchButtonClicked(_ sender: Any) {
