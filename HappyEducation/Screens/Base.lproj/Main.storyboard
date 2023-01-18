@@ -1237,6 +1237,14 @@ recommendations</string>
                                                     <action selector="addTeacherButtonClicked:" destination="mRu-x2-Se0" eventType="touchUpInside" id="RQE-Ca-yOI"/>
                                                 </connections>
                                             </button>
+                                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FJA-Vd-4w9">
+                                                <rect key="frame" x="249" y="546" width="36" height="35"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="+"/>
+                                                <connections>
+                                                    <action selector="addInstitutionButtonClicked:" destination="mRu-x2-Se0" eventType="touchUpInside" id="dmJ-A0-Fia"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="yzq-UR-hpR"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1245,6 +1253,7 @@ recommendations</string>
                                             <constraint firstItem="yzq-UR-hpR" firstAttribute="bottom" secondItem="9JS-fr-Ogd" secondAttribute="bottom" id="2bf-92-Uja"/>
                                             <constraint firstItem="XNi-Tk-End" firstAttribute="top" secondItem="9uw-H8-p6y" secondAttribute="bottom" constant="26" id="3cP-pa-grq"/>
                                             <constraint firstItem="9uw-H8-p6y" firstAttribute="width" secondItem="9s4-9m-agt" secondAttribute="width" id="CkU-UO-LIe"/>
+                                            <constraint firstItem="FJA-Vd-4w9" firstAttribute="leading" secondItem="Abs-f5-odc" secondAttribute="leading" id="CqS-Jn-pnc"/>
                                             <constraint firstItem="CRz-Mf-mee" firstAttribute="leading" secondItem="XNi-Tk-End" secondAttribute="leading" id="DtA-KJ-aMt"/>
                                             <constraint firstItem="Q75-7f-3F0" firstAttribute="bottom" secondItem="yWY-xW-NtF" secondAttribute="bottom" constant="-8" id="IVa-Jn-rCB"/>
                                             <constraint firstItem="Wcu-Sg-1dC" firstAttribute="leading" secondItem="FKc-BD-HVj" secondAttribute="leading" id="J8R-82-eFo"/>
@@ -1270,6 +1279,7 @@ recommendations</string>
                                             <constraint firstItem="a9S-w1-vNI" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="XNi-Tk-End" secondAttribute="trailing" id="tCN-Yt-2kJ"/>
                                             <constraint firstItem="FKc-BD-HVj" firstAttribute="top" secondItem="yzq-UR-hpR" secondAttribute="top" constant="5" id="tJH-a7-6eJ"/>
                                             <constraint firstItem="Q75-7f-3F0" firstAttribute="top" secondItem="yWY-xW-NtF" secondAttribute="top" constant="8" id="taM-5Q-DYR"/>
+                                            <constraint firstItem="FJA-Vd-4w9" firstAttribute="centerY" secondItem="XNi-Tk-End" secondAttribute="centerY" id="upt-lH-a02"/>
                                             <constraint firstItem="Abs-f5-odc" firstAttribute="centerY" secondItem="CRz-Mf-mee" secondAttribute="centerY" id="w9I-mN-rSG"/>
                                             <constraint firstItem="a9S-w1-vNI" firstAttribute="centerY" secondItem="XNi-Tk-End" secondAttribute="centerY" id="yvd-v9-Zd4"/>
                                             <constraint firstItem="9uw-H8-p6y" firstAttribute="centerX" secondItem="yzq-UR-hpR" secondAttribute="centerX" id="z2h-92-zka"/>

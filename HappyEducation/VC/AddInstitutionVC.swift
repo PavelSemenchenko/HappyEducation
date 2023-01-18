@@ -12,7 +12,7 @@ import PhotosUI
 
 class AddInstitutionVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     let institutionRepository: InstitutionRepository = FirebaseInstitutionRepository()
-    var onCreateCompletion: ((Teacher?) -> Void)?
+    var onCreateCompletion: ((Institution?) -> Void)?
     
     @IBOutlet weak var addInstitutionImageView: UIImageView!
     @IBOutlet weak var addInstitutionNameTextField: UITextField!
@@ -21,12 +21,56 @@ class AddInstitutionVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     @IBOutlet weak var addInstitutionSubjectTextField: UITextField!
     @IBOutlet weak var addInstitutionDescriptionTextField: UITextField!
     
+    var photoURL: URL?
     
-    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+    }
     
     @IBAction func addInstitutionImageClicked(_ sender: Any) {
+        let vc = UIImagePickerController()
+        vc.sourceType = .savedPhotosAlbum
+        vc.allowsEditing = true
+        vc.delegate = self
+        present(vc, animated: true)
     }
     
     @IBAction func addInstitutionButtonClicked(_ sender: Any) {
+        guard let name = addInstitutionNameTextField.text , name.count > 3 else {
+            return
+        }
+        guard let subject = addInstitutionSubjectTextField.text else {
+            return
+        }
+        let rating = (addInstitutionRatingTextField.text! as NSString).integerValue
+        
+        let voted = (addInstitutionVotedTextField.text! as NSString).integerValue
+        
+        guard let description = addInstitutionDescriptionTextField.text else {
+            return
+        }
+        
+        guard let image = photoURL else {
+            return
+        }
+        let newInstitution = institutionRepository.createInstitution(name: name,
+                                                                     image: image,
+                                                                     description: description,
+                                                                     rating: Double(rating),
+                                                                     voted: voted,
+                                                                     subject: subject)
+        
+        self.onCreateCompletion?(newInstitution)
+        self.navigationController?.popViewController(animated: true)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController,
+                               didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        photoURL = info[.imageURL] as? URL
+        
+        guard let image = photoURL else {
+            return
+        }
+        addInstitutionImageView.af.setImage(withURL: image)
     }
 }

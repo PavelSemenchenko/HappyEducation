@@ -120,6 +120,19 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         self.navigationController?.pushViewController(ctlAddTeacher, animated: true)
     }
     
+    @IBAction func addInstitutionButtonClicked(_ sender: Any) {
+        let newInstitution = AddInstitutionVC()
+        newInstitution.onCreateCompletion = { newInstitution in
+            if let institution = newInstitution {
+                self.institutionsDataSource.institutions.append(institution)
+                self.institutionsCollectionView.reloadData()
+            }
+        }
+        let sbAddInstitution = UIStoryboard(name: "AddInstitutionSB", bundle: nil)
+        let ctlAddInstitution = sbAddInstitution.instantiateViewController(withIdentifier: "addInstitution")
+        self.navigationController?.pushViewController(ctlAddInstitution, animated: true)
+    }
+    
 }
 
 class TeachersDataSource: NSObject, UICollectionViewDataSource {
