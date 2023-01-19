@@ -9,11 +9,11 @@ import Foundation
 import UIKit
 
 enum Subject {
-    case Biology
-    case Math
-    case Chemistry
-    case Physics
-    case ScienseOfTechnology
+    case biology
+    case math
+    case chemistry
+    case physics
+    case scienseOfTechnology
     case none
 }
 
