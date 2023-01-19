@@ -8,6 +8,15 @@
 import Foundation
 import UIKit
 
+enum Subject {
+    case Biology
+    case Math
+    case Chemistry
+    case Physics
+    case ScienseOfTechnology
+    case none
+}
+
 class HomeVC: UIViewController, UICollectionViewDelegate {
     // About User
     @IBOutlet weak var userImage: UIImageView!
