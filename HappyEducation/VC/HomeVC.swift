@@ -59,7 +59,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         case 0...5: greatingLabel.text = "Good night !"
         default: print("Good time")
         }
-        
+               
         userNameLabel.text = authenticationService.userDisplayName()
         
         // add shadow to search teacher field
@@ -111,18 +111,17 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     @IBAction func searchTeacherTextField(_ sender: Any) {
         guard let searchName = teacherSearchTextField.text?.lowercased() else { return }
         if searchName.isEmpty {
-            // перезаписать таблицу нашими тичер allTeachers
-            teachers = allTeachers // наш массив учиетелей
+            teachers = teachersDataSource.teachers
             teachersCollectionView.reloadData()
             return
         }
         var searchTeachers: [Teacher] = []
-        for teacher in allTeachers {
+        for teacher in teachers {
             if teacher.name.lowercased().contains(searchName) {
                 searchTeachers.append(teacher)
             }
         }
-        teachers = searchTeachers
+        teachers = teachersDataSource.teachers
         teachersCollectionView.reloadData()
     }
     
