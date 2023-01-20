@@ -201,17 +201,48 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     @IBAction func biologySearchButtonClicked(_ sender: Any) {
         if subject == .biology {
             subject = .none
+            
+            teachersDataSource.filtering = false
+            teachersCollectionView.reloadData()
+            
         } else {
             subject = .biology
+            
+            var searchTeachers: [Teacher] = []
+            for teacher in teachersDataSource.allTeachers {
+                if teacher.subject.lowercased().contains("biology") {
+                    searchTeachers.append(teacher)
+                }
+            }
+            teachersDataSource.filteredTeachers = searchTeachers
+            teachersDataSource.filtering = true
+            teachersCollectionView.reloadData()
+            
         }
         validateSubjects()
         biologySearch.layer.cornerRadius = 10
+        
     }
     @IBAction func mathSearchButtonClicked(_ sender: Any) {
         if subject == .math {
             subject = .none
+            
+            teachersDataSource.filtering = false
+            teachersCollectionView.reloadData()
+            
         } else {
             subject = .math
+            
+            var searchTeachers: [Teacher] = []
+            for teacher in teachersDataSource.allTeachers {
+                if teacher.subject.lowercased().contains("math") {
+                    searchTeachers.append(teacher)
+                }
+            }
+            teachersDataSource.filteredTeachers = searchTeachers
+            teachersDataSource.filtering = true
+            teachersCollectionView.reloadData()
+            
         }
         validateSubjects()
         mathSearch.layer.cornerRadius = 10
@@ -219,8 +250,23 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     @IBAction func physicsSerachButtonClicked(_ sender: Any) {
         if subject == .physics {
             subject = .none
+            
+            teachersDataSource.filtering = false
+            teachersCollectionView.reloadData()
+            
         } else {
             subject = .physics
+            
+            var searchTeachers: [Teacher] = []
+            for teacher in teachersDataSource.allTeachers {
+                if teacher.subject.lowercased().contains("physics") {
+                    searchTeachers.append(teacher)
+                }
+            }
+            teachersDataSource.filteredTeachers = searchTeachers
+            teachersDataSource.filtering = true
+            teachersCollectionView.reloadData()
+            
         }
         validateSubjects()
         physicsSearch.layer.cornerRadius = 10
@@ -228,8 +274,23 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     @IBAction func geometrySearchButtonClicked(_ sender: Any) {
         if subject == .geometry {
             subject = .none
+            
+            teachersDataSource.filtering = false
+            teachersCollectionView.reloadData()
+            
         } else {
             subject = .geometry
+            
+            var searchTeachers: [Teacher] = []
+            for teacher in teachersDataSource.allTeachers {
+                if teacher.subject.lowercased().contains("geometry") {
+                    searchTeachers.append(teacher)
+                }
+            }
+            teachersDataSource.filteredTeachers = searchTeachers
+            teachersDataSource.filtering = true
+            teachersCollectionView.reloadData()
+            
         }
         validateSubjects()
         geometrySearch.layer.cornerRadius = 10
@@ -243,6 +304,10 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     @IBAction func teacherSearchCustomFilterButtonClicked(_ sender: Any) {
         if customSearch == .on {
             customSearch = .none
+            // сброс тичер
+            teachersDataSource.filtering = false
+            teachersCollectionView.reloadData()
+            
         } else {
             customSearch = .on
         }
