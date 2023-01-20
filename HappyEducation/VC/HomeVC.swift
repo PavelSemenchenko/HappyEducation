@@ -17,6 +17,8 @@ enum Subject {
     case none
 }
 
+let subjects = ["Biology", "Math", "Physics", "Chemistry"]
+
 class HomeVC: UIViewController, UICollectionViewDelegate {
     // About User
     @IBOutlet weak var userImage: UIImageView!
@@ -41,6 +43,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     let institutionsDataSource = InstitutionsDataSource()
     
     var teachers: [Teacher] = []
+    
     // var allTeachers: [Teacher] // = где хранятся все учителя
     
     override func viewDidLoad() {
@@ -98,7 +101,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     
     func loadAll() {
         teachersRepository.getAll { teachers in
-            self.teachersDataSource.teachers = teachers
+            self.teachersDataSource.allTeachers = teachers
             self.teachersCollectionView.reloadData()
         }
         
@@ -111,17 +114,18 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     @IBAction func searchTeacherTextField(_ sender: Any) {
         guard let searchName = teacherSearchTextField.text?.lowercased() else { return }
         if searchName.isEmpty {
-            teachers = teachersDataSource.teachers
+            teachersDataSource.filtering = false
             teachersCollectionView.reloadData()
             return
         }
         var searchTeachers: [Teacher] = []
-        for teacher in teachers {
+        for teacher in teachersDataSource.allTeachers {
             if teacher.name.lowercased().contains(searchName) {
                 searchTeachers.append(teacher)
             }
         }
-        teachers = teachersDataSource.teachers
+        teachersDataSource.filteredTeachers = searchTeachers
+        teachersDataSource.filtering = true
         teachersCollectionView.reloadData()
     }
     
@@ -141,44 +145,51 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         // назначить контроллер
         // получить данные
         // перерисовать таблицу
-        let newTeacher = AddTeacherVC()
-        newTeacher.onCreateCompletion = { newTeacher in
+        
+        let sbAddTeacher = UIStoryboard(name: "AddTeacherSB", bundle: nil)
+        let ctlAddTeacher = sbAddTeacher.instantiateViewController(withIdentifier: "addTeacher") as! AddTeacherVC
+        ctlAddTeacher.onCreateCompletion = { newTeacher in
             if let teacher = newTeacher {
-                self.teachersDataSource.teachers.append(teacher)
+                self.teachersDataSource.allTeachers.append(teacher)
                 self.teachersCollectionView.reloadData()
             }
         }
-        let sbAddTeacher = UIStoryboard(name: "AddTeacherSB", bundle: nil)
-        let ctlAddTeacher = sbAddTeacher.instantiateViewController(withIdentifier: "addTeacher")
         self.navigationController?.pushViewController(ctlAddTeacher, animated: true)
     }
     
     @IBAction func addInstitutionButtonClicked(_ sender: Any) {
-        let newInstitution = AddInstitutionVC()
-        newInstitution.onCreateCompletion = { newInstitution in
+        let sbAddInstitution = UIStoryboard(name: "AddInstitutionSB", bundle: nil)
+        let ctlAddInstitution = sbAddInstitution.instantiateViewController(withIdentifier: "addInstitution") as! AddInstitutionVC
+        ctlAddInstitution.onCreateCompletion = { newInstitution in
             if let institution = newInstitution {
                 self.institutionsDataSource.institutions.append(institution)
                 self.institutionsCollectionView.reloadData()
             }
         }
-        let sbAddInstitution = UIStoryboard(name: "AddInstitutionSB", bundle: nil)
-        let ctlAddInstitution = sbAddInstitution.instantiateViewController(withIdentifier: "addInstitution")
         self.navigationController?.pushViewController(ctlAddInstitution, animated: true)
     }
     
 }
 
 class TeachersDataSource: NSObject, UICollectionViewDataSource {
-    var teachers: [Teacher] = []
-    
+    var allTeachers: [Teacher] = []
+    var filteredTeachers: [Teacher] = []
+    var filtering = false
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return teachers.count
+        if filtering {
+            return filteredTeachers.count
+        }
+        return allTeachers.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "TeachersCellId", for: indexPath) as! TeacherCell
-        
-        cell.teacher = teachers[indexPath.row]
+        // если в режиме фильтра - отображаем список отсортированных в ячейку
+        if filtering {
+            cell.teacher = filteredTeachers[indexPath.row]
+        } else {
+            cell.teacher = allTeachers[indexPath.row]
+        }
         return cell
     }
 }

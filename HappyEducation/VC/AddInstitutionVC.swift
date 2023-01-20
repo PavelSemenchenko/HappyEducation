@@ -10,7 +10,8 @@ import UIKit
 import Photos
 import PhotosUI
 
-class AddInstitutionVC: UIViewController,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class AddInstitutionVC: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
+        
     let institutionRepository: InstitutionRepository = FirebaseInstitutionRepository()
     var onCreateCompletion: ((Institution?) -> Void)?
     
@@ -21,17 +22,21 @@ class AddInstitutionVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     @IBOutlet weak var addInstitutionSubjectTextField: UITextField!
     @IBOutlet weak var addInstitutionDescriptionTextField: UITextField!
     
-    @IBOutlet weak var addInstitutionView: UIView!
-    var photoURL: URL?
+    @IBOutlet weak var subjectView: UIPickerView!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        /*
+    @IBOutlet weak var addInstitutionView: UIView!
+    
+    var photoURL: URL?
+    var selectedSubject: String?
+    
+    override func viewDidLoad() {
+        subjectView.delegate = self
+        subjectView.dataSource = self
+        
         addInstitutionView.layer.shadowOpacity = 1
         addInstitutionView.layer.shadowRadius = 12.0
         addInstitutionView.layer.shadowOffset = CGSize.zero
-        addInstitutionView.layer.shadowColor = UIColor.gray.cgColor
-         */
+        addInstitutionView.layer.shadowColor = UIColor.systemGray5.cgColor
     }
     
     @IBAction func addInstitutionImageClicked(_ sender: Any) {
@@ -46,7 +51,7 @@ class AddInstitutionVC: UIViewController,UIImagePickerControllerDelegate,UINavig
         guard let name = addInstitutionNameTextField.text , name.count > 3 else {
             return
         }
-        guard let subject = addInstitutionSubjectTextField.text else {
+        guard let subject = selectedSubject else {
             return
         }
         let rating = (addInstitutionRatingTextField.text! as NSString).integerValue
@@ -73,11 +78,25 @@ class AddInstitutionVC: UIViewController,UIImagePickerControllerDelegate,UINavig
     
     func imagePickerController(_ picker: UIImagePickerController,
                                didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        picker.dismiss(animated: false)
         photoURL = info[.imageURL] as? URL
         
         guard let image = photoURL else {
             return
         }
         addInstitutionImageView.af.setImage(withURL: image)
+    }
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return subjects.count
+    }
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return subjects[row]
+    }
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedSubject = subjects[row]
     }
 }
