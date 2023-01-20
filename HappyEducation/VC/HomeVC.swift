@@ -15,17 +15,24 @@ enum Subject {
     case geometry
     case none
 }
+enum CustomSearch {
+    case on
+    case none
+}
 
 let subjects = ["Biology", "Math", "Physics", "Geometry"]
 
 class HomeVC: UIViewController, UICollectionViewDelegate {
     // Custom subject select search
     var subject: Subject = .none
+    var customSearch: CustomSearch = .none
+    
     @IBOutlet weak var geometrySearch: UIButton!
     @IBOutlet weak var physicsSearch: UIButton!
     @IBOutlet weak var mathSearch: UIButton!
     @IBOutlet weak var biologySearch: UIButton!
     
+    @IBOutlet weak var customTeachersSearchView: UIView!
     // About User
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var greatingLabel: UILabel!
@@ -50,7 +57,14 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     
     var teachers: [Teacher] = []
     
-    // var allTeachers: [Teacher] // = где хранятся все учителя
+    func validateCustomSearch() {
+        if customSearch == .on {
+            customTeachersSearchView.isHidden = false
+        } else if customSearch == .none {
+            customTeachersSearchView.isHidden = true
+        }
+    }
+    
     func validateSubjects() {
         if subject == .biology {
             biologySearch.backgroundColor = .systemIndigo
@@ -102,7 +116,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        customTeachersSearchView.isHidden = true
         // try change greating
         let date = Date()
         let calendar = Calendar.current
@@ -227,6 +241,12 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     }
     
     @IBAction func teacherSearchCustomFilterButtonClicked(_ sender: Any) {
+        if customSearch == .on {
+            customSearch = .none
+        } else {
+            customSearch = .on
+        }
+        validateCustomSearch()
     }
     
     @IBAction func popularTeacherSearchButtonClicked(_ sender: Any) {

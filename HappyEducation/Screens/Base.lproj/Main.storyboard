@@ -1366,6 +1366,7 @@ recommendations</string>
                     </view>
                     <connections>
                         <outlet property="biologySearch" destination="F1z-rP-VS9" id="K4d-KY-Xyf"/>
+                        <outlet property="customTeachersSearchView" destination="qZL-9f-JAr" id="t3b-k8-VkO"/>
                         <outlet property="geometrySearch" destination="1pU-sp-wd1" id="r0N-G5-VzY"/>
                         <outlet property="greatingLabel" destination="FKc-BD-HVj" id="O17-wW-ZYV"/>
                         <outlet property="institutionsCollectionView" destination="9JS-fr-Ogd" id="QYR-ka-THr"/>
