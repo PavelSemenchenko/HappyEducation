@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add TeacherVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="addTeacher" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="AddTeacherVC" customModule="HappyEducation" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Cek-hZ-yBa">
+                                <rect key="frame" x="50" y="64" width="293" height="554"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GUb-RD-JpK">
+                                        <rect key="frame" x="64" y="16" width="165" height="200"/>
+                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                        <gestureRecognizers/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="200" id="d2s-PR-04x"/>
+                                        </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="aWb-TA-pQ2" appends="YES" id="cYK-iA-bGT"/>
+                                        </connections>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FAf-qE-FJY">
+                                        <rect key="frame" x="168" y="224" width="61" height="28"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain">
+                                            <attributedString key="attributedTitle">
+                                                <fragment content="upload">
+                                                    <attributes>
+                                                        <color key="NSColor" red="0.016804177310000001" green="0.19835099580000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <font key="NSFont" size="12" name="Helvetica"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addTeacherImageClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="im3-KU-KHi"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Z2t-rI-3rl">
+                                        <rect key="frame" x="16" y="266" width="261" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="32" id="nZr-X6-aaB"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G11-CU-Ggi">
+                                        <rect key="frame" x="72" y="380" width="149" height="35"/>
+                                        <color key="tintColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Save teacher">
+                                            <color key="baseBackgroundColor" red="0.33697855469999999" green="0.40345948929999997" blue="0.99186784029999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="addTeacherSaveClicked:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="hDb-eT-p6i"/>
+                                        </connections>
+                                    </button>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="subject" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eyi-2s-owW">
+                                        <rect key="frame" x="16" y="314" width="261" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="IWh-Bk-diw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rui-uI-Zff">
+                                        <rect key="frame" x="16" y="218" width="97" height="34"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="GUb-RD-JpK" firstAttribute="top" secondItem="Cek-hZ-yBa" secondAttribute="top" constant="16" id="1LO-Di-htV"/>
+                                    <constraint firstAttribute="trailing" secondItem="eyi-2s-owW" secondAttribute="trailing" constant="16" id="1ex-VG-YlQ"/>
+                                    <constraint firstItem="G11-CU-Ggi" firstAttribute="centerX" secondItem="Cek-hZ-yBa" secondAttribute="centerX" id="CyS-jp-cZe"/>
+                                    <constraint firstAttribute="trailing" secondItem="Z2t-rI-3rl" secondAttribute="trailing" constant="16" id="HCu-F4-oZB"/>
+                                    <constraint firstAttribute="trailing" secondItem="GUb-RD-JpK" secondAttribute="trailing" constant="64" id="HoI-v3-GqU"/>
+                                    <constraint firstItem="eyi-2s-owW" firstAttribute="leading" secondItem="Z2t-rI-3rl" secondAttribute="leading" id="Run-Jp-GpB"/>
+                                    <constraint firstItem="G11-CU-Ggi" firstAttribute="leading" secondItem="Cek-hZ-yBa" secondAttribute="leading" constant="72" id="UsS-jr-8aP"/>
+                                    <constraint firstItem="eyi-2s-owW" firstAttribute="top" secondItem="Z2t-rI-3rl" secondAttribute="bottom" constant="16" id="Z6h-Pw-Tpe"/>
+                                    <constraint firstItem="Z2t-rI-3rl" firstAttribute="leading" secondItem="Cek-hZ-yBa" secondAttribute="leading" constant="16" id="ata-f4-2mZ"/>
+                                    <constraint firstItem="G11-CU-Ggi" firstAttribute="top" secondItem="eyi-2s-owW" secondAttribute="bottom" constant="32" id="byt-rZ-4o3"/>
+                                    <constraint firstItem="GUb-RD-JpK" firstAttribute="leading" secondItem="Cek-hZ-yBa" secondAttribute="leading" constant="64" id="lIQ-jt-7xX"/>
+                                    <constraint firstItem="FAf-qE-FJY" firstAttribute="top" secondItem="GUb-RD-JpK" secondAttribute="bottom" constant="8" symbolic="YES" id="rc5-kj-tFh"/>
+                                    <constraint firstItem="FAf-qE-FJY" firstAttribute="trailing" secondItem="GUb-RD-JpK" secondAttribute="trailing" id="sKS-YS-yMj"/>
+                                    <constraint firstAttribute="trailing" secondItem="G11-CU-Ggi" secondAttribute="trailing" constant="72" id="uM8-eB-bjR"/>
+                                    <constraint firstItem="Z2t-rI-3rl" firstAttribute="top" secondItem="GUb-RD-JpK" secondAttribute="bottom" constant="50" id="ula-c6-b5a"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Cek-hZ-yBa" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" constant="5" id="BmQ-3l-WlQ"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="Cek-hZ-yBa" secondAttribute="bottom" constant="200" id="HqG-ZC-2z2"/>
+                            <constraint firstItem="Cek-hZ-yBa" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="50" id="PN4-Mm-vbW"/>
+                            <constraint firstItem="Cek-hZ-yBa" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="SP6-x8-Co2"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="Cek-hZ-yBa" secondAttribute="trailing" constant="50" id="dRt-93-NC0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="addTeacherImageURL" destination="Rui-uI-Zff" id="box-5X-uaq"/>
+                        <outlet property="addTeacherImageView" destination="GUb-RD-JpK" id="66n-gg-dt0"/>
+                        <outlet property="addTeacherSubjectTextField" destination="eyi-2s-owW" id="Hny-tS-uGn"/>
+                        <outlet property="addTeacherUserNameTextField" destination="Z2t-rI-3rl" id="zyZ-aB-fXP"/>
+                        <outlet property="addTeacherView" destination="Cek-hZ-yBa" id="DKQ-dD-BdR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" id="L2A-gd-PLY">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <viewLayoutGuide key="safeArea" id="IRt-Kn-gzb"/>
+                    <viewLayoutGuide key="contentLayoutGuide" id="hWL-m5-9vP"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="XXu-NV-WL0"/>
+                </scrollView>
+                <tapGestureRecognizer id="aWb-TA-pQ2">
+                    <connections>
+                        <action selector="addTeacherImageClicked:" destination="Y6W-OH-hqX" id="bBy-lt-own"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="113.74045801526717" y="-27.464788732394368"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -8,6 +8,15 @@
 import Foundation
 import UIKit
 
+enum Subject {
+    case biology
+    case math
+    case chemistry
+    case physics
+    case scienseOfTechnology
+    case none
+}
+
 class HomeVC: UIViewController, UICollectionViewDelegate {
     // About User
     @IBOutlet weak var userImage: UIImageView!
@@ -31,6 +40,9 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     let teachersDataSource = TeachersDataSource()
     let institutionsDataSource = InstitutionsDataSource()
     
+    var teachers: [Teacher] = []
+    // var allTeachers: [Teacher] // = где хранятся все учителя
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,10 +59,14 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         case 0...5: greatingLabel.text = "Good night !"
         default: print("Good time")
         }
-        
-        //greatingLabel.text = "Greating !"
-        
+               
         userNameLabel.text = authenticationService.userDisplayName()
+        
+        // add shadow to search teacher field
+        teacherSearchTextField.layer.shadowOpacity = 1
+        teacherSearchTextField.layer.shadowRadius = 12.0
+        teacherSearchTextField.layer.shadowOffset = CGSize.zero
+        teacherSearchTextField.layer.shadowColor = UIColor.systemGray4.cgColor
         
         // hide back bar
         navigationItem.setHidesBackButton(true, animated: true)
@@ -91,6 +107,23 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
             self.institutionsCollectionView.reloadData()
         }
     }
+    // textfield search teacher
+    @IBAction func searchTeacherTextField(_ sender: Any) {
+        guard let searchName = teacherSearchTextField.text?.lowercased() else { return }
+        if searchName.isEmpty {
+            teachers = teachersDataSource.teachers
+            teachersCollectionView.reloadData()
+            return
+        }
+        var searchTeachers: [Teacher] = []
+        for teacher in teachers {
+            if teacher.name.lowercased().contains(searchName) {
+                searchTeachers.append(teacher)
+            }
+        }
+        teachers = teachersDataSource.teachers
+        teachersCollectionView.reloadData()
+    }
     
     @IBAction func teacherSearchButtonClicked(_ sender: Any) {
     }
@@ -102,6 +135,35 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     }
     
     @IBAction func populatInstitutionsButtonClicked(_ sender: Any) {
+    }
+    
+    @IBAction func addTeacherButtonClicked(_ sender: Any) {
+        // назначить контроллер
+        // получить данные
+        // перерисовать таблицу
+        let newTeacher = AddTeacherVC()
+        newTeacher.onCreateCompletion = { newTeacher in
+            if let teacher = newTeacher {
+                self.teachersDataSource.teachers.append(teacher)
+                self.teachersCollectionView.reloadData()
+            }
+        }
+        let sbAddTeacher = UIStoryboard(name: "AddTeacherSB", bundle: nil)
+        let ctlAddTeacher = sbAddTeacher.instantiateViewController(withIdentifier: "addTeacher")
+        self.navigationController?.pushViewController(ctlAddTeacher, animated: true)
+    }
+    
+    @IBAction func addInstitutionButtonClicked(_ sender: Any) {
+        let newInstitution = AddInstitutionVC()
+        newInstitution.onCreateCompletion = { newInstitution in
+            if let institution = newInstitution {
+                self.institutionsDataSource.institutions.append(institution)
+                self.institutionsCollectionView.reloadData()
+            }
+        }
+        let sbAddInstitution = UIStoryboard(name: "AddInstitutionSB", bundle: nil)
+        let ctlAddInstitution = sbAddInstitution.instantiateViewController(withIdentifier: "addInstitution")
+        self.navigationController?.pushViewController(ctlAddInstitution, animated: true)
     }
     
 }
