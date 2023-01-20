@@ -1248,6 +1248,71 @@ recommendations</string>
                                                     <action selector="addInstitutionButtonClicked:" destination="mRu-x2-Se0" eventType="touchUpInside" id="dmJ-A0-Fia"/>
                                                 </connections>
                                             </button>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qZL-9f-JAr">
+                                                <rect key="frame" x="10" y="242" width="373" height="30"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F1z-rP-VS9">
+                                                        <rect key="frame" x="10" y="2" width="80.333333333333329" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="32q-6E-0NV"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Biology"/>
+                                                        <connections>
+                                                            <action selector="biologySearchButtonClicked:" destination="mRu-x2-Se0" eventType="touchUpInside" id="vff-Ee-TK8"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qde-hi-jOf">
+                                                        <rect key="frame" x="100.33333333333331" y="2" width="63" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="LIa-Bl-PNJ"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Math"/>
+                                                        <connections>
+                                                            <action selector="mathSearchButtonClicked:" destination="mRu-x2-Se0" eventType="touchUpInside" id="8aJ-xj-wSF"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yjF-ar-bmx">
+                                                        <rect key="frame" x="173.33333333333334" y="2" width="82" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="elS-kv-RNk"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Physics"/>
+                                                        <connections>
+                                                            <action selector="physicsSerachButtonClicked:" destination="mRu-x2-Se0" eventType="touchUpInside" id="yyV-vg-b00"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1pU-sp-wd1">
+                                                        <rect key="frame" x="265.33333333333331" y="2" width="99.666666666666686" height="25"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="25" id="A9h-rj-UHz"/>
+                                                        </constraints>
+                                                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="gray" title="Geometry"/>
+                                                        <connections>
+                                                            <action selector="geometrySearchButtonClicked:" destination="mRu-x2-Se0" eventType="touchUpInside" id="z6e-gU-tRh"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="qde-hi-jOf" firstAttribute="top" secondItem="F1z-rP-VS9" secondAttribute="top" id="FMz-n9-8HS"/>
+                                                    <constraint firstItem="F1z-rP-VS9" firstAttribute="top" secondItem="qZL-9f-JAr" secondAttribute="top" constant="2" id="K6z-Ny-Y2Q"/>
+                                                    <constraint firstItem="yjF-ar-bmx" firstAttribute="top" secondItem="F1z-rP-VS9" secondAttribute="top" id="O4x-uJ-LvD"/>
+                                                    <constraint firstItem="F1z-rP-VS9" firstAttribute="leading" secondItem="qZL-9f-JAr" secondAttribute="leading" constant="10" id="OfM-Hj-ISo"/>
+                                                    <constraint firstItem="1pU-sp-wd1" firstAttribute="top" secondItem="F1z-rP-VS9" secondAttribute="top" id="mU3-VJ-Rhp"/>
+                                                    <constraint firstItem="qde-hi-jOf" firstAttribute="leading" secondItem="F1z-rP-VS9" secondAttribute="trailing" constant="10" id="nJu-aq-DOV"/>
+                                                    <constraint firstAttribute="height" constant="30" id="s67-ic-8cc"/>
+                                                    <constraint firstItem="yjF-ar-bmx" firstAttribute="leading" secondItem="qde-hi-jOf" secondAttribute="trailing" constant="10" id="vbx-Vn-mJd"/>
+                                                    <constraint firstItem="1pU-sp-wd1" firstAttribute="leading" secondItem="yjF-ar-bmx" secondAttribute="trailing" constant="10" id="yXW-De-sA0"/>
+                                                </constraints>
+                                            </view>
                                         </subviews>
                                         <viewLayoutGuide key="safeArea" id="yzq-UR-hpR"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1267,7 +1332,9 @@ recommendations</string>
                                             <constraint firstItem="M2W-y4-lcO" firstAttribute="leading" secondItem="FKc-BD-HVj" secondAttribute="trailing" constant="45" id="TJT-y6-HJV"/>
                                             <constraint firstItem="9JS-fr-Ogd" firstAttribute="top" secondItem="XNi-Tk-End" secondAttribute="bottom" constant="30" id="U9i-JS-7W1"/>
                                             <constraint firstItem="yWY-xW-NtF" firstAttribute="top" secondItem="Wcu-Sg-1dC" secondAttribute="bottom" constant="30" id="UOB-tA-pt9"/>
+                                            <constraint firstItem="qZL-9f-JAr" firstAttribute="leading" secondItem="yzq-UR-hpR" secondAttribute="leading" constant="10" id="VBf-su-heA"/>
                                             <constraint firstItem="XNi-Tk-End" firstAttribute="leading" secondItem="yzq-UR-hpR" secondAttribute="leading" constant="32" id="WNx-S5-gQM"/>
+                                            <constraint firstItem="yzq-UR-hpR" firstAttribute="trailing" secondItem="qZL-9f-JAr" secondAttribute="trailing" constant="10" id="Y45-Xl-K9A"/>
                                             <constraint firstItem="bnN-6i-ZtW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="CRz-Mf-mee" secondAttribute="trailing" constant="8" symbolic="YES" id="Yxl-3u-sRk"/>
                                             <constraint firstItem="yWY-xW-NtF" firstAttribute="leading" secondItem="Wcu-Sg-1dC" secondAttribute="leading" id="ZyM-O0-vsa"/>
                                             <constraint firstItem="Wcu-Sg-1dC" firstAttribute="top" secondItem="FKc-BD-HVj" secondAttribute="bottom" constant="10" id="bWq-b2-loU"/>
@@ -1284,6 +1351,7 @@ recommendations</string>
                                             <constraint firstItem="Q75-7f-3F0" firstAttribute="top" secondItem="yWY-xW-NtF" secondAttribute="top" constant="8" id="taM-5Q-DYR"/>
                                             <constraint firstItem="FJA-Vd-4w9" firstAttribute="centerY" secondItem="XNi-Tk-End" secondAttribute="centerY" id="upt-lH-a02"/>
                                             <constraint firstItem="Abs-f5-odc" firstAttribute="centerY" secondItem="CRz-Mf-mee" secondAttribute="centerY" id="w9I-mN-rSG"/>
+                                            <constraint firstItem="qZL-9f-JAr" firstAttribute="top" secondItem="yWY-xW-NtF" secondAttribute="bottom" constant="8" id="y1Z-HN-ptk"/>
                                             <constraint firstItem="a9S-w1-vNI" firstAttribute="centerY" secondItem="XNi-Tk-End" secondAttribute="centerY" id="yvd-v9-Zd4"/>
                                             <constraint firstItem="9uw-H8-p6y" firstAttribute="centerX" secondItem="yzq-UR-hpR" secondAttribute="centerX" id="z2h-92-zka"/>
                                         </constraints>
@@ -1297,8 +1365,12 @@ recommendations</string>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <connections>
+                        <outlet property="biologySearch" destination="F1z-rP-VS9" id="K4d-KY-Xyf"/>
+                        <outlet property="geometrySearch" destination="1pU-sp-wd1" id="r0N-G5-VzY"/>
                         <outlet property="greatingLabel" destination="FKc-BD-HVj" id="O17-wW-ZYV"/>
                         <outlet property="institutionsCollectionView" destination="9JS-fr-Ogd" id="QYR-ka-THr"/>
+                        <outlet property="mathSearch" destination="qde-hi-jOf" id="KOh-fM-2Gf"/>
+                        <outlet property="physicsSearch" destination="yjF-ar-bmx" id="Gma-uX-37n"/>
                         <outlet property="popularInstitutionsSearchButton" destination="a9S-w1-vNI" id="UEo-Of-H4P"/>
                         <outlet property="popularTeacherSearchButton" destination="bnN-6i-ZtW" id="Y7I-ut-B0c"/>
                         <outlet property="teacherSearchTextField" destination="yWY-xW-NtF" id="ii1-wS-7nd"/>

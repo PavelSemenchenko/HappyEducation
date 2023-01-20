@@ -11,15 +11,21 @@ import UIKit
 enum Subject {
     case biology
     case math
-    case chemistry
     case physics
-    case scienseOfTechnology
+    case geometry
     case none
 }
 
-let subjects = ["Biology", "Math", "Physics", "Chemistry"]
+let subjects = ["Biology", "Math", "Physics", "Geometry"]
 
 class HomeVC: UIViewController, UICollectionViewDelegate {
+    // Custom subject select search
+    var subject: Subject = .none
+    @IBOutlet weak var geometrySearch: UIButton!
+    @IBOutlet weak var physicsSearch: UIButton!
+    @IBOutlet weak var mathSearch: UIButton!
+    @IBOutlet weak var biologySearch: UIButton!
+    
     // About User
     @IBOutlet weak var userImage: UIImageView!
     @IBOutlet weak var greatingLabel: UILabel!
@@ -45,6 +51,54 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
     var teachers: [Teacher] = []
     
     // var allTeachers: [Teacher] // = где хранятся все учителя
+    func validateSubjects() {
+        if subject == .biology {
+            biologySearch.backgroundColor = .systemIndigo
+            biologySearch.tintColor = .white
+            mathSearch.backgroundColor = .systemGray6
+            mathSearch.tintColor = .darkGray
+            physicsSearch.backgroundColor = .systemGray6
+            physicsSearch.tintColor = .darkGray
+            geometrySearch.backgroundColor = .systemGray6
+            geometrySearch.tintColor = .darkGray
+        } else if subject == .math {
+            biologySearch.backgroundColor = .systemGray6
+            biologySearch.tintColor = .darkGray
+            mathSearch.backgroundColor = .systemIndigo
+            mathSearch.tintColor = .white
+            physicsSearch.backgroundColor = .systemGray6
+            physicsSearch.tintColor = .darkGray
+            geometrySearch.backgroundColor = .systemGray6
+            geometrySearch.tintColor = .darkGray
+        } else if subject == .physics {
+            biologySearch.backgroundColor = .systemGray6
+            biologySearch.tintColor = .darkGray
+            mathSearch.backgroundColor = .systemGray6
+            mathSearch.tintColor = .darkGray
+            physicsSearch.backgroundColor = .systemIndigo
+            physicsSearch.tintColor = .white
+            geometrySearch.backgroundColor = .systemGray6
+            geometrySearch.tintColor = .darkGray
+        } else if subject == .geometry {
+            biologySearch.backgroundColor = .systemGray6
+            biologySearch.tintColor = .darkGray
+            mathSearch.backgroundColor = .systemGray6
+            mathSearch.tintColor = .darkGray
+            physicsSearch.backgroundColor = .systemGray6
+            physicsSearch.tintColor = .darkGray
+            geometrySearch.backgroundColor = .systemIndigo
+            geometrySearch.tintColor = .white
+        } else if subject == .none {
+            biologySearch.backgroundColor = .systemGray6
+            biologySearch.tintColor = .darkGray
+            mathSearch.backgroundColor = .systemGray6
+            mathSearch.tintColor = .darkGray
+            physicsSearch.backgroundColor = .systemGray6
+            physicsSearch.tintColor = .darkGray
+            geometrySearch.backgroundColor = .systemGray6
+            geometrySearch.tintColor = .darkGray
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,7 +107,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         let date = Date()
         let calendar = Calendar.current
         let hour = calendar.component(.hour, from: date)
-
+        
         var currentTime = hour
         switch currentTime {
         case 6...11: greatingLabel.text = "Good morning !"
@@ -62,7 +116,7 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         case 0...5: greatingLabel.text = "Good night !"
         default: print("Good time")
         }
-               
+        
         userNameLabel.text = authenticationService.userDisplayName()
         
         // add shadow to search teacher field
@@ -128,6 +182,46 @@ class HomeVC: UIViewController, UICollectionViewDelegate {
         teachersDataSource.filtering = true
         teachersCollectionView.reloadData()
     }
+    
+    // subjects buttons
+    @IBAction func biologySearchButtonClicked(_ sender: Any) {
+        if subject == .biology {
+            subject = .none
+        } else {
+            subject = .biology
+        }
+        validateSubjects()
+        biologySearch.layer.cornerRadius = 10
+    }
+    @IBAction func mathSearchButtonClicked(_ sender: Any) {
+        if subject == .math {
+            subject = .none
+        } else {
+            subject = .math
+        }
+        validateSubjects()
+        mathSearch.layer.cornerRadius = 10
+    }
+    @IBAction func physicsSerachButtonClicked(_ sender: Any) {
+        if subject == .physics {
+            subject = .none
+        } else {
+            subject = .physics
+        }
+        validateSubjects()
+        physicsSearch.layer.cornerRadius = 10
+    }
+    @IBAction func geometrySearchButtonClicked(_ sender: Any) {
+        if subject == .geometry {
+            subject = .none
+        } else {
+            subject = .geometry
+        }
+        validateSubjects()
+        geometrySearch.layer.cornerRadius = 10
+    }
+    
+    
     
     @IBAction func teacherSearchButtonClicked(_ sender: Any) {
     }
